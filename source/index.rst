@@ -11,6 +11,7 @@ Welcome to Python自由人's documentation!
    :caption: Contents:
 
    host
+   django
 
 Indices and tables
 ==================
