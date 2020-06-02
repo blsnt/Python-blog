@@ -10,7 +10,6 @@ Welcome to Python自由人's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   host
    Python   
 
 Indices and tables
