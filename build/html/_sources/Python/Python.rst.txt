@@ -4341,8 +4341,6 @@ pymysql操作数据库
 子查询
 ^^^^^^^^^^^^^
 
-.. code:: python
-
 .. |image0| image:: http://images.dregs.top/images/20200302221200.png
 .. |image1| image:: http://images.dregs.top/images/20200302221241.png
 .. |image2| image:: http://images.dregs.top/images/20200220182511.png
