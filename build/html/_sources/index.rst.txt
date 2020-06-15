@@ -13,6 +13,8 @@ Welcome to blsnt's documentation!
    Linux/index
    ELK/index
    Ansible/index   
+   SaltStack/index
+   golang/index
 
 Indices and tables
 ==================

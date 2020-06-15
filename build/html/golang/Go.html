@@ -1,0 +1,476 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. } &mdash; BLSNT BLOG 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="golang" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BLSNT BLOG
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python编程</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linux/index.html">Linux基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ELK/index.html">ELK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ansible/index.html">Ansible</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SaltStack/index.html">SaltStack</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">golang</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. }</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id50">2. )</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id55">3. }</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BLSNT BLOG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">golang</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>}</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/golang/Go.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p># 安装Go语言及搭建Go语言开发环境</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144339.png">http://images.dregs.top/images/20191108144339.png</a>)</p>
+<p>### 下载地址</p>
+<p>Go官网下载地址：<a class="reference external" href="https://golang.org/dl/">https://golang.org/dl/</a></p>
+<p>Go官方镜像站（推荐）：<a class="reference external" href="https://golang.google.cn/dl/">https://golang.google.cn/dl/</a></p>
+<p>### 版本的选择</p>
+<p>Windows平台和Mac平台推荐下载可执行文件版，Linux平台下载压缩文件版。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144420.png">http://images.dregs.top/images/20191108144420.png</a>)</p>
+<p>## 安装</p>
+<p>### Windows安装</p>
+<p>此安装实例以 <a href="#id1"><span class="problematic" id="id2">`</span></a>64位Win10`系统安装 <a href="#id3"><span class="problematic" id="id4">`</span></a>Go1.11.5可执行文件版本`为例。</p>
+<p>将上一步选好的安装包下载到本地。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144443.png">http://images.dregs.top/images/20191108144443.png</a>)</p>
+<p>双击下载好的文件</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144504.png">http://images.dregs.top/images/20191108144504.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144513.png">http://images.dregs.top/images/20191108144513.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144523.png">http://images.dregs.top/images/20191108144523.png</a>)</p>
+<p>### Linux下安装</p>
+<p>我们在版本选择页面选择并下载好`go1.11.5.linux-amd64.tar.gz`文件：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">wget</span> <span class="pre">https://dl.google.com/go/go1.11.5.linux-amd64.tar.gz</span>
+<span class="pre">`</span></code></p>
+<p>将下载好的文件解压到`/usr/local`目录下：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/usr/local/go</span>&#160; <span class="pre">#</span> <span class="pre">创建目录</span>
+<span class="pre">tar</span> <span class="pre">xf</span> <span class="pre">go1.13.6.linux-amd64.tar.gz</span> <span class="pre">-C</span> <span class="pre">/usr/local/go</span> <span class="pre">#</span> <span class="pre">解压</span>
+<span class="pre">`</span></code></p>
+<p>如果提示没有权限，加上`sudo`以root用户的身份再运行。执行完就可以在`/usr/local/<a href="#id5"><span class="problematic" id="id6">`</span></a>下看到go目录了。</p>
+<p>配置环境变量： Linux下有两个文件可以配置环境变量，其中`/etc/profile`是对所有用户生效的；<a href="#id7"><span class="problematic" id="id8">`</span></a>$HOME/.profile`是对当前用户生效的，根据自己的情况自行选择一个文件打开，添加如下两行代码，保存退出。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">export</span> <span class="pre">GOROOT=/usr/local/go</span>
+<span class="pre">export</span> <span class="pre">PATH=$PATH:$GOROOT/bin</span>
+<span class="pre">`</span></code></p>
+<p>修改`/etc/profile`后要重启生效，修改`$HOME/.profile`后使用source命令加载`$HOME/.profile`文件即可生效。 检查：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">~</span> <span class="pre">go</span> <span class="pre">version</span>
+<span class="pre">go</span> <span class="pre">version</span> <span class="pre">go1.11.5</span> <span class="pre">linux/amd64</span>
+<span class="pre">`</span></code></p>
+<p>### Mac下安装</p>
+<p>下载可执行文件版，直接点击**下一步**安装即可，默认会将go安装到`/usr/local/go`目录下。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144705.png">http://images.dregs.top/images/20191108144705.png</a>)</p>
+<p>### 检查</p>
+<p>上一步安装过程执行完毕后，可以打开终端窗口，输入`go version`命令，查看安装的Go版本。</p>
+<p>## 配置GOPATH</p>
+<p><a href="#id9"><span class="problematic" id="id10">`</span></a>GOPATH`是一个环境变量，用来表明你写的go项目的存放路径（工作目录）。</p>
+<p><a href="#id11"><span class="problematic" id="id12">`</span></a>GOPATH`路径最好只设置一个，所有的项目代码都放到`GOPATH`的`src`目录下。</p>
+<p>补充说明：Go1.11版本之后，开启`go mod`模式之后就不再强制需要配置`GOPATH`了。</p>
+<p>Linux和Mac平台就参照上面配置环境变量的方式将自己的工作目录添加到环境变量中即可。 Windows平台按下面的步骤将`D:codego`添加到环境变量：</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144738.png">http://images.dregs.top/images/20191108144738.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144749.png">http://images.dregs.top/images/20191108144749.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144759.png">http://images.dregs.top/images/20191108144759.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144811.png">http://images.dregs.top/images/20191108144811.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144823.png">http://images.dregs.top/images/20191108144823.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144833.png">http://images.dregs.top/images/20191108144833.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144844.png">http://images.dregs.top/images/20191108144844.png</a>)</p>
+<p>在 Go 1.8 版本之前，<a href="#id13"><span class="problematic" id="id14">`</span></a>GOPATH`环境变量默认是空的。从 Go 1.8 版本开始，Go 开发包在安装完成后会为 <a href="#id15"><span class="problematic" id="id16">`</span></a>GOPATH`设置一个默认目录，参见下表。</p>
+<p><strong>GOPATH在不同操作系统平台上的默认值</strong></p>
+<div class="line-block">
+<div class="line-block">
+<div class="line">平台   |   GOPATH默认值   |        举例        |</div>
+</div>
+<div class="line">:—–: | :————–: | :—————-: |</div>
+<div class="line">Windows | %USERPROFILE%/go | C:Users用户名go |</div>
+<div class="line-block">
+<div class="line">Unix   |     $HOME/go     |  /home/用户名/go   |</div>
+</div>
+</div>
+<p>同时，我们将 <a href="#id17"><span class="problematic" id="id18">`</span></a>GOROOT`下的bin目录及`GOPATH`下的bin目录都添加到环境变量中。</p>
+<p>配置环境变量之后需要重启终端（cmd、VS Code里面的终端和其他编辑器的终端）。</p>
+<p>## Go项目结构</p>
+<p>在进行Go语言开发的时候，我们的代码总是会保存在`$GOPATH/src`目录下。在工程经过`go build`、<cite>go install`或`go get`等指令后，会将下载的第三方包源代码文件放在`$GOPATH/src`目录下， 产生的二进制可执行文件放在 `$GOPATH/bin`目录下，生成的中间缓存文件会被保存在 `$GOPATH/pkg</cite> 下。</p>
+<p>如果我们使用版本管理工具（Version Control System，VCS。常用如Git）来管理我们的项目代码时，我们只需要添加`$GOPATH/src`目录的源代码即可。<cite>bin</cite> 和 <cite>pkg</cite> 目录的内容无需版本控制。</p>
+<p>### 适合个人开发者</p>
+<p>我们知道源代码都是存放在`GOPATH`的`src`目录下，那我们可以按照下图来组织我们的代码。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108144957.png">http://images.dregs.top/images/20191108144957.png</a>)</p>
+<p>### 目前流行的项目结构</p>
+<p>Go语言中也是通过包来组织代码文件，我们可以引用别人的包也可以发布自己的包，但是为了防止不同包的项目名冲突，我们通常使用`顶级域名`来作为包名的前缀，这样就不担心项目名冲突的问题了。</p>
+<p>因为不是每个个人开发者都拥有自己的顶级域名，所以目前流行的方式是使用个人的github用户名来区分不同的包。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108145019.png">http://images.dregs.top/images/20191108145019.png</a>)</p>
+<p>举个例子：张三和李四都有一个名叫`studygo`的项目，那么这两个包的路径就会是：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">&quot;github.com/zhangsan/studygo&quot;</span>
+<span class="pre">`</span></code></p>
+<p>和</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">import</span> <span class="pre">&quot;github.com/lisi/studygo&quot;</span>
+<span class="pre">`</span></code></p>
+<p>以后我们从github上下载别人包的时候，如：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">go</span> <span class="pre">get</span> <span class="pre">github.com/jmoiron/sqlx</span>
+<span class="pre">`</span></code></p>
+<p>那么，这个包会下载到我们本地`GOPATH`目录下的`src/github.com/jmoiron/sqlx`。</p>
+<p>### 适合企业开发者</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20191108145156.png">http://images.dregs.top/images/20191108145156.png</a>)</p>
+<p>## 第一个Go程序</p>
+<p>### Hello World</p>
+<p>现在我们来创建第一个Go项目——<cite>hello</cite>。在我们的`GOPATH`下的src目录中创建hello目录。</p>
+<p>在该目录中创建一个`main.go`文件：</p>
+<p><a href="#id19"><span class="problematic" id="id20">``</span></a><a href="#id21"><span class="problematic" id="id22">`</span></a>go
+package main  // 声明 main 包，表明当前是一个可执行程序</p>
+<p>import “fmt”  // 导入内置 fmt 包</p>
+<dl class="simple">
+<dt>func main(){  // main函数，是程序执行的入口</dt><dd><p>fmt.Println(“Hello World!”)  // 在终端打印 Hello World!</p>
+</dd>
+</dl>
+<div class="section" id="id23">
+<h1><span class="section-number">1. </span>}<a class="headerlink" href="#id23" title="Permalink to this headline">¶</a></h1>
+<p>### go build</p>
+<p><a href="#id24"><span class="problematic" id="id25">`</span></a>go build`表示将源代码编译成可执行文件。</p>
+<p>在hello目录下执行：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">`</span></code></p>
+<p>或者在其他目录执行以下命令：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">go</span> <span class="pre">build</span> <span class="pre">hello</span>
+<span class="pre">`</span></code></p>
+<p>go编译器会去 <a href="#id26"><span class="problematic" id="id27">`</span></a>GOPATH`的src目录下查找你要编译的`hello`项目</p>
+<p>编译得到的可执行文件会保存在执行编译命令的当前目录下，如果是windows平台会在当前目录下找到`hello.exe`可执行文件。</p>
+<p>可在终端直接执行该`hello.exe`文件：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">d:\code\go\src\hello&gt;hello.exe</span>
+<span class="pre">Hello</span> <span class="pre">World!</span>
+<span class="pre">`</span></code></p>
+<p>我们还可以使用`-o`参数来指定编译后可执行文件的名字。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">go</span> <span class="pre">build</span> <span class="pre">-o</span> <span class="pre">heiheihei.exe</span>
+<span class="pre">`</span></code></p>
+<p>### go install</p>
+<p><a href="#id28"><span class="problematic" id="id29">`</span></a>go install`表示安装的意思，它先编译源代码得到可执行文件，然后将可执行文件移动到`GOPATH`的bin目录下。因为我们的环境变量中配置了`GOPATH`下的bin目录，所以我们就可以在任意地方直接执行可执行文件了。</p>
+<p>### 跨平台编译</p>
+<p>默认我们`go build`的可执行文件都是当前操作系统可执行的文件，如果我想在windows下编译一个linux下可执行文件，那需要怎么做呢？</p>
+<p>只需要指定目标操作系统的平台和处理器架构即可：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">SET</span> <span class="pre">CGO_ENABLED=0</span>&#160; <span class="pre">//</span> <span class="pre">禁用CGO</span>
+<span class="pre">SET</span> <span class="pre">GOOS=linux</span>&#160; <span class="pre">//</span> <span class="pre">目标平台是linux</span>
+<span class="pre">SET</span> <span class="pre">GOARCH=amd64</span>&#160; <span class="pre">//</span> <span class="pre">目标处理器架构是amd64</span>
+<span class="pre">`</span></code></p>
+<p>然后再执行`go build`命令，得到的就是能够在Linux平台运行的可执行文件了。</p>
+<p>Mac 下编译 Linux 和 Windows平台 64位 可执行程序：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">CGO_ENABLED=0</span> <span class="pre">GOOS=linux</span> <span class="pre">GOARCH=amd64</span> <span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">CGO_ENABLED=0</span> <span class="pre">GOOS=windows</span> <span class="pre">GOARCH=amd64</span> <span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">`</span></code></p>
+<p>Linux 下编译 Mac 和 Windows 平台64位可执行程序：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">CGO_ENABLED=0</span> <span class="pre">GOOS=darwin</span> <span class="pre">GOARCH=amd64</span> <span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">CGO_ENABLED=0</span> <span class="pre">GOOS=windows</span> <span class="pre">GOARCH=amd64</span> <span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">`</span></code></p>
+<p>Windows下编译Mac平台64位可执行程序：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">SET</span> <span class="pre">CGO_ENABLED=0</span>
+<span class="pre">SET</span> <span class="pre">GOOS=darwin</span>
+<span class="pre">SET</span> <span class="pre">GOARCH=amd64</span>
+<span class="pre">go</span> <span class="pre">build</span>
+<span class="pre">`</span></code></p>
+<p># Go语言基础之变量和常量</p>
+<p># 标识符与关键字</p>
+<p>在编程语言中标识符就是程序员定义的具有特殊意义的词，比如变量名、常量名、函数名等等。 Go语言中标识符由字母数字和`_`(下划线）组成，并且只能以字母和`_`开头。 举几个例子：<cite>abc</cite>, <cite>_</cite>, <cite>_123</cite>, <cite>a123</cite>。</p>
+<p>## 关键字</p>
+<p>关键字是指编程语言中预先定义好的具有特殊含义的标识符。 关键字和保留字都不建议用作变量名。</p>
+<p>Go语言中有25个关键字：</p>
+<dl class="simple">
+<dt><a href="#id30"><span class="problematic" id="id31">``</span></a><a href="#id32"><span class="problematic" id="id33">`</span></a>go</dt><dd><p>break        default      func         interface    select
+case         defer        go           map          struct
+chan         else         goto         package      switch
+const        fallthrough  if           range        type
+continue     for          import       return       var</p>
+</dd>
+</dl>
+<p><a href="#id34"><span class="problematic" id="id35">``</span></a><a href="#id36"><span class="problematic" id="id37">`</span></a></p>
+<p>此外，Go语言中还有37个保留字。</p>
+<dl>
+<dt><a href="#id38"><span class="problematic" id="id39">``</span></a><a href="#id40"><span class="problematic" id="id41">`</span></a>go</dt><dd><p>Constants:    true  false  iota  nil</p>
+<blockquote>
+<div><dl class="simple">
+<dt>Types:    int  int8  int16  int32  int64</dt><dd><p>uint  uint8  uint16  uint32  uint64  uintptr
+float32  float64  complex128  complex64
+bool  byte  rune  string  error</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>Functions:   make  len  cap  new  append  copy  close  delete</dt><dd><p>complex  real  imag
+panic  recover</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id42"><span class="problematic" id="id43">``</span></a><a href="#id44"><span class="problematic" id="id45">`</span></a></p>
+<p># 变量</p>
+<p>## 变量的来历</p>
+<p>程序运行过程中的数据都是保存在内存中，我们想要在代码中操作某个数据时就需要去内存上找到这个变量，但是如果我们直接在代码中通过内存地址去操作变量的话，代码的可读性会非常差而且还容易出错，所以我们就利用变量将这个数据的内存地址保存起来，以后直接通过这个变量就能找到内存上对应的数据了。</p>
+<p>## 变量类型</p>
+<p>变量（Variable）的功能是存储数据。不同的变量保存的数据类型可能会不一样。经过半个多世纪的发展，编程语言已经基本形成了一套固定的类型，常见变量的数据类型有：整型、浮点型、布尔型等。</p>
+<p>Go语言中的每一个变量都有自己的类型，并且变量必须经过声明才能开始使用。</p>
+<p>## 变量声明</p>
+<p>Go语言中的变量需要声明后才能使用，同一作用域内不支持重复声明。 并且Go语言的变量声明后必须使用。</p>
+<p>### 标准声明</p>
+<p>Go语言的变量声明格式为：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">变量名</span> <span class="pre">变量类型</span>
+<span class="pre">`</span></code></p>
+<p>变量声明以关键字`var`开头，变量类型放在变量的后面，行尾无需分号。 举个例子：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">name</span> <span class="pre">string</span>
+<span class="pre">var</span> <span class="pre">age</span> <span class="pre">int</span>
+<span class="pre">var</span> <span class="pre">isOk</span> <span class="pre">bool</span>
+<span class="pre">`</span></code></p>
+<p>### 批量声明</p>
+<p>每声明一个变量就需要写`var`关键字会比较繁琐，go语言中还支持批量变量声明：</p>
+<p><a href="#id46"><span class="problematic" id="id47">``</span></a><a href="#id48"><span class="problematic" id="id49">`</span></a>go
+var (</p>
+<blockquote>
+<div><p>a string
+b int
+c bool
+d float32</p>
+</div></blockquote>
+</div>
+<div class="section" id="id50">
+<h1><span class="section-number">2. </span>)<a class="headerlink" href="#id50" title="Permalink to this headline">¶</a></h1>
+<p>### 变量的初始化</p>
+<p>Go语言在声明变量的时候，会自动对变量对应的内存区域进行初始化操作。每个变量会被初始化成其类型的默认值，例如： 整型和浮点型变量的默认值为`0`。 字符串变量的默认值为`空字符串`。 布尔型变量默认为`false`。 切片、函数、指针变量的默认为`nil`。</p>
+<p>当然我们也可在声明变量的时候为其指定初始值。变量初始化的标准格式如下：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">变量名</span> <span class="pre">类型</span> <span class="pre">=</span> <span class="pre">表达式</span>
+<span class="pre">`</span></code></p>
+<p>举个例子：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">name</span> <span class="pre">string</span> <span class="pre">=</span> <span class="pre">&quot;blsnt&quot;</span>
+<span class="pre">var</span> <span class="pre">age</span> <span class="pre">int</span> <span class="pre">=</span> <span class="pre">18</span>
+<span class="pre">`</span></code></p>
+<p>或者一次性初始化多个变量</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">name,</span> <span class="pre">age</span> <span class="pre">=</span> <span class="pre">&quot;blsnt&quot;,</span> <span class="pre">20</span>
+<span class="pre">`</span></code></p>
+<p>#### 类型推导</p>
+<p>有时候我们会将变量的类型省略，这个时候编译器会根据等号右边的值来推导变量的类型完成初始化。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`go</span>
+<span class="pre">var</span> <span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;blsnt&quot;</span>
+<span class="pre">var</span> <span class="pre">age</span> <span class="pre">=</span> <span class="pre">18</span>
+<span class="pre">`</span></code></p>
+<p>#### 短变量声明</p>
+<p>在函数内部，可以使用更简略的 <cite>:=</cite> 方式声明并初始化变量。</p>
+<p><a href="#id51"><span class="problematic" id="id52">``</span></a><a href="#id53"><span class="problematic" id="id54">`</span></a>go
+package main</p>
+<dl class="simple">
+<dt>import (</dt><dd><p>“fmt”</p>
+</dd>
+</dl>
+<p>)
+// 全局变量m
+var m = 100</p>
+<dl class="simple">
+<dt>func main() {</dt><dd><p>n := 10
+m := 200 // 此处声明局部变量m
+fmt.Println(m, n)</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="id55">
+<h1><span class="section-number">3. </span>}<a class="headerlink" href="#id55" title="Permalink to this headline">¶</a></h1>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="golang" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 小义同学
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
