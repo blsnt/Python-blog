@@ -5,3 +5,4 @@ Welcome to blsnt's documentation!
    :maxdepth: 2
 
    SaltStack/index
+   Docker/index
