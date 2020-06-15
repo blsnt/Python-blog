@@ -1,0 +1,4203 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title># &mdash; BLSNT BLOG 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BLSNT BLOG
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Python/Python.html">1. Python编程</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BLSNT BLOG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>#</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/template/Python笔记.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p># Python编程</p>
+<p>## 第一章 计算机基础</p>
+<p>### 1.1 硬件基础</p>
+<p>计算机基本的硬件有：CPU，内存，显卡，主板，电源，键盘，鼠标，网卡等组成，只有硬件但硬件之间无法进行交流和通信。</p>
+<p>### 1.2 操作系统</p>
+<p>操作系统用于协调和控制硬件之间进行工作，常见的操作系统有哪些</p>
+<ul class="simple">
+<li><p>windows</p></li>
+<li><p>linux
+* centos
+* redhat</p></li>
+<li><p>mac</p></li>
+</ul>
+<p>### 1.3 解释器或编译器</p>
+<p>编程语言的开发者编写的一个工具，将用户写的代码转换成010101交给操作系统去执行</p>
+<p>#### 1.3.1 解释和编译型语言</p>
+<p>解释型语言就类似于：实时翻译，代表：Python/PHP/Ruby/Perl</p>
+<p>编译型语言类似于：说完之后，整体再进行翻译，代表：C/C++/Java/Go</p>
+<p>### 1.4 软件(应用程序)</p>
+<p>软件又称为应用程序，就是我们在电脑上使用的工具，类似于：记事本/图片查看/游戏</p>
+<p>### 1.5 进制</p>
+<p>对于计算机而言无论是文件存储/网络传输输入本质都是：二进制，如：电脑上存储视频/图片/文件，都是二进制</p>
+<p>进制：</p>
+<ul class="simple">
+<li><p>二进制，计算机内部</p></li>
+<li><p>8进制</p></li>
+<li><p>10进制，人来进行使用一般情况下计算机可以获取10进制，然后再内部会自动转换成二进制并操作</p></li>
+<li><p>16进制，一般应用于表示二进制(用更短的内容表示更多的数据)</p></li>
+</ul>
+<p>## 第二章 Python入门</p>
+<p>### 2.1 环境的安装</p>
+<ul class="simple">
+<li><p>解释器：py2/py3 (环境变量)</p></li>
+<li><p>开发工具：pycharm</p></li>
+</ul>
+<p>### 2.2 编码</p>
+<p>#### 2.2.1 编码基础</p>
+<ul class="simple">
+<li><p>unicode 万国码 32位 4字节 所有的都能表示出来还有剩余</p></li>
+<li><p>ascii 8位4字节 只能表示英文字母 数字下划线</p></li>
+<li><p>utf-8 万国码的压缩版 从左到右每8位为0就舍去 汉字占3字节</p></li>
+<li><p>gbk 汉字占2字符</p></li>
+<li><p>gb2312</p></li>
+</ul>
+<p>#### 2.2.2 python编码相关</p>
+<p>对于python默认解释器编码</p>
+<ul>
+<li><p>py2默认ascii编码，在文件头部加</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#!/usr/bin/env</span> <span class="pre">python</span>
+<span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:utf-8</span> <span class="pre">-*-</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>py3默认utf-8编码</p></li>
+</ul>
+<p>&gt; 注意: 对于操作文件时，要按照：以什么编写写入，就要用什么编码打开</p>
+<p>### 2.3 变量</p>
+<p>#### 2.3.1 为什么要有变量？</p>
+<p>为某个值创建一个外号，以后再使用的时候通过此外号就可以直接调用</p>
+<p>#### 2.3.2 变量命名规范</p>
+<ul class="simple">
+<li><p>变量名只能包含：字母数字下划线</p></li>
+<li><p>数字不能开头</p></li>
+<li><p>不能是python关键字</p></li>
+<li><p>见名知意</p></li>
+</ul>
+<p>### 2.4 pycharm  自动生成头部代码</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200302221200.png">http://images.dregs.top/images/20200302221200.png</a>)</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200302221241.png">http://images.dregs.top/images/20200302221241.png</a>)</p>
+<p>### 2.4 python2和3区别</p>
+<ul class="simple">
+<li><p>py2默认解释器编码格式 ascii 修改头文件加</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">#</span> <span class="pre">-*-</span> <span class="pre">coding:utf-8</span> <span class="pre">-*-</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>py3默认解释器编码格式 utf-8</p></li>
+<li><p>py2输出 print加空格</p></li>
+<li><p>py3输出print()</p></li>
+<li><p>py2输入 raw_input()</p></li>
+<li><p>py3输入 input()</p></li>
+<li><p>字典的keys,items,values 拿到的数据类型都不一样
+* py2：拿到的都是列表
+* py3：迭代器</p></li>
+<li><p>字符串类型不同
+* py3 ：str    bytes
+* py2 ：unicode  str</p></li>
+</ul>
+<p>### 2.5 条件判断</p>
+<p>#### 2.5.1 if 判断</p>
+<p><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>python
+if 表达式:</p>
+<blockquote>
+<div><p>语句块 1</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>语句块 2</p>
+</dd>
+</dl>
+<p><a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>python
+# 让用户输入一个数字，猜：如果数字 &gt; 50，则输出：大了，如果数字&lt;=50 ,则输出：小了
+num = input(“请输入数字”)
+number = int(num)
+if number &gt; 50:</p>
+<blockquote>
+<div><p>print(“大了”)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(“小了”)</p>
+</dd>
+</dl>
+<p># 用户名密码登录
+username = input(“请输入用户名：”)
+password = input(“请输入密码：”)</p>
+<dl class="simple">
+<dt>if username == ‘alex’ and password == 123:</dt><dd><p>print(“登录成功”)</p>
+</dd>
+<dt>else:</dt><dd><p>print(“用户名或者密码错误”)</p>
+</dd>
+</dl>
+<p><a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>### 2.6 循环</p>
+<p>#### 2.6.1 while 循环</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>python
+while True:</p>
+<blockquote>
+<div><p>print(“人生苦短，我用python”)</p>
+</div></blockquote>
+<p><a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<p>break</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>python
+while True:</p>
+<blockquote>
+<div><p>print(“人生苦短，我用python”)
+break</p>
+</div></blockquote>
+<p><a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<p>continue</p>
+<p>打印1234568910</p>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>python
+count = 1
+while count &lt;= 10:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if count == 7:</dt><dd><p>count += 1
+continue</p>
+</dd>
+</dl>
+<p>print(count)
+count += 1</p>
+</div></blockquote>
+<p><a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p>while else</p>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>python
+count = 1
+while count &lt; 10:</p>
+<blockquote>
+<div><p>print(count)
+count += 1</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else: # 不在满足while候的条件时触发，或者条件等于False</dt><dd><p>print(“else代码块”)</p>
+</dd>
+</dl>
+<p>print(“结束”)
+<a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+<p>#### 2.6.2 for 循环</p>
+<p><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>python
+name = ‘alex’
+for i in name:</p>
+<blockquote>
+<div><p>print(i)</p>
+</div></blockquote>
+<p><a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+<p>break</p>
+<p><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>python
+name = ‘alex’
+for i in name:</p>
+<blockquote>
+<div><p>print(i)
+break
+print(‘123’)</p>
+</div></blockquote>
+<p><a href="#id61"><span class="problematic" id="id62">``</span></a><a href="#id63"><span class="problematic" id="id64">`</span></a></p>
+<p>continue</p>
+<p><a href="#id65"><span class="problematic" id="id66">``</span></a><a href="#id67"><span class="problematic" id="id68">`</span></a>python
+name = ‘alex’
+for i in name:</p>
+<blockquote>
+<div><p>print(i)
+continue
+print(‘123’)</p>
+</div></blockquote>
+<p><a href="#id69"><span class="problematic" id="id70">``</span></a><a href="#id71"><span class="problematic" id="id72">`</span></a></p>
+<p>range</p>
+<p><a href="#id73"><span class="problematic" id="id74">``</span></a><a href="#id75"><span class="problematic" id="id76">`</span></a>python
+for i in range(1,11):</p>
+<blockquote>
+<div><p>print(i)</p>
+</div></blockquote>
+<p># 打印1234568910
+for i in range(1,11):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if i != 7:</dt><dd><p>print(i)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id77"><span class="problematic" id="id78">``</span></a><a href="#id79"><span class="problematic" id="id80">`</span></a></p>
+<p>### 2.7 注释</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">当行注释</span>
+<span class="pre">&quot;&quot;&quot;&quot;&quot;&quot;</span> <span class="pre">#</span> <span class="pre">多行注释</span>
+<span class="pre">#</span> <span class="pre">快捷键</span> <span class="pre">ctrl</span> <span class="pre">+</span> <span class="pre">/</span> <span class="pre">选中多行注释</span>
+<span class="pre">`</span></code></p>
+<p>### 2.8 字符串格式化</p>
+<p><a href="#id81"><span class="problematic" id="id82">``</span></a><a href="#id83"><span class="problematic" id="id84">`</span></a>python
+msg = “我是%s,年龄%s” %(‘alex’,19,)
+print(msg)</p>
+<p>msg = “我是%(n1)s,年龄%(n2)s” % {‘n1’: ‘alex’, ‘n2’: 123, }
+print(msg)
+<a href="#id85"><span class="problematic" id="id86">``</span></a><a href="#id87"><span class="problematic" id="id88">`</span></a></p>
+<p><a href="#id89"><span class="problematic" id="id90">``</span></a><a href="#id91"><span class="problematic" id="id92">`</span></a>python
+# v1 = “我是{0},年龄{1}”.format(‘alex’,19)
+v1 = “我是{0},年龄{1}”.format(<a href="#id93"><span class="problematic" id="id94">*</span></a>(‘alex’,19,))
+print(v1)</p>
+<p># v2 = “我是{name},年龄{age}”.format(name=’alex’,age=18)
+v2 = “我是{name},年龄{age}”.format(<a href="#id95"><span class="problematic" id="id96">**</span></a>{‘name’:’alex’,’age’:18})
+print(v2)
+<a href="#id97"><span class="problematic" id="id98">``</span></a><a href="#id99"><span class="problematic" id="id100">`</span></a></p>
+<p>## 第三章 数据类型</p>
+<p>### 3.1 整形(int)</p>
+<p>#### 3.1.1 整形的长度</p>
+<p>py2中有：int、long</p>
+<p>py3中有：int</p>
+<p>#### 3.1.2 整除</p>
+<p>注意：在python2中使用除法时，只能保留整数位，如果想要保留小数位，可以先导入一个模块。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">from</span> <span class="pre">__future__</span> <span class="pre">import</span> <span class="pre">division</span>
+<span class="pre">value</span> <span class="pre">=</span> <span class="pre">3/2</span>
+<span class="pre">print(value)</span>
+<span class="pre">`</span></code></p>
+<p>### 3.2 布尔(bool)</p>
+<p>布尔值就是用于表示真假，True和False</p>
+<p>转换：</p>
+<ul class="simple">
+<li><p>数字转布尔：0是False，其他都是True</p></li>
+<li><p>字符串转布尔：””是False，其他都是True</p></li>
+</ul>
+<p>### 3.3 字符串(str)</p>
+<p>字符串是写代码中最常见的，python内存中的字符串是按照:unicode编码存储，对于字符串是不可变</p>
+<p>#### 3.3.1 字符串的私有方法</p>
+<ul>
+<li><p>upper() / lower() 大小写</p></li>
+<li><p>isupper() 是否全部是大写</p></li>
+<li><p>isdigit() 是否是数字</p></li>
+<li><p>isnumeric() 推荐使用，判断是否是10进制的数</p></li>
+<li><p>strip() /lstrip()/rstrip()  ，去空白、t、n</p></li>
+<li><p>replace(‘被替换的字符’,’要替换的内容’,可选次数)</p></li>
+<li><p>split(‘根据什么东西分割’,’分割次数’) / rsplit() 从右切割</p></li>
+<li><p>startswith() 以什么开头</p></li>
+<li><p>endswith() 以什么结尾</p></li>
+<li><p>capitalize() 首字母变大写</p></li>
+<li><p>find 找索引位置</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">'alex'</span>
+<span class="pre">index</span> <span class="pre">=</span> <span class="pre">v.find('e')</span> <span class="pre">#</span> <span class="pre">存在则返回索引位置，不存在则返回-1</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>center 居中</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">'alex'</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">v.center(20,'*')</span>
+<span class="pre">print(v1)</span>&#160; <span class="pre">#</span> <span class="pre">********alex********</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>count 计算个数</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">'alex'</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">v.count('a')</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>format 格式化</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">&quot;我叫:{0},年龄:{1}&quot;.format('老男孩',74)</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>encode 编码</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">'杨世义'</span> <span class="pre">#</span> <span class="pre">解释器读取到内存后，按照unicode编码存储，8个字节</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">name.encode('utf-8')</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>join 拼接</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">'alex'</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">&quot;_&quot;.join(name)</span> <span class="pre">#</span> <span class="pre">a_l_e_x</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+<p>### 3.4 列表</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">['blsnt','alex',99]</span>
+<span class="pre">`</span></code></p>
+<ul>
+<li><p>append 追加</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">[]</span>
+<span class="pre">name.append('name')</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>insert 插入指定位置</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5]</span>
+<span class="pre">name.insert(0,9)</span>
+<span class="pre">print(name)</span>
+<span class="pre">[9,</span> <span class="pre">1,</span> <span class="pre">2,</span> <span class="pre">3,</span> <span class="pre">4,</span> <span class="pre">5]</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>remove 删除</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5]</span>
+<span class="pre">name.remove(1)</span> <span class="pre">#</span> <span class="pre">1是元素名字</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>pop</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5]</span>
+<span class="pre">name.pop(1)</span> <span class="pre">#</span> <span class="pre">1是索引位置，不加索引默认删除最后一个</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>del</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">del</span> <span class="pre">name[1]</span> <span class="pre">#</span> <span class="pre">1是索引</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>修改(字符串/数字/布尔除外)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">['李烧起','李思','王五']</span>
+<span class="pre">user[2]</span> <span class="pre">=</span> <span class="pre">66</span>
+<span class="pre">user[0]</span> <span class="pre">=</span> <span class="pre">'李杰'</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>列表嵌套</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">['alex',0,True,[11,22,33],[1,['alex','oldboy'],2,3]]</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>extend</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">name</span> <span class="pre">=</span> <span class="pre">['alex',123,12]</span>
+<span class="pre">s</span> <span class="pre">=</span> <span class="pre">'qwert'</span>
+<span class="pre">li.extend(s)</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>reverse</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5]</span>
+<span class="pre">v1.reverse()</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>sort</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5]</span>
+<span class="pre">v1.sort(reverse=False)</span> <span class="pre">#</span> <span class="pre">从小到大（默认False）</span>
+<span class="pre">v1.sort(reverse=True)</span>&#160; <span class="pre">#</span> <span class="pre">从大到小</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+<p>反转案例</p>
+<p><a href="#id101"><span class="problematic" id="id102">``</span></a><a href="#id103"><span class="problematic" id="id104">`</span></a>python
+name = ‘xadgasdgsdg’
+name_len = len(name) - 1
+value = “”
+for index in range(name_len,-1,-1):</p>
+<blockquote>
+<div><p>value += name[index]</p>
+</div></blockquote>
+<p>print(value)
+<a href="#id105"><span class="problematic" id="id106">``</span></a><a href="#id107"><span class="problematic" id="id108">`</span></a></p>
+<p>&gt;注意：删除功能数字布尔字符串除外</p>
+<p>&gt; 字符串本身不能修改或删除【不可变类型】</p>
+<p>&gt; 列表是可变类型</p>
+<p>### 3.5 元祖</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">元祖格式</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">(11,22,33,44)</span>
+<span class="pre">`</span></code></p>
+<p>公共功能</p>
+<p>1.索引（排除：int/bool）</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">(11,22,33,44)</span>
+<span class="pre">user[0]</span>
+<span class="pre">`</span></code></p>
+<p>2.切片（排除：int/bool）</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">(11,22,33,44)</span>
+<span class="pre">user[0:2]</span>
+<span class="pre">`</span></code></p>
+<p>3.步长（排除：int/bool）</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">(11,22,33,44)</span>
+<span class="pre">user[0:2:2]</span>
+<span class="pre">`</span></code></p>
+<p>4.删除（排除：tuple/str/int/bool）</p>
+<p>5.修改（排除：tuple/str/int/bool）</p>
+<p>6.for循环（排除：int/bool）</p>
+<p><a href="#id109"><span class="problematic" id="id110">``</span></a><a href="#id111"><span class="problematic" id="id112">`</span></a>python
+users = (11,22,33,44)
+for i in users:</p>
+<blockquote>
+<div><p>print(i)</p>
+</div></blockquote>
+<p><a href="#id113"><span class="problematic" id="id114">``</span></a><a href="#id115"><span class="problematic" id="id116">`</span></a></p>
+<p>7.len（排除：int/bool）</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">users</span> <span class="pre">=</span> <span class="pre">(11,22,33,44)</span>
+<span class="pre">print(len(users))</span>
+<span class="pre">`</span></code></p>
+<p>独有功能(无)</p>
+<p>### 3.6 字典</p>
+<p>帮助用户去表示一个事物的信息(事物是有多个属性)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">info</span> <span class="pre">=</span> <span class="pre">{&quot;name&quot;:&quot;伟大&quot;,&quot;age&quot;:18,&quot;gender&quot;:&quot;男&quot;}</span>
+<span class="pre">info['name']</span> <span class="pre">#</span> <span class="pre">取值</span>
+<span class="pre">`</span></code></p>
+<p>字典的独有功能</p>
+<ul class="simple">
+<li><p>keys</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">info</span> <span class="pre">=</span> <span class="pre">{&quot;name&quot;:&quot;伟大&quot;,&quot;age&quot;:18,&quot;gender&quot;:&quot;男&quot;}</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">info.keys()</span> <span class="pre">#</span> <span class="pre">获取字典中的所有键</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>values</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">info</span> <span class="pre">=</span> <span class="pre">{&quot;name&quot;:&quot;伟大&quot;,&quot;age&quot;:18,&quot;gender&quot;:&quot;男&quot;}</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">info.values()</span> <span class="pre">#</span> <span class="pre">获取字典中的所有值</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>items</p></li>
+</ul>
+<p><a href="#id117"><span class="problematic" id="id118">``</span></a><a href="#id119"><span class="problematic" id="id120">`</span></a>python
+info = {“name”:”伟大”,”age”:18,”gender”:”男”}
+v1 = info.items() # 获取字典中的所有键值
+for v1,v2 in info.items():</p>
+<blockquote>
+<div><p>print(v1,v2)</p>
+</div></blockquote>
+<p><a href="#id121"><span class="problematic" id="id122">``</span></a><a href="#id123"><span class="problematic" id="id124">`</span></a></p>
+<ul class="simple">
+<li><p>get</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">{'user':'blsnt','k2':'v2'}</span>
+<span class="pre">print(v.get('k2'，666))</span>&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160; <span class="pre">#</span> <span class="pre">key存在返回值，如果不存在None，后面可以修改默认返回666</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>pop</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">{'user':'blsnt','k2':'v2'}</span>
+<span class="pre">result</span> <span class="pre">=</span> <span class="pre">v.pop('user')</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>update</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">{'user':'blsnt','k2':'v2'}</span>
+<span class="pre">v.update({'k3':'v3','k4':'v4'})</span> <span class="pre">#</span> <span class="pre">存在就覆盖，不存在就添加</span>
+<span class="pre">`</span></code></p>
+<p>判断一个字符串中是否有敏感字符？</p>
+<ul>
+<li><p>str</p>
+<p><a href="#id125"><span class="problematic" id="id126">``</span></a><a href="#id127"><span class="problematic" id="id128">`</span></a>python
+v = “Python全栈21期”</p>
+<dl class="simple">
+<dt>if “全栈” in v:</dt><dd><p>print(‘含敏感字符’)</p>
+</dd>
+</dl>
+<p><a href="#id129"><span class="problematic" id="id130">``</span></a><a href="#id131"><span class="problematic" id="id132">`</span></a></p>
+</li>
+<li><p>list/tuple</p>
+<p><a href="#id133"><span class="problematic" id="id134">``</span></a><a href="#id135"><span class="problematic" id="id136">`</span></a>python
+v = [‘alex’,’oldboy’,’藏老四’,’利奇航’]</p>
+<dl class="simple">
+<dt>if “利奇航” in v:</dt><dd><p>print(‘含敏感’)</p>
+</dd>
+</dl>
+<p><a href="#id137"><span class="problematic" id="id138">``</span></a><a href="#id139"><span class="problematic" id="id140">`</span></a></p>
+</li>
+<li><p>dict</p>
+<p><a href="#id141"><span class="problematic" id="id142">``</span></a><a href="#id143"><span class="problematic" id="id144">`</span></a>python
+v = {‘k1’:’v1’,’k2’:’v2’,’k3’:’v3’}</p>
+<p># 默认按照键判断，即：判断x是否是字典的键。
+if ‘x’ in v:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># 请判断：k1 是否在其中？
+if ‘k1’ in v:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># 请判断：v2 是否在其中？
+# 方式一：循环判断
+flag = ‘不存在’
+for v in v.values():</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if v == ‘v2’:</dt><dd><p>flag = ‘存在’</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>print(flag)
+# 方式二：
+if ‘v2’ in list(v.values()): # 强制转换成列表 [‘v1’,’v2’,’v3’]</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># 请判断：k2:v2 是否在其中？
+value = v.get(‘k2’)
+if value == ‘v2’:</p>
+<blockquote>
+<div><p>print(‘存在’)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(‘不存在’)</p>
+</dd>
+</dl>
+<p><a href="#id145"><span class="problematic" id="id146">``</span></a><a href="#id147"><span class="problematic" id="id148">`</span></a></p>
+</li>
+<li><p>练习题</p>
+<p><a href="#id149"><span class="problematic" id="id150">``</span></a><a href="#id151"><span class="problematic" id="id152">`</span></a>python
+# 让用户输入任意字符串，然后判断此字符串是否包含指定的敏感字符。</p>
+<p>char_list = [‘利奇航’,’堂有光’,’炸展会’]
+content = input(‘请输入内容：’) # 我叫利奇航  / 我是堂有光  / 我要炸展会</p>
+<p>success = True</p>
+<dl class="simple">
+<dt>for v in char_list:</dt><dd><dl class="simple">
+<dt>if v in content:</dt><dd><p>success = False
+break</p>
+</dd>
+</dl>
+</dd>
+<dt>if success:</dt><dd><p>print(content)</p>
+</dd>
+<dt>else:</dt><dd><p>print(‘包含铭感字符’)</p>
+</dd>
+</dl>
+<p># 示例：
+# 1. 昨天课上最后一题
+# 2. 判断 ‘v2’ 是否在字典的value中 v = {‘k1’:’v1’,’k2’:’v2’,’k3’:’v3’} 【循环判断】
+# 3. 敏感字
+<a href="#id153"><span class="problematic" id="id154">``</span></a><a href="#id155"><span class="problematic" id="id156">`</span></a></p>
+</li>
+</ul>
+<p>### 3.7 集合</p>
+<p><a href="#id157"><span class="problematic" id="id158">``</span></a><a href="#id159"><span class="problematic" id="id160">`</span></a>python
+v = {1,2,3,4,5,6}</p>
+<p># 空集合
+v1 = set()
+<a href="#id161"><span class="problematic" id="id162">``</span></a><a href="#id163"><span class="problematic" id="id164">`</span></a></p>
+<p>独有功能</p>
+<p><a href="#id165"><span class="problematic" id="id166">``</span></a><a href="#id167"><span class="problematic" id="id168">`</span></a>python
+# 添加
+v1 = {1,2}
+v.add(‘blsnt’)</p>
+<p># 删除
+v1 = {1,2,’blsnt’}
+v1.discard(‘blsnt’) # 无序，不能使用索引删除，不存在不会报错</p>
+<p># 批量添加
+v1 = {1,2,’blsnt’}
+v1.update({11,22,33})</p>
+<p># 交集
+v1 = {1,2,’blsnt’}
+restult = v1.intersection({1,’blsnt’})  # 会重新生成值，也可以是列表[1,’blsnt’]
+print(restult)</p>
+<p># 并集
+v1 = {1,2,’blsnt’}
+restult = v1.union({1,3,’blsnt’})
+print(restult)</p>
+<p># 差集
+v1 = {1,2,’blsnt’}
+restult = v1.difference({1,3,’blsnt’}) # v1里面有的，这里面没有的
+print(restult)
+<a href="#id169"><span class="problematic" id="id170">``</span></a><a href="#id171"><span class="problematic" id="id172">`</span></a></p>
+<p>公共功能</p>
+<ul>
+<li><p>len</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">{1,2,'李邵奇'}</span>
+<span class="pre">print(len(v))</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>for循环</p>
+<p><a href="#id173"><span class="problematic" id="id174">``</span></a>`
+v = {1,2,’李邵奇’}
+for item in v:</p>
+<blockquote>
+<div><p>print(item)</p>
+</div></blockquote>
+<p><a href="#id175"><span class="problematic" id="id176">``</span></a><a href="#id177"><span class="problematic" id="id178">`</span></a></p>
+</li>
+<li><p>索引【无】</p></li>
+<li><p>步长【无】</p></li>
+<li><p>切片【无】</p></li>
+<li><p>删除【无】</p></li>
+<li><p>修改【无】</p></li>
+</ul>
+<p>元祖嵌套</p>
+<p><a href="#id179"><span class="problematic" id="id180">``</span></a><a href="#id181"><span class="problematic" id="id182">`</span></a>python
+# 1.列表/字典/集合 -&gt; 不能放在集合中+不能作为字典的key</p>
+<p># 特殊情况
+info = {0, 2, 3, 4, False, “国风”, None, (1, 2, 3)}
+print(info) # {0, 2, 3, 4, ‘国风’, None, (1, 2, 3)}</p>
+<dl class="simple">
+<dt>info = {</dt><dd><p>1:’alex’,
+True:’oldboy’</p>
+</dd>
+</dl>
+<p>}
+print(info) # {1: ‘oldboy’}
+<a href="#id183"><span class="problematic" id="id184">``</span></a><a href="#id185"><span class="problematic" id="id186">`</span></a></p>
+<p>### 3.8 内存相关(小数据池)</p>
+<p><a href="#id187"><span class="problematic" id="id188">``</span></a><a href="#id189"><span class="problematic" id="id190">`</span></a>python
+v1 = [11,22,33]
+v2 = [11,22,33]</p>
+<p>v1 = 666
+v2 = 666</p>
+<p># 按理 v1 和 v2 应该是不同的内存地址。特殊：
+1. 整型：  -5 ~ 256
+2. 字符串：”alex”,’asfasd asdf asdf d_asdf ‘       —-“f_*” * 3  - 重新开辟内存。
+<a href="#id191"><span class="problematic" id="id192">``</span></a><a href="#id193"><span class="problematic" id="id194">`</span></a></p>
+<p><a href="#id195"><span class="problematic" id="id196">``</span></a><a href="#id197"><span class="problematic" id="id198">`</span></a>python
+v1 = [11,22,33]
+v2 = v1</p>
+<p># 练习1 (内部修改)
+v1 = [11,22,33]
+v2 = v1
+v1.append(666)
+print(v2) # 含 666</p>
+<p># 练习2：（赋值）
+v1 = [11,22,33]
+v2 = v1
+v1 = [1,2,3,4]
+print(v2)</p>
+<p># 练习3：(重新赋值)
+v1 = ‘alex’
+v2 = v1
+v1 = ‘oldboy’
+print(v2)
+<a href="#id199"><span class="problematic" id="id200">``</span></a><a href="#id201"><span class="problematic" id="id202">`</span></a></p>
+<p>### 3.9 ==和is区别？</p>
+<ul class="simple">
+<li><p>== 用于比较值是否相等</p></li>
+<li><p>is用于比较内存地址是否相等</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">[1,2,3,4]</span>
+<span class="pre">v2</span> <span class="pre">=</span> <span class="pre">[1,2,3,4]</span>
+<span class="pre">print(v1</span> <span class="pre">==</span> <span class="pre">v2)</span>&#160; <span class="pre">#</span> <span class="pre">True</span>
+<span class="pre">print(v1</span> <span class="pre">is</span> <span class="pre">v2)</span>&#160; <span class="pre">#</span> <span class="pre">False</span>
+<span class="pre">`</span></code></p>
+<p>### 3.10 运算符</p>
+<p>#### 3.10.1 算数运算</p>
+<p>以下假设变量：a=10，b=20</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200220182511.png">http://images.dregs.top/images/20200220182511.png</a>)</p>
+<p><a href="#id203"><span class="problematic" id="id204">``</span></a><a href="#id205"><span class="problematic" id="id206">`</span></a>python
+1-100 之间所有的数相加
+total = 0
+count = 1
+while count &lt;= 100:</p>
+<blockquote>
+<div><p>total = total + count
+count = count + 1</p>
+</div></blockquote>
+<p>print(total)
+<a href="#id207"><span class="problematic" id="id208">``</span></a><a href="#id209"><span class="problematic" id="id210">`</span></a></p>
+<p>#### 3.10.2 比较运算</p>
+<p>以下假设变量：a=10，b=20</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200220182630.png">http://images.dregs.top/images/20200220182630.png</a>)</p>
+<p>#### 3.10.3 赋值运算</p>
+<p>以下假设变量：a=10，b=20</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200220183529.png">http://images.dregs.top/images/20200220183529.png</a>)</p>
+<p>#### 3.10.4 逻辑运算</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200220185115.png">http://images.dregs.top/images/20200220185115.png</a>)</p>
+<p>针对逻辑运算的进一步研究：</p>
+<p>在没有()的情况下not 优先级高于 and，and优先级高于or，即优先级关系为( )&gt;not&gt;and&gt;or，同一优先级从左往右计算。</p>
+<p>例题：</p>
+<p>判断下列逻辑语句的True，False。</p>
+<p>x or y , x为真，值就是x，x为假，值是y；</p>
+<p>x and y, x为真，值是y,x为假，值是x。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">3&gt;4</span> <span class="pre">or</span> <span class="pre">4&lt;3</span> <span class="pre">and</span> <span class="pre">1==1</span>
+<span class="pre">1</span> <span class="pre">&lt;</span> <span class="pre">2</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">4</span> <span class="pre">or</span> <span class="pre">1&gt;2</span>
+<span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">1</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">4</span> <span class="pre">or</span> <span class="pre">4</span> <span class="pre">&gt;</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">2</span> <span class="pre">&lt;</span> <span class="pre">1</span>
+<span class="pre">not</span> <span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">1</span> <span class="pre">and</span> <span class="pre">3</span> <span class="pre">&lt;</span> <span class="pre">4</span> <span class="pre">or</span> <span class="pre">4</span> <span class="pre">&gt;</span> <span class="pre">5</span> <span class="pre">and</span> <span class="pre">2</span> <span class="pre">&gt;</span> <span class="pre">1</span> <span class="pre">and</span> <span class="pre">9</span> <span class="pre">&gt;</span> <span class="pre">8</span> <span class="pre">or</span> <span class="pre">7</span> <span class="pre">&lt;</span> <span class="pre">6</span>
+<span class="pre">`</span></code></p>
+<p><a href="#id211"><span class="problematic" id="id212">``</span></a><a href="#id213"><span class="problematic" id="id214">`</span></a>python
+&lt; or &gt;
+v1 = 0 or 1 # 1
+v2 = 8 or 10 # 8
+v3 = 0 or 9 or 8 # 9
+第一个值如果是转换成布尔值如果是真，则value=第一值
+第一个值如果是转换成布尔值如果是假，则value=第二值
+如果有多个or条件，则从左到右依次进行比较</p>
+<p>&lt; and &gt;
+v1 = 1 and 9 # 9
+v2 = 1 and 0 # 0
+v3 = 0 and 7 # 0
+v4 = 0 and “” # 0
+v5 = 1 and 0 and 9 # 0
+如果第一个值转换成布尔值是True，则value=第二个值
+如果第一个值转换成布尔值是False，则value=第一个值
+多个and条件，则从左到右依次进行比较</p>
+<p>&lt; 综合 &gt;
+v1 = 1 and 9 or 0 and  6 # 9
+<a href="#id215"><span class="problematic" id="id216">``</span></a><a href="#id217"><span class="problematic" id="id218">`</span></a></p>
+<p>### 3.11 in &amp; not in</p>
+<ul class="simple">
+<li><p>in</p></li>
+</ul>
+<p><a href="#id219"><span class="problematic" id="id220">``</span></a><a href="#id221"><span class="problematic" id="id222">`</span></a>python
+value = “我是中国人”
+v1 = “中国” in value  # 判断中国是否在value所代指的字符串中，得到布尔类型</p>
+<p># 示列
+content = input(“请输入内容：”)
+if ‘退钱’ in content:</p>
+<blockquote>
+<div><p>print(“包含敏感字符”)</p>
+</div></blockquote>
+<p><a href="#id223"><span class="problematic" id="id224">``</span></a><a href="#id225"><span class="problematic" id="id226">`</span></a></p>
+<ul class="simple">
+<li><p>not in</p></li>
+</ul>
+<p>练习题</p>
+<p><a href="#id227"><span class="problematic" id="id228">``</span></a><a href="#id229"><span class="problematic" id="id230">`</span></a>python
+# 三次登录失败就退出
+count = 1
+while count &lt;= 3:</p>
+<blockquote>
+<div><p>print(count)
+user = input(“请输入用户名：”)
+pwd = input(“请输入密码：”)</p>
+<dl class="simple">
+<dt>if user == ‘blsnt’ and pwd == ‘blsnt’:</dt><dd><p>print(“登录成功”)
+break</p>
+</dd>
+<dt>else:</dt><dd><p>print(“登录失败”)</p>
+</dd>
+</dl>
+<p>if count ==3:break
+count += 1</p>
+</div></blockquote>
+<p># 需求：允许用户最多尝试三次登录，没尝试三次过后，如果还没输入正确，就问用户是否还想继续玩，如果回答Y，就继续让其猜3次，以此往复
+count = 1
+while count &lt;= 3:</p>
+<blockquote>
+<div><p>print(count)
+user = input(“请输入用户名：”)
+pwd = input(“请输入密码：”)</p>
+<dl>
+<dt>if user == ‘blsnt’ and pwd == ‘blsnt’:</dt><dd><p>print(“登录成功”)
+break</p>
+</dd>
+<dt>else:</dt><dd><p>print(“登录失败”)</p>
+</dd>
+<dt>if count ==3:</dt><dd><p>choice = input(“请输入是否继续(Y/N):”)
+if choice == ‘N’:</p>
+<blockquote>
+<div><p>break</p>
+</div></blockquote>
+<dl class="simple">
+<dt>elif choice == ‘Y’:</dt><dd><p>count = 1
+continue</p>
+</dd>
+<dt>else:</dt><dd><p>print(“输入错误”)
+break</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>count += 1</p>
+</div></blockquote>
+<p># 三次登录，并打印剩余登录次数
+count = 2
+while count &gt;= 0:</p>
+<blockquote>
+<div><blockquote>
+<div><p>user = input(“请输入用户名：”)</p>
+</div></blockquote>
+<p>pwd = input(“请输入密码：”)
+if user == ‘alex’  and pwd == ‘alex’:</p>
+<blockquote>
+<div><p>print(“登录成功”)
+break</p>
+</div></blockquote>
+<p>template = “用户名或密码输入错误，剩余%s次机会” %(count,)
+print(template)
+count -= 1</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>print(“三次机会用完”)</p>
+</dd>
+</dl>
+<p><a href="#id231"><span class="problematic" id="id232">``</span></a><a href="#id233"><span class="problematic" id="id234">`</span></a></p>
+<p>### 3.12 深浅拷贝</p>
+<p><a href="#id235"><span class="problematic" id="id236">``</span></a><a href="#id237"><span class="problematic" id="id238">`</span></a>python
+# 浅拷贝
+# 应该每次都会拷贝一会(但由于小数据池,未拷贝)
+v1 = ‘alex’
+import copy
+v2 = copy.copy(v1)
+print(id(v1),id(v2))</p>
+<p>v1 = [1,2,3,4,[11,22,33]]
+v2 = copy.copy(v1)
+print(id(v1),id(v2))
+print(id(v1[4]),id(v2[4]))</p>
+<p># 深拷贝，有嵌套的时候才有意义
+import copy
+v1 = [1,2,3,4,[11,22,33]]
+v2 = copy.deepcopy(v1)
+print(id(v1),id(v2))
+print(id(v1[4]),id(v2[4]))
+<a href="#id239"><span class="problematic" id="id240">``</span></a><a href="#id241"><span class="problematic" id="id242">`</span></a></p>
+<p>练习</p>
+<p><a href="#id243"><span class="problematic" id="id244">``</span></a><a href="#id245"><span class="problematic" id="id246">`</span></a>python
+# 浅拷贝
+import copy</p>
+<p>v1 = [1,2,3]</p>
+<p>v2 = copy.copy(v1)
+print(v1 == v2) # True
+print(v1 is v2) # False
+print(v1[0] is v2[0])  # True</p>
+<p># 深拷贝
+import copy</p>
+<p>v1 = [1,2,3]</p>
+<p>v2 = copy.deepcopy(v1)
+print(v1 == v2) # True
+print(v1 is v2) # False
+print(v1[0] is v2[0])  # True ,因为都是不可变数据类型，如果没有小数据池就会是False</p>
+<p># 案例
+import copy</p>
+<p>v1 = [1,2,3,{‘k1’:123}]
+v2 = copy.deepcopy(v1)
+print(v1 == v2) # True
+print(v1 is v2) # False
+print(v1[3] is v2[3])  # False</p>
+<p># 特殊情况
+v1 = (1,2,3,4)  # 如果元祖是不可变类型，深浅拷贝都是一样的内存地址。里面如果有可变类型，内存地址会不一样</p>
+<p>import copy
+v2 = copy.copy(v1)
+print(id(v1),id(v2))
+v3 = copy.deepcopy(v1)
+print(id(v1),id(v3))
+<a href="#id247"><span class="problematic" id="id248">``</span></a><a href="#id249"><span class="problematic" id="id250">`</span></a></p>
+<p>&gt; 注意：浅拷贝只拷贝第一层，深拷贝只拷贝层次里面的所有可变类型</p>
+<p>## 第四章 文件操作</p>
+<p>### 4.1 文件基本操作</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">obj</span> <span class="pre">=</span> <span class="pre">open('路径',mode='模式',encoding='编码')</span>
+<span class="pre">obj.write()</span>
+<span class="pre">obj.read()</span>
+<span class="pre">obj.close()</span>
+<span class="pre">`</span></code></p>
+<p>### 4.2 打开模式</p>
+<ul class="simple">
+<li><p>r / w / a</p></li>
+<li><p>r+ / w+ /a+</p></li>
+<li><p>rb / wb /ab</p></li>
+<li><p>r+b / w+b / a+b</p></li>
+</ul>
+<p>### 4.3 操作</p>
+<ul>
+<li><p>read(),全部读到内存</p></li>
+<li><p>read(1)</p>
+<ul>
+<li><p>1表示一个字符</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">obj</span> <span class="pre">=</span> <span class="pre">open('a.txt',mode='r',encoding='utf-8')</span>
+<span class="pre">data</span> <span class="pre">=</span> <span class="pre">obj.read(1)</span> <span class="pre">#</span> <span class="pre">1个字符</span>
+<span class="pre">obj.close()</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>1表示一个字节</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">obj</span> <span class="pre">=</span> <span class="pre">open('a.txt',mode='rb')</span>
+<span class="pre">data</span> <span class="pre">=</span> <span class="pre">obj.read(1)</span> <span class="pre">#</span> <span class="pre">1个字节</span>
+<span class="pre">obj.close()</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+</li>
+<li><p>write(字符串)</p></li>
+<li><p>seek() ,无论模式是否带b，都是按照字节处理</p></li>
+<li><p>tell(),获取光标当前所在字节位置</p></li>
+<li><p>flush()，刷新到磁盘</p>
+<p><a href="#id251"><span class="problematic" id="id252">``</span></a><a href="#id253"><span class="problematic" id="id254">`</span></a>python
+v = open(‘a.txt’,’w’,encoding=’utf-8’)
+while True:</p>
+<blockquote>
+<div><p>val = input(‘请输入：’)
+v.write(val)
+v.flush() # 强制刷到硬盘上</p>
+</div></blockquote>
+<p>v.close()  # 数据会一直写在内存中
+<a href="#id255"><span class="problematic" id="id256">``</span></a><a href="#id257"><span class="problematic" id="id258">`</span></a></p>
+</li>
+</ul>
+<p>### 4.4 关闭文件</p>
+<p>文艺青年</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">open('a.txt','w',encoding='utf-8')</span>
+<span class="pre">v.close()</span>
+<span class="pre">`</span></code></p>
+<p>二逼</p>
+<p><a href="#id259"><span class="problematic" id="id260">``</span></a><a href="#id261"><span class="problematic" id="id262">`</span></a>python
+with open(‘a.txt’,’w’,encoding=’utf-8’) as f:</p>
+<blockquote>
+<div><blockquote>
+<div><p>data = v.read()</p>
+</div></blockquote>
+<p># 缩进中的代码执行完毕后，自动关闭文件</p>
+</div></blockquote>
+<p><a href="#id263"><span class="problematic" id="id264">``</span></a><a href="#id265"><span class="problematic" id="id266">`</span></a></p>
+<p>### 4.5 文件修改</p>
+<p><a href="#id267"><span class="problematic" id="id268">``</span></a><a href="#id269"><span class="problematic" id="id270">`</span></a>python
+with open(‘a.txt’,mode=’r’,encoding=’utf-8’) as f1:</p>
+<blockquote>
+<div><p>data = f1.read()</p>
+</div></blockquote>
+<p>new_data = data.replace(‘飞洒’,’666’)</p>
+<dl class="simple">
+<dt>with open(‘a.txt’,mode=’w’,encoding=’utf-8’) as f1:</dt><dd><p>data = f1.write(new_data)</p>
+</dd>
+</dl>
+<p><a href="#id271"><span class="problematic" id="id272">``</span></a><a href="#id273"><span class="problematic" id="id274">`</span></a></p>
+<p>大文件修改</p>
+<p><a href="#id275"><span class="problematic" id="id276">``</span></a><a href="#id277"><span class="problematic" id="id278">`</span></a>python
+f1 = open(‘a.txt’,mode=’r’,encoding=’utf-8’)
+f2 = open(‘b.txt’,mode=’w’,encoding=’utf-8’)</p>
+<dl class="simple">
+<dt>for line in f1:</dt><dd><p>new_line = line.replace(‘阿斯’,’死啊’)
+f2.write(new_line)</p>
+</dd>
+</dl>
+<p>f1.close()
+f2.close()
+<a href="#id279"><span class="problematic" id="id280">``</span></a><a href="#id281"><span class="problematic" id="id282">`</span></a></p>
+<p><a href="#id283"><span class="problematic" id="id284">``</span></a><a href="#id285"><span class="problematic" id="id286">`</span></a>python
+with open(‘a.txt’,mode=’r’,encoding=’utf-8’) as f1, open(‘c.txt’,mode=’w’,encoding=’utf-8’) as f2:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>for line in f1:</dt><dd><p>new_line = line.replace(‘阿斯’, ‘死啊’)
+f2.write(new_line)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p><a href="#id287"><span class="problematic" id="id288">``</span></a><a href="#id289"><span class="problematic" id="id290">`</span></a></p>
+<p>## 第五章 函数</p>
+<p>### 5.1 三元运算</p>
+<p><a href="#id291"><span class="problematic" id="id292">``</span></a><a href="#id293"><span class="problematic" id="id294">`</span></a>python
+v = 前面 if 条件 else 后面</p>
+<dl class="simple">
+<dt>if 条件：</dt><dd><p>v = ‘前面’</p>
+</dd>
+<dt>else:</dt><dd><p>v = ‘后面’</p>
+</dd>
+</dl>
+<p><a href="#id295"><span class="problematic" id="id296">``</span></a><a href="#id297"><span class="problematic" id="id298">`</span></a></p>
+<p>### 5.2 函数的基本结构</p>
+<p><a href="#id299"><span class="problematic" id="id300">``</span></a><a href="#id301"><span class="problematic" id="id302">`</span></a>python
+# 定义函数
+def 函数名():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># 函数执行
+函数名()
+<a href="#id303"><span class="problematic" id="id304">``</span></a><a href="#id305"><span class="problematic" id="id306">`</span></a></p>
+<p><a href="#id307"><span class="problematic" id="id308">``</span></a><a href="#id309"><span class="problematic" id="id310">`</span></a>python
+def get_list_first_data():</p>
+<blockquote>
+<div><p>v = [11,22,33,44]
+print(v[0])</p>
+</div></blockquote>
+<p>get_list_first_data()
+<a href="#id311"><span class="problematic" id="id312">``</span></a><a href="#id313"><span class="problematic" id="id314">`</span></a></p>
+<p>### 5.3 函数的参数</p>
+<p>什么是形参？顾名思义，形参就是形式上的参数，可以理解为数学的X，没有实际的值，通过别人赋值后才有意义。相当于变量。</p>
+<p>什么是实参？顾名思义，实参就是实际意义上的参数，是一个实际存在的参数，可以是字符串或是数字等</p>
+<p>#### 5.3.1 形参</p>
+<p><a href="#id315"><span class="problematic" id="id316">``</span></a><a href="#id317"><span class="problematic" id="id318">`</span></a>python
+def get_list_first_data(a): # 形参</p>
+<blockquote>
+<div><p>v = [11,22,33,44]
+print(v[a])</p>
+</div></blockquote>
+<p>get_list_first_data(1) # 实参
+<a href="#id319"><span class="problematic" id="id320">``</span></a><a href="#id321"><span class="problematic" id="id322">`</span></a></p>
+<p>练习题</p>
+<p><a href="#id323"><span class="problematic" id="id324">``</span></a><a href="#id325"><span class="problematic" id="id326">`</span></a>python
+# 1.写一个函数，函数计算列表info = [11,22,33,44,55]中所有元素的和
+def get_num():</p>
+<blockquote>
+<div><p>info = [11, 22, 33, 44, 55]
+count = 0
+for i in info:</p>
+<blockquote>
+<div><p>count += i</p>
+</div></blockquote>
+<p>print(count)</p>
+</div></blockquote>
+<p>get_num()
+<a href="#id327"><span class="problematic" id="id328">``</span></a><a href="#id329"><span class="problematic" id="id330">`</span></a></p>
+<p>##### 5.3.1.1 万能参数</p>
+<p><a href="#id331"><span class="problematic" id="id332">``</span></a><a href="#id333"><span class="problematic" id="id334">`</span></a>python
+def func(<a href="#id335"><span class="problematic" id="id336">*</span></a>args,**kwargs):</p>
+<blockquote>
+<div><p>print(args,kwargs)</p>
+</div></blockquote>
+<p>func(1,2,3,4,5,a=2,b=6) # (1, 2, 3, 4, 5) {‘a’: 2, ‘b’: 6}
+<a href="#id337"><span class="problematic" id="id338">``</span></a><a href="#id339"><span class="problematic" id="id340">`</span></a></p>
+<p>#### 5.3.2 实参</p>
+<p>##### 5.3.2.1 位置传参</p>
+<p><a href="#id341"><span class="problematic" id="id342">``</span></a><a href="#id343"><span class="problematic" id="id344">`</span></a>python
+def func(a1,a2):</p>
+<blockquote>
+<div><p>print(a1,a2)</p>
+</div></blockquote>
+<p>func(1,2)
+<a href="#id345"><span class="problematic" id="id346">``</span></a><a href="#id347"><span class="problematic" id="id348">`</span></a></p>
+<p>##### 5.3.2.2 关键字传参</p>
+<p><a href="#id349"><span class="problematic" id="id350">``</span></a><a href="#id351"><span class="problematic" id="id352">`</span></a>python
+def func(a1,a2):</p>
+<blockquote>
+<div><p>print(a1,a2)</p>
+</div></blockquote>
+<p>func(a1=1,a2=2)</p>
+<p># 关键字传参和位置传参混合使用
+def func(a1,a2,a3):</p>
+<blockquote>
+<div><p>print(a1,a2,a3)</p>
+</div></blockquote>
+<p>func(1,2,a3=9)
+<a href="#id353"><span class="problematic" id="id354">``</span></a><a href="#id355"><span class="problematic" id="id356">`</span></a></p>
+<p>&gt; 注意: 关键字参数不能放在位置参数前面</p>
+<p>##### 5.3.2.3 默认参数</p>
+<p><a href="#id357"><span class="problematic" id="id358">``</span></a><a href="#id359"><span class="problematic" id="id360">`</span></a>python
+def func(a1,a2=9):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># func函数接收两个参数，调用函数进行船只时
+func(1,2)
+func(1,a2=10)
+func(1)  # 不传第二个参数的话，就会引用a2=9这个默认参数
+<a href="#id361"><span class="problematic" id="id362">``</span></a><a href="#id363"><span class="problematic" id="id364">`</span></a></p>
+<p>### 5.4 函数的返回值</p>
+<p><a href="#id365"><span class="problematic" id="id366">``</span></a><a href="#id367"><span class="problematic" id="id368">`</span></a>python
+def get_num(num):</p>
+<blockquote>
+<div><p>count = 0
+for i in num:</p>
+<blockquote>
+<div><p>count += i</p>
+</div></blockquote>
+<p>return count # 返回值，可以添加,返回多个，默认返回None</p>
+</div></blockquote>
+<p>count = get_num([11, 22, 33, 44, 55])
+<a href="#id369"><span class="problematic" id="id370">``</span></a><a href="#id371"><span class="problematic" id="id372">`</span></a></p>
+<p>### 5.5 作用域</p>
+<p>py文件：全局作用域</p>
+<p>函数：局部作用域</p>
+<p><a href="#id373"><span class="problematic" id="id374">``</span></a><a href="#id375"><span class="problematic" id="id376">`</span></a>python
+a = 1
+def s1():</p>
+<blockquote>
+<div><p>x1 = 666
+print(x1)
+print(a)
+print(b)</p>
+</div></blockquote>
+<p>b = 2
+print(a)
+s1()
+a = 88888
+def s2():</p>
+<blockquote>
+<div><p>print(a,b)
+s1()</p>
+</div></blockquote>
+<p>s2()
+<a href="#id377"><span class="problematic" id="id378">``</span></a><a href="#id379"><span class="problematic" id="id380">`</span></a></p>
+<p>总结：</p>
+<ul>
+<li><p>一个函数是一个作用域</p>
+<p><a href="#id381"><span class="problematic" id="id382">``</span></a>`
+def func():</p>
+<blockquote>
+<div><p>x = 9
+print(x)</p>
+</div></blockquote>
+<p>func()
+print(x)
+<a href="#id383"><span class="problematic" id="id384">``</span></a><a href="#id385"><span class="problematic" id="id386">`</span></a></p>
+</li>
+<li><p>作用域中查找数据规则：优先在自己的作用域找数据，自己没有就去  “父级” -&gt;  “父级” -&gt; 直到全局，全部么有就报错。注意：父级作用域中的值到底是什么？</p>
+<p><a href="#id387"><span class="problematic" id="id388">``</span></a><a href="#id389"><span class="problematic" id="id390">`</span></a>python
+x = 10
+def func():</p>
+<blockquote>
+<div><p>x = 9
+print(x)</p>
+</div></blockquote>
+<p>func()
+<a href="#id391"><span class="problematic" id="id392">``</span></a><a href="#id393"><span class="problematic" id="id394">`</span></a></p>
+</li>
+<li><p>子作用域只能在父级找到值，默认无法赋值</p>
+<p><a href="#id395"><span class="problematic" id="id396">``</span></a><a href="#id397"><span class="problematic" id="id398">`</span></a>python
+name = ‘oldboy’
+def func():</p>
+<blockquote>
+<div><p>name = ‘alex’
+print(name)</p>
+</div></blockquote>
+<p>func() # 这个只能找到alex，在自己作用域中创建了一个name=’alex’
+<a href="#id399"><span class="problematic" id="id400">``</span></a><a href="#id401"><span class="problematic" id="id402">`</span></a></p>
+</li>
+</ul>
+<p>#### 5.5.1 global</p>
+<p><a href="#id403"><span class="problematic" id="id404">``</span></a><a href="#id405"><span class="problematic" id="id406">`</span></a>python
+name = ‘oldboy’
+def func():</p>
+<blockquote>
+<div><p>global name
+name = ‘alex’
+print(name)</p>
+</div></blockquote>
+<p>func()
+print(name) # alex  global 关键字修改全局name值
+<a href="#id407"><span class="problematic" id="id408">``</span></a><a href="#id409"><span class="problematic" id="id410">`</span></a></p>
+<p>#### 5.5.2 nonlocal</p>
+<p><a href="#id411"><span class="problematic" id="id412">``</span></a><a href="#id413"><span class="problematic" id="id414">`</span></a>python
+name = ‘oldboy’
+def func():</p>
+<blockquote>
+<div><p>name = ‘alex’
+def inner():</p>
+<blockquote>
+<div><p>nonlocal name # 找到上一级的name
+name = 999
+inner()</p>
+</div></blockquote>
+<p>print(name)</p>
+</div></blockquote>
+<p>func()
+print(name)
+<a href="#id415"><span class="problematic" id="id416">``</span></a><a href="#id417"><span class="problematic" id="id418">`</span></a></p>
+<p>### 5.6 函数嵌套</p>
+<p><a href="#id419"><span class="problematic" id="id420">``</span></a><a href="#id421"><span class="problematic" id="id422">`</span></a>python
+def func():</p>
+<blockquote>
+<div><p>name = ‘oldboy’
+def inner():</p>
+<blockquote>
+<div><p>print(name)</p>
+</div></blockquote>
+<p>inner()
+print(name)</p>
+</div></blockquote>
+<p>func()
+<a href="#id423"><span class="problematic" id="id424">``</span></a><a href="#id425"><span class="problematic" id="id426">`</span></a></p>
+<p>### 5.6 函数小高级</p>
+<p>#### 5.6.1 函数可以当做变量来使用</p>
+<p><a href="#id427"><span class="problematic" id="id428">``</span></a><a href="#id429"><span class="problematic" id="id430">`</span></a>python
+def func():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<p>v1 = func
+func()
+v1()</p>
+<p># 函数放在列表当元素
+def func():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<p>v1 = [func,func,func]
+for i in v1:</p>
+<blockquote>
+<div><p>i()</p>
+</div></blockquote>
+<p><a href="#id431"><span class="problematic" id="id432">``</span></a><a href="#id433"><span class="problematic" id="id434">`</span></a></p>
+<p>#### 5.6.2 函数可以当做参数进行传递</p>
+<p><a href="#id435"><span class="problematic" id="id436">``</span></a><a href="#id437"><span class="problematic" id="id438">`</span></a>python
+def func(arg):</p>
+<blockquote>
+<div><p>print(arg)</p>
+</div></blockquote>
+<p>func(1)
+func([1,2,3,4])</p>
+<dl class="simple">
+<dt>def show():</dt><dd><p>return 000</p>
+</dd>
+</dl>
+<p>func(show)
+<a href="#id439"><span class="problematic" id="id440">``</span></a><a href="#id441"><span class="problematic" id="id442">`</span></a></p>
+<p><a href="#id443"><span class="problematic" id="id444">``</span></a><a href="#id445"><span class="problematic" id="id446">`</span></a>python
+def func(arg):</p>
+<blockquote>
+<div><p>arg()</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def show():</dt><dd><p>print(666)</p>
+</dd>
+</dl>
+<p>func(show)
+<a href="#id447"><span class="problematic" id="id448">``</span></a><a href="#id449"><span class="problematic" id="id450">`</span></a></p>
+<p>### 5.7 lambda 表达式</p>
+<p>用于表示简单的函数的</p>
+<p><a href="#id451"><span class="problematic" id="id452">``</span></a><a href="#id453"><span class="problematic" id="id454">`</span></a>python
+if 2 &gt; 1:</p>
+<blockquote>
+<div><p>v1 = 3</p>
+</div></blockquote>
+<dl class="simple">
+<dt>else:</dt><dd><p>v1 = 5</p>
+</dd>
+</dl>
+<p># 三元运算
+v1 = 3 if 2&gt;1 else 5</p>
+<p># lambda表达式，为了解决简单函数的情况
+def func(a1,a2):</p>
+<blockquote>
+<div><p>return a1 + a2</p>
+</div></blockquote>
+<p>func = lambda a1,a2:a1+a2  # 隐藏了一个return
+v = func(1,2)
+<a href="#id455"><span class="problematic" id="id456">``</span></a><a href="#id457"><span class="problematic" id="id458">`</span></a></p>
+<p>lambda表达式种类</p>
+<p><a href="#id459"><span class="problematic" id="id460">``</span></a>` python
+func1 = lambda :100 # 没有参数返回100</p>
+<p>func2 = lambda <a href="#id461"><span class="problematic" id="id462">*</span></a>args,**kwargs: len(args)
+func2(1,2,3,4)</p>
+<p>DATA = 100
+def func():</p>
+<blockquote>
+<div><p>DATA = 1000
+func4 = lambda a1: a1+DATA
+v = func4(1)
+print(v)</p>
+</div></blockquote>
+<p>func()</p>
+<p>func5 = lambda n1,n2: n1 if n1 &gt; n2 else n2
+<a href="#id463"><span class="problematic" id="id464">``</span></a><a href="#id465"><span class="problematic" id="id466">`</span></a></p>
+<p>&gt; 列表所有方法基本都是返回None，字符串的所有方法基本都是返回新值</p>
+<p>### 5.8 内置函数</p>
+<ul>
+<li><p>自定义函数</p></li>
+<li><p>内置函数</p>
+<ul>
+<li><p>len</p></li>
+<li><p>open</p></li>
+<li><p>range</p></li>
+<li><p>id</p></li>
+<li><p>输入输出</p>
+<ul class="simple">
+<li><p>print</p></li>
+<li><p>input</p></li>
+</ul>
+</li>
+<li><p>强制转换</p>
+<ul class="simple">
+<li><p>dict</p></li>
+<li><p>list</p></li>
+<li><p>tuple</p></li>
+<li><p>int</p></li>
+<li><p>str</p></li>
+<li><p>bool</p></li>
+<li><p>set</p></li>
+</ul>
+</li>
+<li><p>数学相关</p>
+<ul>
+<li><p>abs，绝对值</p></li>
+<li><p>float, 浮点型</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">55</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">float(v)</span>
+<span class="pre">print(v1)</span> <span class="pre">#</span> <span class="pre">55.0</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>max, 找到最大值</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">[1,2,3,455]</span>
+<span class="pre">result</span> <span class="pre">=</span> <span class="pre">max(v)</span>
+<span class="pre">print(result)</span> <span class="pre">#</span> <span class="pre">455</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>min，找到最小值</p></li>
+<li><p>sum，求和</p></li>
+<li><p>divmod，两个数相除，得商和余数</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">a,b</span> <span class="pre">=</span> <span class="pre">divmod(1001,5)</span>
+<span class="pre">print(a,b)</span>
+<span class="pre">`</span></code></p>
+<p>练习题</p>
+<p><a href="#id467"><span class="problematic" id="id468">``</span></a><a href="#id469"><span class="problematic" id="id470">`</span></a>python
+# 通过分页对数据进行显示
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-
+USER_LIST = []
+for i in range(1,836):</p>
+<blockquote>
+<div><p>temp = {‘name’:’blsnt-%s’ %i}
+USER_LIST.append(temp)</p>
+</div></blockquote>
+<p># 数据总条数
+total_count = len(USER_LIST)</p>
+<p># 每页显示10条
+per_page_count = 10</p>
+<p># 总页码数
+max_page_num,a = divmod(total_count,per_page_count)
+if a&gt;0:</p>
+<blockquote>
+<div><p>max_page_num += 1</p>
+</div></blockquote>
+<dl>
+<dt>while True:</dt><dd><p>pager = int(input(“请输入要查看的页码：”))
+if pager &lt; 1 or pager &gt; max_page_num:</p>
+<blockquote>
+<div><p>print(‘页码输入不合法，必须是1~%s’ %max_page_num)</p>
+</div></blockquote>
+<dl>
+<dt>else:</dt><dd><p>start = (pager - 1) * 10
+end = pager * per_page_count
+data = USER_LIST[start:end]
+for item in data:</p>
+<blockquote>
+<div><p>print(item)</p>
+</div></blockquote>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><a href="#id471"><span class="problematic" id="id472">``</span></a><a href="#id473"><span class="problematic" id="id474">`</span></a></p>
+</li>
+</ul>
+</li>
+<li><p>进制相关</p>
+<ul>
+<li><p>bin，将其他进制转换成二进制</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">num</span> <span class="pre">=</span> <span class="pre">13</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">bin(num)</span>
+<span class="pre">print(v1)</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>oct，将其他进制转换成八进制</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">num</span> <span class="pre">=</span> <span class="pre">7</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">oct(num)</span>
+<span class="pre">print(v1)</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>int，将其他进制转换成十进制</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">二进制转十进制，其他的也是一样</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">'0b1101'</span>
+<span class="pre">result</span> <span class="pre">=</span> <span class="pre">int(v1,base=2)</span>
+<span class="pre">print(result)</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>hex，将其他进制转换成十六进制</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">num</span> <span class="pre">=</span> <span class="pre">16</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">hex(num)</span>
+<span class="pre">print(v1)</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+</li>
+<li><p>编码相关</p>
+<ul>
+<li><p>chr,将十进制数字转换成unicode编码中的对应字符串</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">chr(99)</span>
+<span class="pre">print(v)</span> <span class="pre">#</span> <span class="pre">c</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>ord,根据字符找到在unicode中找到其对应的十进制</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v</span> <span class="pre">=</span> <span class="pre">ord('A')</span>
+<span class="pre">print(v)</span> <span class="pre">#</span> <span class="pre">65</span>
+<span class="pre">`</span></code></p>
+<p>随机验证码练习题</p>
+<p><a href="#id475"><span class="problematic" id="id476">``</span></a><a href="#id477"><span class="problematic" id="id478">`</span></a>python
+import random</p>
+<dl>
+<dt>def get_random_data(length=6):</dt><dd><p>DATA = []
+for i in range(length):</p>
+<blockquote>
+<div><p>v = random.randint(65,90)
+DATA.append(chr(v))</p>
+</div></blockquote>
+<p>return ‘’.join(DATA)</p>
+</dd>
+</dl>
+<p>num = get_random_data()
+print(num)
+<a href="#id479"><span class="problematic" id="id480">``</span></a><a href="#id481"><span class="problematic" id="id482">`</span></a></p>
+</li>
+</ul>
+</li>
+<li><p>高级内置函数</p>
+<ul>
+<li><p>filter</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">result</span> <span class="pre">=</span> <span class="pre">filter(lambda</span> <span class="pre">x:</span> <span class="pre">type(x)</span> <span class="pre">==</span> <span class="pre">int,v1)</span> <span class="pre">#</span> <span class="pre">函数返回True添加到列表中，返回False则丢弃</span>
+<span class="pre">print(list(result))</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>map，循环每个元素(第二个参数)，然后让每个元素执行函数(第一个参数)，将每个函数的返回值添加到列表中</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">[11,22,33,44]</span>
+<span class="pre">res</span> <span class="pre">=</span> <span class="pre">map(lambda</span> <span class="pre">args:</span> <span class="pre">args</span> <span class="pre">+</span> <span class="pre">100,v1)</span> <span class="pre">#</span> <span class="pre">第一个参数必须是一个函数,第二个参数必须是可迭代的类型,循环列表拿到的每个值当做参数传递给函数，会将函数的返回值添加到空列表中</span>
+<span class="pre">print(list(res))</span> <span class="pre">#</span> <span class="pre">[111,</span> <span class="pre">122,</span> <span class="pre">133,</span> <span class="pre">144]</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>reduce，会将列表的元素相加</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">functools</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">[1,2,3,4,5,6]</span>
+<span class="pre">result</span> <span class="pre">=</span> <span class="pre">functools.reduce(lambda</span> <span class="pre">x,y:</span> <span class="pre">x+y,v1)</span> <span class="pre">#</span> <span class="pre">x第一次为1，y为2，第二次x为1+2=3，y为3</span>
+<span class="pre">print(result)</span> <span class="pre">#</span> <span class="pre">21</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>### 5.9 函数中高级</p>
+<p>#### 5.9.1  函数当返回值</p>
+<p><a href="#id483"><span class="problematic" id="id484">``</span></a><a href="#id485"><span class="problematic" id="id486">`</span></a>python
+def func():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def bar()：</dt><dd><p>return func</p>
+</dd>
+</dl>
+<p>v = bar()
+v()
+<a href="#id487"><span class="problematic" id="id488">``</span></a><a href="#id489"><span class="problematic" id="id490">`</span></a></p>
+<p><a href="#id491"><span class="problematic" id="id492">``</span></a><a href="#id493"><span class="problematic" id="id494">`</span></a>python
+def bar():</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner():</dt><dd><p>print(123)</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>v = bar()
+v()
+<a href="#id495"><span class="problematic" id="id496">``</span></a><a href="#id497"><span class="problematic" id="id498">`</span></a></p>
+<p><a href="#id499"><span class="problematic" id="id500">``</span></a><a href="#id501"><span class="problematic" id="id502">`</span></a>python
+name = ‘olboyd’
+def bar():</p>
+<blockquote>
+<div><p>name = ‘alex’
+def inner():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<p>return inner</p>
+</div></blockquote>
+<p>v = bar()
+v()
+<a href="#id503"><span class="problematic" id="id504">``</span></a><a href="#id505"><span class="problematic" id="id506">`</span></a></p>
+<p>#### 5.9.2 闭包</p>
+<p>闭包概念：为函数创建一块区域并为其维护自己数据，以后执行时方便调用【应用场景：装饰器/SQLAlchemy源码】</p>
+<p><a href="#id507"><span class="problematic" id="id508">``</span></a><a href="#id509"><span class="problematic" id="id510">`</span></a>python
+def func(name):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner():</dt><dd><p>print(name)
+return inner</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>v1 = func(‘alex’)
+v1()
+v2 = func(‘eric’)
+v2()
+<a href="#id511"><span class="problematic" id="id512">``</span></a><a href="#id513"><span class="problematic" id="id514">`</span></a></p>
+<p>&gt; 注意name 是需要调用的，才能达到闭包的效果</p>
+<p>### 5.10 装饰器</p>
+<p>目的：在不改变原函数的基础上，在函数执行前后自定义功能</p>
+<p>#### 5.10.1 装饰器基本格式</p>
+<p><a href="#id515"><span class="problematic" id="id516">``</span></a><a href="#id517"><span class="problematic" id="id518">`</span></a>python
+def x(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner():</dt><dd><p>return func()</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p><a href="#id519"><span class="problematic" id="id520">``</span></a><a href="#id521"><span class="problematic" id="id522">`</span></a></p>
+<p>#### 5.10.2 关于于参数</p>
+<p><a href="#id523"><span class="problematic" id="id524">``</span></a><a href="#id525"><span class="problematic" id="id526">`</span></a>python
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id527"><span class="problematic" id="id528">*</span></a>args,**kwargs):</dt><dd><p>return func(<a href="#id529"><span class="problematic" id="id530">*</span></a>args,**kwargs)</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x1
+def f1():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>&#64;x1
+def f2(a1):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>&#64;x1
+def f3(a1,a2):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p><a href="#id531"><span class="problematic" id="id532">``</span></a><a href="#id533"><span class="problematic" id="id534">`</span></a></p>
+<p>#### 5.10.3 关于返回值</p>
+<p><a href="#id535"><span class="problematic" id="id536">``</span></a><a href="#id537"><span class="problematic" id="id538">`</span></a>python
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id539"><span class="problematic" id="id540">*</span></a>args,**kwargs):</dt><dd><p>data = func(<a href="#id541"><span class="problematic" id="id542">*</span></a>args,**kwargs)
+return data</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x1
+def f1():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<p>v1 = f1()
+print(v1)
+<a href="#id543"><span class="problematic" id="id544">``</span></a><a href="#id545"><span class="problematic" id="id546">`</span></a></p>
+<p><a href="#id547"><span class="problematic" id="id548">``</span></a><a href="#id549"><span class="problematic" id="id550">`</span></a>python
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id551"><span class="problematic" id="id552">*</span></a>args,**kwargs):</dt><dd><p>data = func(<a href="#id553"><span class="problematic" id="id554">*</span></a>args,**kwargs)
+return data</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x1
+def f1():</p>
+<blockquote>
+<div><p>print(123)
+return 666</p>
+</div></blockquote>
+<p>v1 = f1()
+print(v1)
+<a href="#id555"><span class="problematic" id="id556">``</span></a><a href="#id557"><span class="problematic" id="id558">`</span></a></p>
+<p><a href="#id559"><span class="problematic" id="id560">``</span></a><a href="#id561"><span class="problematic" id="id562">`</span></a>python
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id563"><span class="problematic" id="id564">*</span></a>args,**kwargs):</dt><dd><p>data = func(<a href="#id565"><span class="problematic" id="id566">*</span></a>args,**kwargs)</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x1
+def f1():</p>
+<blockquote>
+<div><p>print(123)
+return 666</p>
+</div></blockquote>
+<p>v1 = f1()
+print(v1)
+<a href="#id567"><span class="problematic" id="id568">``</span></a><a href="#id569"><span class="problematic" id="id570">`</span></a></p>
+<p>#### 5.10.4 装饰器推荐写法</p>
+<p><a href="#id571"><span class="problematic" id="id572">``</span></a><a href="#id573"><span class="problematic" id="id574">`</span></a>python
+装饰器建议写法：
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id575"><span class="problematic" id="id576">*</span></a>args,**kwargs):</dt><dd><p>data = func(<a href="#id577"><span class="problematic" id="id578">*</span></a>args,**kwargs)
+return data</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p><a href="#id579"><span class="problematic" id="id580">``</span></a><a href="#id581"><span class="problematic" id="id582">`</span></a></p>
+<p>#### 5.10.5 关于前后</p>
+<p><a href="#id583"><span class="problematic" id="id584">``</span></a><a href="#id585"><span class="problematic" id="id586">`</span></a>python
+def x1(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id587"><span class="problematic" id="id588">*</span></a>args,**kwargs):</dt><dd><p>print(‘调用原函数之前’)
+data = func(<a href="#id589"><span class="problematic" id="id590">*</span></a>args,**kwargs) # 执行原函数并获取返回值
+print(‘调用员函数之后’)
+return data</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;x1
+def index():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+<p>index()
+<a href="#id591"><span class="problematic" id="id592">``</span></a><a href="#id593"><span class="problematic" id="id594">`</span></a></p>
+<p>#### 5.10.6 带参数的装饰器</p>
+<p><a href="#id595"><span class="problematic" id="id596">``</span></a><a href="#id597"><span class="problematic" id="id598">`</span></a>python
+# 第一步：执行 ret = xxx(index)
+# 第二步：将返回值赋值给 index = ret
+&#64;xxx
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># 第一步：执行 v1 = uuu(9)
+# 第二步：ret = v1(index)
+# 第三步：index = ret
+&#64;uuu(9)
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p><a href="#id599"><span class="problematic" id="id600">``</span></a><a href="#id601"><span class="problematic" id="id602">`</span></a></p>
+<p><a href="#id603"><span class="problematic" id="id604">``</span></a><a href="#id605"><span class="problematic" id="id606">`</span></a>python
+# ################## 普通装饰器 #####################
+def wrapper(func):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner(<a href="#id607"><span class="problematic" id="id608">*</span></a>args,**kwargs):</dt><dd><p>print(‘调用原函数之前’)
+data = func(<a href="#id609"><span class="problematic" id="id610">*</span></a>args,**kwargs) # 执行原函数并获取返回值
+print(‘调用员函数之后’)
+return data</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p>&#64;wrapper
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p># ################## 带参数装饰器 #####################
+def x(counter):</p>
+<blockquote>
+<div><dl>
+<dt>def wrapper(func):</dt><dd><dl class="simple">
+<dt>def inner(<a href="#id611"><span class="problematic" id="id612">*</span></a>args,**kwargs):</dt><dd><p>data = func(<a href="#id613"><span class="problematic" id="id614">*</span></a>args,**kwargs) # 执行原函数并获取返回值
+return data</p>
+</dd>
+</dl>
+<p>return inner
+return wrapper</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>&#64;x(9)
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p><a href="#id615"><span class="problematic" id="id616">``</span></a><a href="#id617"><span class="problematic" id="id618">`</span></a></p>
+<p>练习题</p>
+<p><a href="#id619"><span class="problematic" id="id620">``</span></a><a href="#id621"><span class="problematic" id="id622">`</span></a>python
+# 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，把每次结果添加到列表中，最终返回列表。
+def xxx(counter):</p>
+<blockquote>
+<div><p>print(‘x函数’)
+def wrapper(func):</p>
+<blockquote>
+<div><p>print(‘wrapper函数’)
+def inner(<a href="#id623"><span class="problematic" id="id624">*</span></a>args,**kwargs):</p>
+<blockquote>
+<div><p>v = []
+for i in range(counter):</p>
+<blockquote>
+<div><p>data = func(<a href="#id625"><span class="problematic" id="id626">*</span></a>args,**kwargs) # 执行原函数并获取返回值
+v.append(data)</p>
+</div></blockquote>
+<p>return v</p>
+</div></blockquote>
+<p>return inner</p>
+</div></blockquote>
+<p>return wrapper</p>
+</div></blockquote>
+<p>&#64;xxx(5)
+def index():</p>
+<blockquote>
+<div><p>return 8</p>
+</div></blockquote>
+<p>v = index()
+print(v)</p>
+<p># 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，并返回最后一次执行的结果【面试题】
+def xxx(counter):</p>
+<blockquote>
+<div><p>print(‘x函数’)
+def wrapper(func):</p>
+<blockquote>
+<div><p>print(‘wrapper函数’)
+def inner(<a href="#id627"><span class="problematic" id="id628">*</span></a>args,**kwargs):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>for i in range(counter):</dt><dd><p>data = func(<a href="#id629"><span class="problematic" id="id630">*</span></a>args,**kwargs) # 执行原函数并获取返回值，data一直被覆盖</p>
+</dd>
+</dl>
+<p>return data</p>
+</div></blockquote>
+<p>return inner</p>
+</div></blockquote>
+<p>return wrapper</p>
+</div></blockquote>
+<p>&#64;xxx(5)
+def index():</p>
+<blockquote>
+<div><p>return 8</p>
+</div></blockquote>
+<p>v = index()
+print(v)
+# 写一个带参数的装饰器，实现：参数是多少，被装饰的函数就要执行多少次，并返回执行结果中最大的值。
+def xxx(counter):</p>
+<blockquote>
+<div><p>print(‘x函数’)
+def wrapper(func):</p>
+<blockquote>
+<div><p>print(‘wrapper函数’)
+def inner(<a href="#id631"><span class="problematic" id="id632">*</span></a>args,**kwargs):</p>
+<blockquote>
+<div><p>value = 0
+for i in range(counter):</p>
+<blockquote>
+<div><p>data = func(<a href="#id633"><span class="problematic" id="id634">*</span></a>args,**kwargs) # 执行原函数并获取返回值
+if data &gt; value:</p>
+<blockquote>
+<div><p>value = data</p>
+</div></blockquote>
+</div></blockquote>
+<p>return value</p>
+</div></blockquote>
+<p>return inner</p>
+</div></blockquote>
+<p>return wrapper</p>
+</div></blockquote>
+<p>&#64;xxx(5)
+def index():</p>
+<blockquote>
+<div><p>return 8</p>
+</div></blockquote>
+<p>v = index()
+print(v)</p>
+<p># 不同需求的装饰器通过True和False实现不同的功能
+def x(counter):</p>
+<blockquote>
+<div><p>print(‘x函数’)
+def wrapper(func):</p>
+<blockquote>
+<div><p>print(‘wrapper函数’)
+def inner(<a href="#id635"><span class="problematic" id="id636">*</span></a>args,**kwargs):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if counter:</dt><dd><p>return 123</p>
+</dd>
+</dl>
+<p>return func(<a href="#id637"><span class="problematic" id="id638">*</span></a>args,**kwargs)</p>
+</div></blockquote>
+<p>return inner</p>
+</div></blockquote>
+<p>return wrapper</p>
+</div></blockquote>
+<p>&#64;x(True)
+def fun990():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>&#64;x(False)
+def func10():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p><a href="#id639"><span class="problematic" id="id640">``</span></a><a href="#id641"><span class="problematic" id="id642">`</span></a></p>
+<p>示例</p>
+<p><a href="#id643"><span class="problematic" id="id644">``</span></a><a href="#id645"><span class="problematic" id="id646">`</span></a>python
+def func(arg):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner():</dt><dd><p>print(‘before’)
+v = arg()
+print(‘after’)
+return v</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def index():</dt><dd><p>print(‘123’)
+return ‘666’</p>
+</dd>
+</dl>
+<p># 示例一
+“””
+v1 = index() # 执行index函数，打印123并返回666赋值给v1.
+“””
+# 示例二
+“””
+v2 = func(index) # v2是inner函数，arg=index函数
+index = 666
+v3 = v2()
+“””
+# 示例三
+“””
+v4 = func(index)
+index = v4  # index ==&gt; inner
+index()
+“””</p>
+<p># 示例四
+index = func(index)
+index()
+<a href="#id647"><span class="problematic" id="id648">``</span></a><a href="#id649"><span class="problematic" id="id650">`</span></a></p>
+<p><a href="#id651"><span class="problematic" id="id652">``</span></a><a href="#id653"><span class="problematic" id="id654">`</span></a>python
+def func(arg):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def inner():</dt><dd><p>v = arg()
+return v</p>
+</dd>
+</dl>
+<p>return inner</p>
+</div></blockquote>
+<p># 第一步：执行func函数并将下面的函数参数传递，相当于：func(index)
+# 第二步：将func的返回值重新赋值给下面的函数名。 index = func(index)
+&#64;func
+def index():</p>
+<blockquote>
+<div><p>print(123)
+return 666</p>
+</div></blockquote>
+<p>print(index)
+<a href="#id655"><span class="problematic" id="id656">``</span></a><a href="#id657"><span class="problematic" id="id658">`</span></a></p>
+<p>应用：</p>
+<p><a href="#id659"><span class="problematic" id="id660">``</span></a><a href="#id661"><span class="problematic" id="id662">`</span></a>python
+# 计算函数执行时间</p>
+<dl>
+<dt>def wrapper(func):</dt><dd><dl class="simple">
+<dt>def inner():</dt><dd><p>start_time = time.time()
+v = func()
+end_time = time.time()
+print(end_time-start_time)
+return v</p>
+</dd>
+</dl>
+<p>return inner</p>
+</dd>
+</dl>
+<p>&#64;wrapper
+def func1():</p>
+<blockquote>
+<div><p>time.sleep(2)
+print(123)</p>
+</div></blockquote>
+<p>&#64;wrapper
+def func2():</p>
+<blockquote>
+<div><p>time.sleep(1)
+print(123)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def func3():</dt><dd><p>time.sleep(1.5)
+print(123)</p>
+</dd>
+</dl>
+<p>func1()
+<a href="#id663"><span class="problematic" id="id664">``</span></a><a href="#id665"><span class="problematic" id="id666">`</span></a></p>
+<p>装饰器编写格式</p>
+<p><a href="#id667"><span class="problematic" id="id668">``</span></a><a href="#id669"><span class="problematic" id="id670">`</span></a>python
+def 外层函数(参数):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def 内层函数(<a href="#id671"><span class="problematic" id="id672">*</span></a>args,**kwargs):</dt><dd><p>return 参数(<a href="#id673"><span class="problematic" id="id674">*</span></a>args,**kwargs)</p>
+</dd>
+</dl>
+<p>return 内层函数</p>
+</div></blockquote>
+<p><a href="#id675"><span class="problematic" id="id676">``</span></a><a href="#id677"><span class="problematic" id="id678">`</span></a></p>
+<p>装饰器应用格式</p>
+<p><a href="#id679"><span class="problematic" id="id680">``</span></a><a href="#id681"><span class="problematic" id="id682">`</span></a>python
+&#64;外层函数
+def index():</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>index()
+<a href="#id683"><span class="problematic" id="id684">``</span></a><a href="#id685"><span class="problematic" id="id686">`</span></a></p>
+<p>### 5.11 推导式</p>
+<p>#### 5.11.1 列表推导式</p>
+<p><a href="#id687"><span class="problematic" id="id688">``</span></a><a href="#id689"><span class="problematic" id="id690">`</span></a>python
+“””
+目的：方便的生成一个列表。
+格式：</p>
+<blockquote>
+<div><p>v1 = [i for i in 可迭代对象 ]
+v2 = [i for i in 可迭代对象 if 条件 ] # 条件为true才进行append</p>
+</div></blockquote>
+<p>“””
+v1 = [ i for i in ‘alex’ ]
+v2 = [i+100 for i in range(10)]
+v3 = [99 if i&gt;5 else 66  for i in range(10)]</p>
+<dl class="simple">
+<dt>def func():</dt><dd><p>return 100</p>
+</dd>
+</dl>
+<p>v4 = [func for i in range(10)]</p>
+<p>v5 = [lambda : 100 for i in range(10)]
+result = v5[9]()</p>
+<dl class="simple">
+<dt>def func():</dt><dd><p>return i</p>
+</dd>
+</dl>
+<p>v6 = [func for i in range(10)]
+result = v6[5]()</p>
+<p>v7 = [lambda :i for i in range(10)]
+result = v7[5]()</p>
+<p>v8 = [lambda x:x*i for i in range(10)] # 新浪微博面试题
+# 1.请问 v8 是什么？
+# 2.请问 v8[0](2) 的结果是什么？</p>
+<p># 面试题
+def num():</p>
+<blockquote>
+<div><p>return [lambda x:i*x for i in range(4)]</p>
+</div></blockquote>
+<p># num() -&gt; [函数,函数,函数,函数]
+print([ m(2) for m in num() ]) # [6,6,6,6]</p>
+<p># ##################### 筛选 #########################
+v9 = [i for i in range(10) if i &gt; 5]
+<a href="#id691"><span class="problematic" id="id692">``</span></a><a href="#id693"><span class="problematic" id="id694">`</span></a></p>
+<p>#### 5.11.2 集合推导式</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">i</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">'alex'</span> <span class="pre">}</span>
+<span class="pre">`</span></code></p>
+<p>#### 5.11.3 字典推导式</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">v1</span> <span class="pre">=</span> <span class="pre">{</span> <span class="pre">'k'+str(i):i</span> <span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">range(10)</span> <span class="pre">}</span>
+<span class="pre">`</span></code></p>
+<p>## 第六章 模块</p>
+<p>模块的概念：一系列功能的集合体，可以给其他文件提供功能</p>
+<p>### 6.1 模块基本知识</p>
+<ul>
+<li><p>内置模块，python内部提供的功能</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">os</span>
+<span class="pre">os.path.listdir()</span>
+<span class="pre">`</span></code></p>
+</li>
+<li><p>自定义模块</p></li>
+<li><p>第三方模块，下载/安装/使用</p></li>
+</ul>
+<p>python 找模块的地方</p>
+<p><a href="#id695"><span class="problematic" id="id696">``</span></a><a href="#id697"><span class="problematic" id="id698">`</span></a>python
+import sys
+print(sys.path)</p>
+<p># 添加目录路径
+sys.path.append(‘D:test’)
+<a href="#id699"><span class="problematic" id="id700">``</span></a><a href="#id701"><span class="problematic" id="id702">`</span></a></p>
+<p>定义模块时，可以把一个py文件或一个文件夹（包）当做一个模块，以方便以后其他py文件的调用</p>
+<p>对于包的定义：</p>
+<ul class="simple">
+<li><p>py2：文件夹中必须有__init__.py</p></li>
+<li><p>py3：不需要__init__.py</p></li>
+</ul>
+<p>#### 6.1.1 导入模块方式</p>
+<p>导入模块,加载此模块中的所有的值到内存</p>
+<p><a href="#id703"><span class="problematic" id="id704">``</span></a><a href="#id705"><span class="problematic" id="id706">`</span></a>python
+import xxx</p>
+<p># import 所做的事情,xxx名字就是模块xxx的文件对象，存放的是xxx文件的地址
+1. 将被导入的模块编译成模块名对应的pyc文件
+2. 从上至下执行被调用模块的所有代码
+3. 形成模块的名称空间,将模块中的所有名字存放在模块的名称空间中
+4. 在要使用模块的文件(当前文件)的名称空间中产生一个与模块名同名的名字指向模块的名称空间</p>
+<p>from xxx import xxx
+from xxx import *
+from xxx import xxx as f  # 模块起别名
+1. 模块名与当前文件中名字发生冲突，用起名字解决冲突
+2. 优化模块名</p>
+<p>from xxx import xxx,zzz</p>
+<p># 相对导入
+form . import xxx # 相对导入必须要有一个父级目录，在根目录不行
+<a href="#id707"><span class="problematic" id="id708">``</span></a><a href="#id709"><span class="problematic" id="id710">`</span></a></p>
+<p>#### 6.1.2 配置BASE_DIR</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">默认只有运行的py文件的目录会导入到系统path中,要排除pycharm导入</span>
+<span class="pre">import</span> <span class="pre">os</span>
+<span class="pre">import</span> <span class="pre">sys</span>
+<span class="pre">print(__file__)</span>&#160; <span class="pre">#</span> <span class="pre">当前运行脚本的路径,要配置abspath获取绝对路径</span>
+<span class="pre">BASE_DIR</span> <span class="pre">=</span> <span class="pre">os.path.dirname(os.path.dirname(os.path.abspath(__file__)))</span>
+<span class="pre">sys.path.append(BASE_DIR)</span>
+<span class="pre">`</span></code></p>
+<p>#### 6.1.3 项目常用目录</p>
+<ul class="simple">
+<li><p>bin 程序入口 可执行文件</p></li>
+<li><p>config 配置文件</p></li>
+<li><p>db 数据</p></li>
+<li><p>lib 公共代码</p></li>
+<li><p>src 业务代码</p></li>
+</ul>
+<ul class="simple">
+<li><p>脚本</p></li>
+</ul>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200302210656.png">http://images.dregs.top/images/20200302210656.png</a>)</p>
+<ul class="simple">
+<li><p>单执行文件</p></li>
+</ul>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200302210831.png">http://images.dregs.top/images/20200302210831.png</a>)</p>
+<ul class="simple">
+<li><p>多执行文件</p></li>
+</ul>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200302210909.png">http://images.dregs.top/images/20200302210909.png</a>)</p>
+<p>#### 6.1.4 模块实现单例模式</p>
+<p><a href="#id711"><span class="problematic" id="id712">``</span></a><a href="#id713"><span class="problematic" id="id714">`</span></a>python
+# jd.py
+class Foo(object):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>obj = Foo()
+<a href="#id715"><span class="problematic" id="id716">``</span></a><a href="#id717"><span class="problematic" id="id718">`</span></a></p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">app.py</span>
+<span class="pre">import</span> <span class="pre">jd</span> <span class="pre">#</span> <span class="pre">加载jd.py，加载最后会实例化一个Foo对象并赋值给obj</span>
+<span class="pre">print(jd.obj)</span>
+<span class="pre">`</span></code></p>
+<p>#### 6.1.5 重新加载模块</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">jd</span> <span class="pre">#</span> <span class="pre">第一次加载：会加载一遍jd中所有的内容。</span>
+<span class="pre">import</span> <span class="pre">jd</span> <span class="pre">#</span> <span class="pre">由已经加载过，就不在加载。</span>
+<span class="pre">print(456)</span>
+<span class="pre">`</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">import</span> <span class="pre">importlib</span>
+<span class="pre">import</span> <span class="pre">jd</span>
+<span class="pre">importlib.reload(jd)</span>
+<span class="pre">print(456)</span>
+<span class="pre">`</span></code></p>
+<p>#### 6.1.6 模块的多次导入</p>
+<p><a href="#id719"><span class="problematic" id="id720">``</span></a><a href="#id721"><span class="problematic" id="id722">`</span></a>python
+# m1.py
+print(‘导入模块’)</p>
+<p># test.py
+# 第一次导入模块已经完成导入模块的三步，编译，运行(产生名称空间存放名字)，执行文件产生名字指向模块
+import m1
+# 再次导入：前两步是重复的，所以只会在当前文件再产生一个名字指向模块的名称空间
+import m1 as m
+<a href="#id723"><span class="problematic" id="id724">``</span></a><a href="#id725"><span class="problematic" id="id726">`</span></a></p>
+<p>#### 6.1.7 模块导入的执行过程</p>
+<p><a href="#id727"><span class="problematic" id="id728">``</span></a><a href="#id729"><span class="problematic" id="id730">`</span></a>python
+#　执行文件.py
+print(‘加载’)
+import m1   #　进入m1,m1全部走完回到这里
+print(‘结束’)</p>
+<p>#　m1.py
+print(‘m1 开始’)
+y = 10
+import m2   # 进入m2，m2全部走完回到这里
+print(‘m1 结束’)</p>
+<p># m2.py
+print(‘m2 开始’)
+y = 20
+print(‘m2 结束’)
+<a href="#id731"><span class="problematic" id="id732">``</span></a><a href="#id733"><span class="problematic" id="id734">`</span></a></p>
+<p>执行过程结果</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">加载</span>
+<span class="pre">m1</span> <span class="pre">开始</span>
+<span class="pre">m2</span> <span class="pre">开始</span>
+<span class="pre">m2</span> <span class="pre">结束</span>
+<span class="pre">m1</span> <span class="pre">结束</span>
+<span class="pre">结束</span>
+<span class="pre">`</span></code></p>
+<p>&gt; 注意在执行文件中访问20
+&gt;
+&gt; print(m1.m2.y)</p>
+<p>#### 6.1.8 py文件的两种执行方式</p>
+<ul class="simple">
+<li><p>自执行
+* 在模块中的__name__ = __main__</p></li>
+<li><p>模块方式导入执行
+* 作为模块导入执行__name__ = ‘模块名’</p></li>
+</ul>
+<p><a href="#id735"><span class="problematic" id="id736">``</span></a><a href="#id737"><span class="problematic" id="id738">`</span></a>python
+# 执行的py
+import m1
+print(‘模块导入执行’,num)</p>
+<p># m1.py
+num = 100
+print(‘模块自执行’,num)
+<a href="#id739"><span class="problematic" id="id740">``</span></a><a href="#id741"><span class="problematic" id="id742">`</span></a></p>
+<p>&gt; 模块导入执行的__name__ 是模块名，自执行的时候是__main__</p>
+<p>共存</p>
+<p><a href="#id743"><span class="problematic" id="id744">``</span></a><a href="#id745"><span class="problematic" id="id746">`</span></a>python
+# 模块文件
+# 先写所有的模块资源(数据与函数)
+# 模块最下方
+if __name__ == ‘__main__’</p>
+<blockquote>
+<div><p># 自执行的逻辑代码</p>
+</div></blockquote>
+<p><a href="#id747"><span class="problematic" id="id748">``</span></a><a href="#id749"><span class="problematic" id="id750">`</span></a></p>
+<p>### 6.2 常用内置模块</p>
+<ul class="simple">
+<li><p>logging</p></li>
+</ul>
+<p>基本应用</p>
+<p>日志处理本质：Logger/FileHandler/Formatter</p>
+<p>推荐处理日志方式</p>
+<p><a href="#id751"><span class="problematic" id="id752">``</span></a><a href="#id753"><span class="problematic" id="id754">`</span></a>python
+import logging</p>
+<p>file_handler = logging.FileHandler(filename=’x1.log’, mode=’a’, encoding=’utf-8’,)
+logging.basicConfig(</p>
+<blockquote>
+<div><p>format=’%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s’,
+datefmt=’%Y-%m-%d %H:%M:%S %p’,
+handlers=[file_handler,],
+level=logging.ERROR</p>
+</div></blockquote>
+<p>)</p>
+<p>logging.error(‘你好’)
+<a href="#id755"><span class="problematic" id="id756">``</span></a><a href="#id757"><span class="problematic" id="id758">`</span></a></p>
+<p>推荐处理日志方式 + 日志分割</p>
+<p><a href="#id759"><span class="problematic" id="id760">``</span></a><a href="#id761"><span class="problematic" id="id762">`</span></a>python
+import time
+import logging
+from logging import handlers
+# file_handler = logging.FileHandler(filename=’x1.log’, mode=’a’, encoding=’utf-8’,)
+file_handler = handlers.TimedRotatingFileHandler(filename=’x3.log’, when=’s’, interval=5, encoding=’utf-8’)
+logging.basicConfig(</p>
+<blockquote>
+<div><p>format=’%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s’,
+datefmt=’%Y-%m-%d %H:%M:%S %p’,
+handlers=[file_handler,],
+level=logging.ERROR</p>
+</div></blockquote>
+<p>)</p>
+<dl class="simple">
+<dt>for i in range(1,100000):</dt><dd><p>time.sleep(1)
+logging.error(str(i))</p>
+</dd>
+</dl>
+<p><a href="#id763"><span class="problematic" id="id764">``</span></a><a href="#id765"><span class="problematic" id="id766">`</span></a></p>
+<p>注意事项：</p>
+<p><a href="#id767"><span class="problematic" id="id768">``</span></a><a href="#id769"><span class="problematic" id="id770">`</span></a>python
+# 在应用日志时，如果想要保留异常的堆栈信息。
+import logging
+import requests</p>
+<dl class="simple">
+<dt>logging.basicConfig(</dt><dd><p>filename=’wf.log’,
+format=’%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s’,
+datefmt=’%Y-%m-%d %H:%M:%S %p’,
+level=logging.ERROR</p>
+</dd>
+</dl>
+<p>)</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>requests.get(‘<a class="reference external" href="http://www.xxx.com">http://www.xxx.com</a>’)</p>
+</dd>
+<dt>except Exception as e:</dt><dd><p>msg = str(e) # 调用e.__str__方法
+logging.error(msg,exc_info=True)</p>
+</dd>
+</dl>
+<p><a href="#id771"><span class="problematic" id="id772">``</span></a><a href="#id773"><span class="problematic" id="id774">`</span></a></p>
+<p>settings配置</p>
+<p><a href="#id775"><span class="problematic" id="id776">``</span></a><a href="#id777"><span class="problematic" id="id778">`</span></a>python
+# settings.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LOG_FILE_PATH = os.path.join(BASE_DIR,’log’,’cmdb.log’)
+LOG_WHEN = “s”
+LOG_INTERVAL = 5</p>
+<p># log.py配置
+import os
+import logging
+from logging import handlers
+from config import settings</p>
+<dl>
+<dt>def get_logger():</dt><dd><dl class="simple">
+<dt>file_handler = handlers.TimedRotatingFileHandler(filename=settings.LOG_FILE_PATH,</dt><dd><p>when=settings.LOG_WHEN,
+interval=settings.LOG_INTERVAL,
+encoding=’utf-8’)</p>
+</dd>
+<dt>logging.basicConfig(</dt><dd><p>format=’%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s’,
+datefmt=’%Y-%m-%d %H:%M:%S %p’,
+handlers=[file_handler],
+level=logging.ERROR</p>
+</dd>
+</dl>
+<p>)
+return logging</p>
+</dd>
+</dl>
+<p>logger = get_logger()
+<a href="#id779"><span class="problematic" id="id780">``</span></a><a href="#id781"><span class="problematic" id="id782">`</span></a></p>
+<p>logging高级用法</p>
+<p>默认日志级别30</p>
+<p>日志模块的详细用法：</p>
+<p><a href="#id783"><span class="problematic" id="id784">``</span></a><a href="#id785"><span class="problematic" id="id786">`</span></a>python
+import logging
+# 1.Logger: 产生日志
+# 2.Filter: 几乎不用
+# 3.Handler：接收Logger传过来的日志，进行日志格式化，可以打印到终端，也可以打印到文件(可以有多个)
+# 4.Formatter：日志格式</p>
+<p>‘’’
+critical=50
+error =40
+warning =30
+info = 20
+debug =10
+‘’’</p>
+<p>#1、logger对象：负责产生日志，然后交给Filter过滤，然后交给不同的Handler输出
+logger=logging.getLogger(__file__)</p>
+<p>#2、Filter对象：不常用，略</p>
+<p>#3、Handler对象：接收logger传来的日志，然后控制输出
+h1=logging.FileHandler(‘t1.log’) #打印到文件
+h2=logging.FileHandler(‘t2.log’) #打印到文件
+h3=logging.StreamHandler() #打印到终端</p>
+<p>#4、Formatter对象：日志格式
+formmater1=logging.Formatter(‘%(asctime)s - %(name)s - %(levelname)s -%(module)s:  %(message)s’,</p>
+<blockquote>
+<div><p>datefmt=’%Y-%m-%d %H:%M:%S %p’,)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>formmater2=logging.Formatter(‘%(asctime)s<span class="classifier">%(message)s’,</span></dt><dd><p>datefmt=’%Y-%m-%d %H:%M:%S %p’,)</p>
+</dd>
+</dl>
+<p>formmater3=logging.Formatter(‘%(name)s %(message)s’,)</p>
+<p>#5、为Handler对象绑定格式
+h1.setFormatter(formmater1)
+h2.setFormatter(formmater2)
+h3.setFormatter(formmater3)</p>
+<p>#6、将Handler添加给logger并设置日志级别
+logger.addHandler(h1)
+logger.addHandler(h2)
+logger.addHandler(h3)
+logger.setLevel(10)</p>
+<p>#7、测试
+logger.debug(‘debug’)
+logger.info(‘info’)
+logger.warning(‘warning’)
+logger.error(‘error’)
+logger.critical(‘critical’)
+<a href="#id787"><span class="problematic" id="id788">``</span></a><a href="#id789"><span class="problematic" id="id790">`</span></a></p>
+<p>python 之 logger日志 字典配置文件</p>
+<p><a href="#id791"><span class="problematic" id="id792">``</span></a><a href="#id793"><span class="problematic" id="id794">`</span></a>python
+# settings.py
+import os
+import sys</p>
+<p>BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.append(BASE_DIR)</p>
+<p># 定义日志文件的路径
+LOG_PATH=os.path.join(BASE_DIR,’logs’,’access.log’)</p>
+<p># 定义三种日志输出格式 开始
+standard_format = ‘[%(asctime)s][%(threadName)s:%(thread)d][task_id:%(name)s][%(filename)s:%(lineno)d]’ </p>
+<blockquote>
+<div><p>‘[%(levelname)s][%(message)s]’ #其中name为getlogger指定的名字</p>
+</div></blockquote>
+<p>#simple_format = ‘[%(asctime)s] - [%(name)s] - %(levelname)s -%(module)s:  %(message)s’</p>
+<p>simple_format =  ‘[%(levelname)s][%(asctime)s][%(filename)s:%(lineno)d]%(message)s’</p>
+<p>id_simple_format = ‘[%(levelname)s][%(asctime)s] %(message)s’</p>
+<p># log配置字典
+LOGGING_DIC = {</p>
+<blockquote>
+<div><p>‘version’: 1,
+# 禁用已经存在的logger实例
+‘disable_existing_loggers’: False,
+# 定义日志 格式化的 工具
+‘formatters’: {</p>
+<blockquote>
+<div><dl class="simple">
+<dt>‘standard’: {</dt><dd><p>‘format’: standard_format</p>
+</dd>
+</dl>
+<p>},
+‘simple’: {</p>
+<blockquote>
+<div><p>‘format’: simple_format</p>
+</div></blockquote>
+<p>},
+‘id_simple’: {</p>
+<blockquote>
+<div><p>‘format’: id_simple_format</p>
+</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>},
+# 过滤
+‘filters’: {},  # jango此处不同
+‘handlers’: {</p>
+<blockquote>
+<div><p>#打印到终端的日志
+‘stream’: {</p>
+<blockquote>
+<div><p>‘level’: ‘DEBUG’,
+‘class’: ‘logging.StreamHandler’,  # 打印到屏幕
+‘formatter’: ‘standard’</p>
+</div></blockquote>
+<p>},
+#打印到文件的日志,收集info及以上的日志
+‘access’: {</p>
+<blockquote>
+<div><p>‘level’: ‘DEBUG’,
+‘class’: ‘logging.handlers.RotatingFileHandler’,  # 保存到文件
+‘formatter’: ‘standard’,
+‘filename’: LOG_PATH,       # 日志文件路径
+‘maxBytes’: 1024*1024*5,  # 日志大小 5M
+‘backupCount’: 5,
+‘encoding’: ‘utf-8’,  # 日志文件的编码，再也不用担心中文log乱码了</p>
+</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>},
+# logger实例
+‘loggers’: {</p>
+<blockquote>
+<div><p># 默认的logger应用如下配置
+‘’: {</p>
+<blockquote>
+<div><p>‘handlers’: [‘stream’, ‘access’],  # 这里把上面定义的两个handler都加上，即log数据既写入文件又打印到屏幕
+‘level’: ‘DEBUG’,
+‘propagate’: True,  # 向上（更高level的logger）传递</p>
+</div></blockquote>
+<p>},
+# logging.getLogger(__name__)拿到的logger配置
+# 这样我们再取logger对象时logging.getLogger(__name__)，不同的文件__name__不同，这保证了打印日志时标识信息不同，
+# 但是拿着该名字去loggers里找key名时却发现找不到，于是默认使用key=’’的配置</p>
+</div></blockquote>
+<p>},</p>
+</div></blockquote>
+<p>}</p>
+<p># common.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import logging.config
+from config import settings
+def load_my_logging_cfg(log_name):</p>
+<blockquote>
+<div><p>logging.config.dictConfig(settings.LOGGING_DIC)  # 导入上面定义的logging配置
+logger = logging.getLogger(log_name)  # 生成一个log实例
+return  logger</p>
+</div></blockquote>
+<p># run.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-
+from config import settings
+from lib import common</p>
+<dl class="simple">
+<dt>try:</dt><dd><p>int(‘adgdsg’)</p>
+</dd>
+<dt>except Exception as e:</dt><dd><p>msg = str(e)
+logger = common.load_my_logging_cfg(‘吃饭功能’)
+logger.info(msg,exc_info=True)</p>
+</dd>
+</dl>
+<p><a href="#id795"><span class="problematic" id="id796">``</span></a><a href="#id797"><span class="problematic" id="id798">`</span></a></p>
+<ul class="simple">
+<li><p>importlib</p></li>
+</ul>
+<p><a href="#id799"><span class="problematic" id="id800">``</span></a><a href="#id801"><span class="problematic" id="id802">`</span></a>python
+import importlib
+# 用字符串的形式导入模块。
+redis = importlib.import_module(‘utils.redis’)
+# 用字符串的形式去对象（模块）找到他的成员。
+getattr(redis,’func’)()</p>
+<p>#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-
+from utils import redis
+import importlib</p>
+<dl class="simple">
+<dt>middleware_classes = [</dt><dd><p>‘utils.redis.Redis’,
+# ‘utils.mysql.MySQL’,
+‘utils.mongo.Mongo’</p>
+</dd>
+</dl>
+<p>]
+for path in middleware_classes:</p>
+<blockquote>
+<div><p>module_path,class_name = path.rsplit(‘.’,maxsplit=1)
+module_object = importlib.import_module(module_path)# from utils import redis
+cls = getattr(module_object,class_name)
+obj = cls()
+obj.connect()</p>
+</div></blockquote>
+<p><a href="#id803"><span class="problematic" id="id804">``</span></a><a href="#id805"><span class="problematic" id="id806">`</span></a></p>
+<p>&gt; 补充：开放封闭原则（源代码不改变，改变输入信息，输出信息随即改变）</p>
+<ul class="simple">
+<li><p>shutil</p></li>
+</ul>
+<p><a href="#id807"><span class="problematic" id="id808">``</span></a><a href="#id809"><span class="problematic" id="id810">`</span></a>python
+import shutil</p>
+<p># 删除目录
+# shutil.rmtree(‘test’)</p>
+<p># 重命名
+# shutil.move(‘test’,’ttt’)</p>
+<p># 压缩文件
+# shutil.make_archive(‘zzh’,’zip’,’D:codes21day16lizhong’)</p>
+<p># 解压文件
+# shutil.unpack_archive(‘zzh.zip’,extract_dir=r’D:codexxxxxxxxxx’,format=’zip’)
+<a href="#id811"><span class="problematic" id="id812">``</span></a><a href="#id813"><span class="problematic" id="id814">`</span></a></p>
+<p>示例</p>
+<p><a href="#id815"><span class="problematic" id="id816">``</span></a><a href="#id817"><span class="problematic" id="id818">`</span></a>python
+import os
+import shutil
+from datetime import datetime
+ctime = datetime.now().strftime(‘%Y-%m-%d-%H-%M-%S’)</p>
+<p># 1.压缩lizhongwei文件夹 zip
+# 2.放到到 code 目录（默认不存在）
+# 3.将文件解压到D:x1目录中。</p>
+<dl class="simple">
+<dt>if not os.path.exists(‘code’):</dt><dd><p>os.makedirs(‘code’)</p>
+</dd>
+</dl>
+<p>shutil.make_archive(os.path.join(‘code’,ctime),’zip’,’D:codes21day16lizhongwei’)</p>
+<p>file_path = os.path.join(‘code’,ctime) + ‘.zip’
+shutil.unpack_archive(file_path,r’D:x1’,’zip’)
+<a href="#id819"><span class="problematic" id="id820">``</span></a><a href="#id821"><span class="problematic" id="id822">`</span></a></p>
+<ul class="simple">
+<li><p>random</p></li>
+</ul>
+<p><a href="#id823"><span class="problematic" id="id824">``</span></a><a href="#id825"><span class="problematic" id="id826">`</span></a>python
+# randint 随机
+import random</p>
+<dl>
+<dt>def get_random_data(length=6):</dt><dd><p>DATA = []
+for i in range(length):</p>
+<blockquote>
+<div><p>v = random.randint(65,90)  # 随机取65-90之间的数字
+DATA.append(chr(v))</p>
+</div></blockquote>
+<p>return ‘’.join(DATA)</p>
+</dd>
+</dl>
+<p>num = get_random_data()
+print(num)
+<a href="#id827"><span class="problematic" id="id828">``</span></a><a href="#id829"><span class="problematic" id="id830">`</span></a></p>
+<ul class="simple">
+<li><p>hashlib</p></li>
+</ul>
+<p><a href="#id831"><span class="problematic" id="id832">``</span></a><a href="#id833"><span class="problematic" id="id834">`</span></a>python
+# md5 将指定的字符串进行加密
+import hashlib</p>
+<dl class="simple">
+<dt>def get_md5(data):</dt><dd><p>obj = hashlib.md5()
+obj.update(data.encode(‘utf-8’))
+result = obj.hexdigest()
+return result</p>
+</dd>
+</dl>
+<p>val = get_md5(‘122453535’)
+print(val)</p>
+<p># 加盐
+import hashlib</p>
+<dl class="simple">
+<dt>def get_md5(data):</dt><dd><p>obj = hashlib.md5(‘adgfsdgesgasdg’.encode(‘utf-8’))
+obj.update(data.encode(‘utf-8’))
+result = obj.hexdigest()
+return result</p>
+</dd>
+</dl>
+<p>val = get_md5(‘123’)
+print(val)</p>
+<div class="section" id="id835">
+<h1>#<a class="headerlink" href="#id835" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>getpass</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">密码不显示</span>
+<span class="pre">pwd</span> <span class="pre">=</span> <span class="pre">getpass.getpass('请输入密码')</span>
+<span class="pre">print(pwd)</span>
+<span class="pre">`</span></code></p>
+<ul class="simple">
+<li><p>os</p></li>
+</ul>
+<p>和操作系统相关的数据。</p>
+<p><a href="#id836"><span class="problematic" id="id837">``</span></a><a href="#id838"><span class="problematic" id="id839">`</span></a>python
+# 文件或目录是否存在
+os.path.exists(path)  如果path存在，返回True；如果path不存在，返回False</p>
+<p># 文件大小
+os.stat(‘20190409_192149.mp4’).st_size  获取文件大小</p>
+<p># 文件绝对路径
+os.path.abspath()   获取一个文件的绝对路径</p>
+<p># 获取路径的上级目录
+os.path.dirname 获取路径的上级目录</p>
+<p># 路径的拼接
+# os.path.join
+import os
+path = “D:codes21day14” # user/index/inx/fasd/
+v = ‘n.txt’</p>
+<p>result = os.path.join(path,v)
+print(result)
+result = os.path.join(path,’n1’,’n2’,’n3’)
+print(result)</p>
+<p># 查看一个目录下所有的文件【第一层】
+import os</p>
+<p>result = os.listdir(r’D:codes21day14’)
+for path in result:</p>
+<blockquote>
+<div><p>print(path)</p>
+</div></blockquote>
+<p># 查看一个目录下所有的文件【所有层】
+import os</p>
+<p>result = os.walk(r’D:codes21day14’)
+for a,b,c in result:</p>
+<blockquote>
+<div><p># a,正在查看的目录 b,此目录下的文件夹  c,此目录下的文件
+for item in c:</p>
+<blockquote>
+<div><p>path = os.path.join(a,item)
+print(path)</p>
+</div></blockquote>
+</div></blockquote>
+<p># 创建文件夹，可以多级创建
+os.makedirs()</p>
+<p>import os
+file_path = r’dbxxxoxxxxx.txt’</p>
+<p>file_folder = os.path.dirname(file_path)
+if not os.path.exists(file_folder):</p>
+<blockquote>
+<div><p>os.makedirs(file_folder)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>with open(file_path,mode=’w’,encoding=’utf-8’) as f:</dt><dd><p>f.write(‘asdf’)</p>
+</dd>
+</dl>
+<p><a href="#id840"><span class="problematic" id="id841">``</span></a><a href="#id842"><span class="problematic" id="id843">`</span></a></p>
+<ul class="simple">
+<li><p>sys</p></li>
+</ul>
+<p><a href="#id844"><span class="problematic" id="id845">``</span></a><a href="#id846"><span class="problematic" id="id847">`</span></a>python
+# python解释器相关的数据
+import sys</p>
+<p># python默认支持的递归数量
+print(sys.getrecursionlimit())</p>
+<p># 获取一个值的应用计数
+a = [11,22,33]
+b = a
+print(sys.getrefcount(a))</p>
+<p># 进度条
+import os
+# 读取文件大小
+file_path = ‘CentOS-7-x86_64-DVD-1810.iso’
+file_size = os.stat(file_path).st_size</p>
+<p>chunk_size = 1024
+read_size = 0
+with open(file_path,mode=’rb’) as f,open(‘centos.iso’,mode=’wb’) as f1:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>while read_size &lt; file_size:</dt><dd><p>chunk = f.read(1024) # 每次读最多1024个字节
+f1.write(chunk)
+read_size += len(chunk)
+val = int(read_size / file_size * 100)
+print(‘%s%%r’ %val,end=’’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p># 获取脚本参数
+获取用户执行脚本时，传入的参数。
+C:Python36python36.exe D:/code/s21day14/7.模块传参.py D:/test
+sys.argv = [D:/code/s21day14/7.模块传参.py, D:/test]</p>
+<p>path = sys.argv[1]
+#删除目录
+import shutil
+shutil.rmtree(path)</p>
+<p># sys.path ,默认python查找模块的目录
+import sys
+sys.path.append(‘路径’)
+<a href="#id848"><span class="problematic" id="id849">``</span></a><a href="#id850"><span class="problematic" id="id851">`</span></a></p>
+<ul class="simple">
+<li><p>json</p></li>
+</ul>
+<p><a href="#id852"><span class="problematic" id="id853">``</span></a><a href="#id854"><span class="problematic" id="id855">`</span></a>python
+# json.dumps() 序列化
+v = [12,3,4,5,{‘k1’:’v1’},True,’asf’]
+v_json = json.dumps(v,ensure_ascii=False) # 序列化保留中文显示
+print(v_json) # [12, 3, 4, 5, {“k1”: “v1”}, true, “asf”]</p>
+<p># json.loads()  反序列化
+v = ‘[12, 3, 4, 5, {“k1”: “v1”}, true, “asf”]’
+v_list = json.loads(v)
+print(v_list) #  [12, 3, 4, 5, {‘k1’: ‘v1’}, True, ‘asf’]
+<a href="#id856"><span class="problematic" id="id857">``</span></a><a href="#id858"><span class="problematic" id="id859">`</span></a></p>
+<ul class="simple">
+<li><p>pickle</p></li>
+</ul>
+<p><a href="#id860"><span class="problematic" id="id861">``</span></a><a href="#id862"><span class="problematic" id="id863">`</span></a>python
+import pickle</p>
+<p># #################### dumps/loads ######################
+“””
+v = {1,2,3,4}
+val = pickle.dumps(v)
+print(val)
+data = pickle.loads(val)
+print(data,type(data))
+“””</p>
+<p>“””
+def f1():</p>
+<blockquote>
+<div><p>print(‘f1’)</p>
+</div></blockquote>
+<p>v1 = pickle.dumps(f1)
+print(v1)
+v2 = pickle.loads(v1)
+v2()
+“””</p>
+<p># #################### dump/load ######################
+# v = {1,2,3,4}
+# f = open(‘x.txt’,mode=’wb’)
+# val = pickle.dump(v,f)
+# f.close()</p>
+<p># f = open(‘x.txt’,mode=’rb’)
+# data = pickle.load(f)
+# f.close()
+# print(data)
+<a href="#id864"><span class="problematic" id="id865">``</span></a><a href="#id866"><span class="problematic" id="id867">`</span></a></p>
+<ul class="simple">
+<li><p>logging</p></li>
+</ul>
+<p>### 6.3 异常处理</p>
+<p><a href="#id868"><span class="problematic" id="id869">``</span></a><a href="#id870"><span class="problematic" id="id871">`</span></a>python
+try:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>except Exception as e:</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p><a href="#id872"><span class="problematic" id="id873">``</span></a><a href="#id874"><span class="problematic" id="id875">`</span></a></p>
+<p><a href="#id876"><span class="problematic" id="id877">``</span></a><a href="#id878"><span class="problematic" id="id879">`</span></a>python
+# finally 的运用
+def:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>try:</dt><dd><p>int(‘asdf’)</p>
+</dd>
+<dt>except Exception as e:</dt><dd><p>print(e)
+return 123</p>
+</dd>
+<dt>finally:</dt><dd><p>print(‘1’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>func()
+#即使return  finally最后也会执行
+<a href="#id880"><span class="problematic" id="id881">``</span></a><a href="#id882"><span class="problematic" id="id883">`</span></a></p>
+<p>主动抛出异常</p>
+<p><a href="#id884"><span class="problematic" id="id885">``</span></a><a href="#id886"><span class="problematic" id="id887">`</span></a>python
+try:</p>
+<blockquote>
+<div><p>int(‘123’)
+raise Exception(‘dsfsegsdg’) #主动触发异常
+except Exception as e:</p>
+<blockquote>
+<div><p>print(‘111’)</p>
+</div></blockquote>
+</div></blockquote>
+<p><a href="#id888"><span class="problematic" id="id889">``</span></a><a href="#id890"><span class="problematic" id="id891">`</span></a></p>
+<p>自定义异常</p>
+<p><a href="#id892"><span class="problematic" id="id893">``</span></a><a href="#id894"><span class="problematic" id="id895">`</span></a>python
+class MyException(Exception):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self,message):</dt><dd><p>super().__init__()
+self.message = message</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>try:</dt><dd><p>raise MyException(‘asdf’)</p>
+</dd>
+<dt>except MyException as e:</dt><dd><p>print(e.message)</p>
+</dd>
+</dl>
+<p><a href="#id896"><span class="problematic" id="id897">``</span></a><a href="#id898"><span class="problematic" id="id899">`</span></a></p>
+<p>### 6.4 第三方模块</p>
+<p>### 6.5 主文件</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__':</span>
+<span class="pre">`</span></code></p>
+<p>## 第七章 面向对象</p>
+<p>### 7.1 迭代器</p>
+<p>自己不会写迭代器，只用</p>
+<p>任务：展示列表中所有的数据</p>
+<ul class="simple">
+<li><p>while + 索引 + 计数器</p></li>
+<li><p>迭代器
+* 列表转迭代器</p></li>
+</ul>
+<p>### 7.3 生成器（函数的变异）</p>
+<p><a href="#id900"><span class="problematic" id="id901">``</span></a><a href="#id902"><span class="problematic" id="id903">`</span></a>python
+# 生成器函数（内部是否包含yield）
+def func(arg):</p>
+<blockquote>
+<div><p>arg = arg+1
+yield 1
+yield 2
+yield 100</p>
+</div></blockquote>
+<p># 函数内部代码不会执行，返回一个生成器对象
+func(200)
+<a href="#id904"><span class="problematic" id="id905">``</span></a><a href="#id906"><span class="problematic" id="id907">`</span></a></p>
+<p>from</p>
+<p><a href="#id908"><span class="problematic" id="id909">``</span></a><a href="#id910"><span class="problematic" id="id911">`</span></a>python
+def base():</p>
+<blockquote>
+<div><p>yield 88
+yield 99</p>
+</div></blockquote>
+<dl class="simple">
+<dt>def func():</dt><dd><p>yield 1
+yield 2
+yield from base()
+yield 3</p>
+</dd>
+</dl>
+<p>result = func()</p>
+<dl class="simple">
+<dt>for item in result:</dt><dd><p>print(item)</p>
+</dd>
+</dl>
+<p><a href="#id912"><span class="problematic" id="id913">``</span></a><a href="#id914"><span class="problematic" id="id915">`</span></a></p>
+<p>生成器推导式</p>
+<p><a href="#id916"><span class="problematic" id="id917">``</span></a><a href="#id918"><span class="problematic" id="id919">`</span></a>python
+# def func():
+#     result = []
+#     for i in range(10):
+#         result.append(i)
+#     return result
+# v1 = func()
+v1 = [i for i in range(10)] # 列表推导式，立即循环创建所有元素。
+print(v1)</p>
+<p># def func():
+#     for i in range(10):
+#         yield i
+# v2 = func()
+v2 = (i for i in range(10)) # 生成器推导式，创建了一个生成器，内部循环为执行。
+print(v2)
+<a href="#id920"><span class="problematic" id="id921">``</span></a><a href="#id922"><span class="problematic" id="id923">`</span></a></p>
+<p>### 7.4 面向对象基本格式</p>
+<p><a href="#id924"><span class="problematic" id="id925">``</span></a><a href="#id926"><span class="problematic" id="id927">`</span></a>python
+# ###### 定义类 ######
+class 类名:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def 方法名(self,name):</dt><dd><p>print(name)
+return 123</p>
+</dd>
+<dt>def 方法名(self,name):</dt><dd><p>print(name)
+return 123</p>
+</dd>
+<dt>def 方法名(self,name):</dt><dd><p>print(name)
+return 123</p>
+</dd>
+</dl>
+</div></blockquote>
+<p># ###### 调用类中的方法 ######
+# 1.创建该类的对象
+obj = 类名()
+# 2.通过对象调用方法
+result = obj.方法名(‘alex’)
+print(result)
+<a href="#id928"><span class="problematic" id="id929">``</span></a><a href="#id930"><span class="problematic" id="id931">`</span></a></p>
+<p>应用场景：遇到很多函数，需要给函数进行归类和划分。 【封装】</p>
+<p>### 7.5 类成员</p>
+<ul class="simple">
+<li><p>类
+- 类变量
+- 绑定方法
+- 类方法
+- 静态方法
+- 属性</p></li>
+<li><p>实例（对象）
+- 实例变量</p></li>
+</ul>
+<p>#### 7.5.1 实列变量（属于对象成员）</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200301042126.png">http://images.dregs.top/images/20200301042126.png</a>)</p>
+<p>#### 7.5.2 类变量</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200301042337.png">http://images.dregs.top/images/20200301042337.png</a>)</p>
+<ul>
+<li><p>定义：写在类的下一级和方法同一级。</p></li>
+<li><p>访问：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">类.类变量名称</span>
+<span class="pre">对象.类变量名称</span>
+<span class="pre">`</span></code></p>
+</li>
+</ul>
+<p>&gt; 总结：找变量优先找自己，自己没有找 类 或 基类；修改或赋值只能在自己的内部设置。</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20200301042849.png">http://images.dregs.top/images/20200301042849.png</a>)</p>
+<p>### 7.5方法</p>
+<p>#### 7.5.1 绑定方法/普通方法</p>
+<ul class="simple">
+<li><p>定义：至少有一个self参数</p></li>
+<li><p>执行：先创建对象，由对象.方法</p></li>
+</ul>
+<p><a href="#id932"><span class="problematic" id="id933">``</span></a><a href="#id934"><span class="problematic" id="id935">`</span></a>python
+# 普通方法 第一个方法是没有使用self，比较浪费内存
+class Foo:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(self,a,b):</dt><dd><p>print(a,b)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo()
+obj.func(1,2)</p>
+<p># 绑定方法 使用到了self，所以是有意义的
+class Foo:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.name = 123</p>
+</dd>
+<dt>def func(self, a, b):</dt><dd><p>print(self.name, a, b)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo()
+obj.func(1, 2)
+<a href="#id936"><span class="problematic" id="id937">``</span></a><a href="#id938"><span class="problematic" id="id939">`</span></a></p>
+<p>#### 7.5.2 静态方法</p>
+<ul class="simple">
+<li><p>定义：
+- &#64;staticmethod装饰器
+- 参数无限制</p></li>
+<li><p>执行：
+- 类.静态方法名 ()
+- 对象.静态方法()  (不推荐)</p></li>
+</ul>
+<p><a href="#id940"><span class="problematic" id="id941">``</span></a><a href="#id942"><span class="problematic" id="id943">`</span></a>python
+class Foo:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.name = 123</p>
+</dd>
+<dt>def func(self, a, b):</dt><dd><p>print(self.name, a, b)</p>
+</dd>
+</dl>
+<p>&#64;staticmethod
+def f1():</p>
+<blockquote>
+<div><p>print(123)</p>
+</div></blockquote>
+</div></blockquote>
+<p>obj = Foo()
+obj.func(1, 2)</p>
+<p>Foo.f1()
+obj.f1() # 不推荐
+<a href="#id944"><span class="problematic" id="id945">``</span></a><a href="#id946"><span class="problematic" id="id947">`</span></a></p>
+<p>#### 7.5.3 类方法</p>
+<ul class="simple">
+<li><p>定义：
+- &#64;classmethod装饰器
+- 至少有cls参数，当前类。</p></li>
+<li><p>执行：
+- 类.类方法()
+- 对象.类方法() （不推荐）</p></li>
+</ul>
+<p><a href="#id948"><span class="problematic" id="id949">``</span></a><a href="#id950"><span class="problematic" id="id951">`</span></a>python
+class Foo:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.name = 123</p>
+</dd>
+<dt>def func(self, a, b):</dt><dd><p>print(self.name, a, b)</p>
+</dd>
+</dl>
+<p>&#64;classmethod
+def f2(cls,a,b):</p>
+<blockquote>
+<div><p>print(‘cls是当前类’,cls)
+print(a,b)</p>
+</div></blockquote>
+</div></blockquote>
+<p>obj = Foo()
+obj.func(1, 2)</p>
+<p>Foo.f2(1,2)
+<a href="#id952"><span class="problematic" id="id953">``</span></a><a href="#id954"><span class="problematic" id="id955">`</span></a></p>
+<p>### 7.6 嵌套</p>
+<ul class="simple">
+<li><p>函数：参数可以是任意类型。</p></li>
+<li><p>字典：对象和类都可以做字典的key和value</p></li>
+<li><p>继承的查找关系</p></li>
+</ul>
+<p><a href="#id956"><span class="problematic" id="id957">``</span></a><a href="#id958"><span class="problematic" id="id959">`</span></a>python
+class StarkConfig(object):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class AdminSite(object):</dt><dd><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.data_list = []</p>
+</dd>
+<dt>def register(self,arg):</dt><dd><p>self.data_list.append(arg)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>site = AdminSite()</p>
+<p>obj = StarkConfig()
+site.register(obj)
+<a href="#id960"><span class="problematic" id="id961">``</span></a><a href="#id962"><span class="problematic" id="id963">`</span></a></p>
+<p><a href="#id964"><span class="problematic" id="id965">``</span></a><a href="#id966"><span class="problematic" id="id967">`</span></a>python
+class StarkConfig(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self,name,age):</dt><dd><p>self.name = name
+self.age = age</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>class AdminSite(object):</dt><dd><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self.data_list = []
+self.sk = None</p>
+</dd>
+<dt>def set_sk(self,arg):</dt><dd><p>self.sk = arg</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>site = AdminSite() # data_list = []  sk = StarkConfig
+site.set_sk(StarkConfig)
+site.sk(‘alex’,19)
+<a href="#id968"><span class="problematic" id="id969">``</span></a><a href="#id970"><span class="problematic" id="id971">`</span></a></p>
+<p><a href="#id972"><span class="problematic" id="id973">``</span></a><a href="#id974"><span class="problematic" id="id975">`</span></a>python
+class StackConfig(object):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class Foo(object):</dt><dd><p>pass</p>
+</dd>
+<dt>class Base(object):</dt><dd><p>pass</p>
+</dd>
+<dt>class AdminSite(object):</dt><dd><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>self._register = {}</p>
+</dd>
+<dt>def registry(self,key,arg):</dt><dd><p>self._register[key] = arg</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>site = AdminSite()
+site.registry(1,StackConfig)
+site.registry(2,StackConfig)
+site.registry(3,StackConfig)
+site.registry(4,Foo)
+site.registry(5,Base)</p>
+<dl class="simple">
+<dt>for k,v in site._register.items():</dt><dd><p>print(k,v() )</p>
+</dd>
+</dl>
+<p><a href="#id976"><span class="problematic" id="id977">``</span></a><a href="#id978"><span class="problematic" id="id979">`</span></a></p>
+<p>### 7.7 特殊成员</p>
+<p>#### 7.7.1 <cite>__init__</cite></p>
+<p><a href="#id980"><span class="problematic" id="id981">``</span></a><a href="#id982"><span class="problematic" id="id983">`</span></a>python
+# 初始化方法
+class Foo:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self.al):</dt><dd><p>self.a1 = a1</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo(‘alex’)
+<a href="#id984"><span class="problematic" id="id985">``</span></a><a href="#id986"><span class="problematic" id="id987">`</span></a></p>
+<p>#### 7.7.2 <cite>__new__</cite></p>
+<p><a href="#id988"><span class="problematic" id="id989">``</span></a><a href="#id990"><span class="problematic" id="id991">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self):</dt><dd><p>“””
+用于给对象中赋值，初始化方法
+“””
+self.x = 123</p>
+</dd>
+<dt>def __new__(cls, <a href="#id992"><span class="problematic" id="id993">*</span></a>args, <a href="#id994"><span class="problematic" id="id995">**</span></a>kwargs):</dt><dd><p>“””
+用于创建空对象，构造方法，在__init__之前执行
+:param args:
+:param kwargs:
+:return:
+“””
+return object.__new__(cls)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo()
+<a href="#id996"><span class="problematic" id="id997">``</span></a><a href="#id998"><span class="problematic" id="id999">`</span></a></p>
+<p>#### 7.7.3 <cite>__cal__</cite></p>
+<p><a href="#id1000"><span class="problematic" id="id1001">``</span></a><a href="#id1002"><span class="problematic" id="id1003">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __call__(self, <a href="#id1004"><span class="problematic" id="id1005">*</span></a>args, <a href="#id1006"><span class="problematic" id="id1007">**</span></a>kwargs):</dt><dd><p>print(‘执行call方法’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p># obj = Foo()
+# obj()
+Foo()()
+<a href="#id1008"><span class="problematic" id="id1009">``</span></a><a href="#id1010"><span class="problematic" id="id1011">`</span></a></p>
+<p>#### 7.7.4 <cite>__getitem__   __setitem__ __delitem__</cite></p>
+<p><a href="#id1012"><span class="problematic" id="id1013">``</span></a><a href="#id1014"><span class="problematic" id="id1015">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __setitem__(self, key, value):</dt><dd><p>pass</p>
+</dd>
+<dt>def __getitem__(self, item):</dt><dd><p>return item + ‘uuu’</p>
+</dd>
+<dt>def __delitem__(self, key):</dt><dd><p>pass</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj1 = Foo()
+obj1[‘k1’] = 123  # 内部会自动调用 __setitem__方法
+val = obj1[‘xxx’]  # 内部会自动调用 __getitem__方法
+print(val)
+del obj1[‘ttt’]  # 内部会自动调用 __delitem__ 方法
+<a href="#id1016"><span class="problematic" id="id1017">``</span></a><a href="#id1018"><span class="problematic" id="id1019">`</span></a></p>
+<p>#### 7.7.5 ` __str__ `</p>
+<p><a href="#id1020"><span class="problematic" id="id1021">``</span></a><a href="#id1022"><span class="problematic" id="id1023">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __str__(self):</dt><dd><p>“””
+只有在打印对象时，会自动化调用此方法，并将其返回值在页面显示出来
+:return:
+“””
+return ‘asdfasudfasdfsad’</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo()
+print(obj)
+<a href="#id1024"><span class="problematic" id="id1025">``</span></a><a href="#id1026"><span class="problematic" id="id1027">`</span></a></p>
+<p><a href="#id1028"><span class="problematic" id="id1029">``</span></a><a href="#id1030"><span class="problematic" id="id1031">`</span></a>python
+class User(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self,name,email):</dt><dd><p>self.name = name
+self.email = email</p>
+</dd>
+<dt>def __str__(self):</dt><dd><p>return “%s %s” %(self.name,self.email,)</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>user_list = [User(‘二狗’,’<a class="reference external" href="mailto:2g&#37;&#52;&#48;qq&#46;com">2g<span>&#64;</span>qq<span>&#46;</span>com</a>’),User(‘二蛋’,’<a class="reference external" href="mailto:2d&#37;&#52;&#48;qq&#46;com">2d<span>&#64;</span>qq<span>&#46;</span>com</a>’),User(‘狗蛋’,’<a class="reference external" href="mailto:xx&#37;&#52;&#48;qq&#46;com">xx<span>&#64;</span>qq<span>&#46;</span>com</a>’)]
+for item in user_list:</p>
+<blockquote>
+<div><p>print(item)</p>
+</div></blockquote>
+<p><a href="#id1032"><span class="problematic" id="id1033">``</span></a><a href="#id1034"><span class="problematic" id="id1035">`</span></a></p>
+<p>#### 7.7.6  <cite>__dict__</cite></p>
+<p><a href="#id1036"><span class="problematic" id="id1037">``</span></a><a href="#id1038"><span class="problematic" id="id1039">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self,name,age,email):</dt><dd><p>self.name = name
+self.age = age
+self.email = email</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo(‘alex’,19,’<a class="reference external" href="mailto:xxxx&#37;&#52;&#48;qq&#46;com">xxxx<span>&#64;</span>qq<span>&#46;</span>com</a>’)
+print(obj)
+print(obj.name)
+print(obj.age)
+print(obj.email)
+val = obj.__dict__ # 去对象中找到所有变量并将其转换为字典
+print(val)
+<a href="#id1040"><span class="problematic" id="id1041">``</span></a><a href="#id1042"><span class="problematic" id="id1043">`</span></a></p>
+<p>#### 7.7.7 上下文管理</p>
+<p><a href="#id1044"><span class="problematic" id="id1045">``</span></a><a href="#id1046"><span class="problematic" id="id1047">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def do_something(self):</dt><dd><p>print(‘内部执行’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>class Context:</dt><dd><dl class="simple">
+<dt>def __enter__(self):</dt><dd><p>print(‘进入’)
+return Foo()</p>
+</dd>
+<dt>def __exit__(self, exc_type, exc_val, exc_tb):</dt><dd><p>print(‘推出’)</p>
+</dd>
+</dl>
+</dd>
+<dt>with Context() as ctx:</dt><dd><p>print(‘内部执行’)
+ctx.do_something()</p>
+</dd>
+</dl>
+<p><a href="#id1048"><span class="problematic" id="id1049">``</span></a><a href="#id1050"><span class="problematic" id="id1051">`</span></a></p>
+<p>#### 7.7.8 对象相加</p>
+<ul class="simple">
+<li><p><cite>__add__</cite></p></li>
+</ul>
+<p><a href="#id1052"><span class="problematic" id="id1053">``</span></a><a href="#id1054"><span class="problematic" id="id1055">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def__add__(self,other):</dt><dd><p>return 13</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj1 = Foo()
+obj2 = Foo()
+val  = obj1 + obj2
+print(val)
+<a href="#id1056"><span class="problematic" id="id1057">``</span></a><a href="#id1058"><span class="problematic" id="id1059">`</span></a></p>
+<p>### 7.8 内置函数补充</p>
+<ul class="simple">
+<li><p>type 判断对象是否是类的实例</p></li>
+</ul>
+<p><a href="#id1060"><span class="problematic" id="id1061">``</span></a><a href="#id1062"><span class="problematic" id="id1063">`</span></a>python
+class Foo:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>obj = Foo()</p>
+<dl class="simple">
+<dt>if type(obj) == Foo:</dt><dd><p>print(‘obj是Foo类的对象’)</p>
+</dd>
+</dl>
+<p><a href="#id1064"><span class="problematic" id="id1065">``</span></a><a href="#id1066"><span class="problematic" id="id1067">`</span></a></p>
+<ul class="simple">
+<li><p>issubclass 判断派生类和基类的从属关系</p></li>
+</ul>
+<p><a href="#id1068"><span class="problematic" id="id1069">``</span></a><a href="#id1070"><span class="problematic" id="id1071">`</span></a>python
+class Base:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class Base1(Base):</dt><dd><p>pass</p>
+</dd>
+<dt>class Foo(Base1):</dt><dd><p>pass</p>
+</dd>
+<dt>class Bar:</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>print(issubclass(Bar,Base))  #如果是，则返回True,否则返回False
+print(issubclass(Foo,Base))
+<a href="#id1072"><span class="problematic" id="id1073">``</span></a><a href="#id1074"><span class="problematic" id="id1075">`</span></a></p>
+<ul class="simple">
+<li><p>isinstance 判断对象是否是类或基类的实例</p></li>
+</ul>
+<p><a href="#id1076"><span class="problematic" id="id1077">``</span></a><a href="#id1078"><span class="problematic" id="id1079">`</span></a>python
+class Base(object):</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class Foo(Base):</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>obj = Foo()</p>
+<p>print(isinstance(obj,Foo))  # 判断obj是否是Foo类或其基类的实例（对象）
+print(isinstance(obj,Base)) # 判断obj是否是Foo类或其基类的实例（对象）
+<a href="#id1080"><span class="problematic" id="id1081">``</span></a><a href="#id1082"><span class="problematic" id="id1083">`</span></a></p>
+<ul class="simple">
+<li><p>super 按照self对象所属类的继承关系，按照顺序挨个找func方法并执行（只找第一个）</p></li>
+</ul>
+<p><a href="#id1084"><span class="problematic" id="id1085">``</span></a><a href="#id1086"><span class="problematic" id="id1087">`</span></a>python
+class Base(object): # Base -&gt; object</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def func(self):</dt><dd><p>super().func()
+print(‘base.func’)</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>class Bar(object):</dt><dd><dl class="simple">
+<dt>def func(self):</dt><dd><p>print(‘bar.func’)</p>
+</dd>
+</dl>
+</dd>
+<dt>class Foo(Base,Bar): # Foo -&gt; Base -&gt; Bar</dt><dd><p>pass</p>
+</dd>
+</dl>
+<p>obj = Foo()
+obj.func()
+<a href="#id1088"><span class="problematic" id="id1089">``</span></a><a href="#id1090"><span class="problematic" id="id1091">`</span></a></p>
+<p>### 7.9 可迭代对象</p>
+<ul class="simple">
+<li><p>只要能被for循环，内部就有iter方法</p></li>
+<li><p>在类中实现`__iter__`方法且返回一个迭代器（或者是生成器）</p></li>
+</ul>
+<p><a href="#id1092"><span class="problematic" id="id1093">``</span></a><a href="#id1094"><span class="problematic" id="id1095">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __iter__(self):</dt><dd><p>return iter([1,2,3,4])</p>
+</dd>
+</dl>
+</div></blockquote>
+<dl class="simple">
+<dt>class Foo(object):    #生成器是特殊的迭代器</dt><dd><dl class="simple">
+<dt>def __iter__(self):</dt><dd><p>yield 1
+yield 2
+…</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>obj = Foo()
+<a href="#id1096"><span class="problematic" id="id1097">``</span></a><a href="#id1098"><span class="problematic" id="id1099">`</span></a></p>
+<p>### 7.10 约束</p>
+<ul class="simple">
+<li><p>寻找方便：在源代码或者别人写的代码中加入代码，根据查看基类代码，要在子类中都要添加此send</p></li>
+<li><p>别人也方便：从上往下看，可以看到基类中存在raise中的约束，也方便掌握代码结构</p></li>
+<li><p>更加规范：代码不会轻易出BUG</p></li>
+<li><p><strong>没有也可以，只要不调用这个send也不会出错，只是为了规范，同上。</strong></p></li>
+</ul>
+<p><a href="#id1100"><span class="problematic" id="id1101">``</span></a><a href="#id1102"><span class="problematic" id="id1103">`</span></a>python
+class base(object):</p>
+<blockquote>
+<div><p>def send(self):
+raise NotImplementedError(‘子类中必须有方法’)</p>
+</div></blockquote>
+<dl class="simple">
+<dt>class Foo(base):</dt><dd><dl class="simple">
+<dt>def send(self):</dt><dd><p>print(‘我是真的’)</p>
+</dd>
+</dl>
+</dd>
+<dt>class Fooo(base):</dt><dd><dl class="simple">
+<dt>def send(self):</dt><dd><p>print(‘我也是真的’)</p>
+</dd>
+</dl>
+</dd>
+<dt>class Foooo(base):</dt><dd><dl class="simple">
+<dt>def func(self):</dt><dd><p>print(‘我不知道发生了什么’)</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>obj = Foooo()
+obj.send()    #报错 NotImplementedError 提醒
+<a href="#id1104"><span class="problematic" id="id1105">``</span></a><a href="#id1106"><span class="problematic" id="id1107">`</span></a></p>
+<p>### 7.11 反射</p>
+<ul class="simple">
+<li><p>实现了根据输入的字符查找元素并操作</p></li>
+<li><p>根据字符串形式去操作对象中的元素</p></li>
+<li><p>getattr(对象,”字符串”)     根据字符粗的形式去某个对象中 获取 对象的成员。</p></li>
+</ul>
+<p><a href="#id1108"><span class="problematic" id="id1109">``</span></a><a href="#id1110"><span class="problematic" id="id1111">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def __init__(self,name):</dt><dd><p>self.name = name</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo(‘alex’)</p>
+<p># 获取变量
+v1 = getattr(obj,’name’)
+# 获取方法
+method_name = getattr(obj,’login’)
+method_name()
+<a href="#id1112"><span class="problematic" id="id1113">``</span></a><a href="#id1114"><span class="problematic" id="id1115">`</span></a></p>
+<ul class="simple">
+<li><p>getattr 中的第三个值是如果获取不到的返回值</p></li>
+</ul>
+<p><a href="#id1116"><span class="problematic" id="id1117">``</span></a><a href="#id1118"><span class="problematic" id="id1119">`</span></a>python
+class Foo(object):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>def get(self):</dt><dd><p>pass</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj = Foo()
+if hasattr(obj,’post’):</p>
+<blockquote>
+<div><p>getattr(obj,’post’)</p>
+</div></blockquote>
+<p>v1 = getattr(obj,’get’,None) # 推荐
+print(v1)
+<a href="#id1120"><span class="problematic" id="id1121">``</span></a><a href="#id1122"><span class="problematic" id="id1123">`</span></a></p>
+<ul class="simple">
+<li><p>hasattr(对象,’字符串’)   根据字符粗的形式去某个对象中判断是否有该成员。</p></li>
+</ul>
+<p><a href="#id1124"><span class="problematic" id="id1125">``</span></a><a href="#id1126"><span class="problematic" id="id1127">`</span></a>python
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-
+from wsgiref.simple_server import make_server</p>
+<dl>
+<dt>class View(object):</dt><dd><dl class="simple">
+<dt>def login(self):</dt><dd><p>return ‘登陆’</p>
+</dd>
+<dt>def logout(self):</dt><dd><p>return ‘等处’</p>
+</dd>
+<dt>def index(self):</dt><dd><p>return ‘首页’</p>
+</dd>
+</dl>
+</dd>
+<dt>def func(environ,start_response):</dt><dd><p>start_response(“200 OK”, [(‘Content-Type’, ‘text/plain; charset=utf-8’)])
+#
+obj = View()
+# 获取用户输入的URL
+method_name = environ.get(‘PATH_INFO’).strip(‘/’)
+if not hasattr(obj,method_name):</p>
+<blockquote>
+<div><p>return [“sdf”.encode(“utf-8”),]</p>
+</div></blockquote>
+<p>response = getattr(obj,method_name)()
+return [response.encode(“utf-8”)  ]</p>
+</dd>
+</dl>
+<p># 作用：写一个网站，用户只要来方法，就自动找到第三个参数并执行。
+server = make_server(‘192.168.12.87’, 8000, func)
+server.serve_forever()
+<a href="#id1128"><span class="problematic" id="id1129">``</span></a><a href="#id1130"><span class="problematic" id="id1131">`</span></a></p>
+<ul class="simple">
+<li><p>setattr(对象,’变量’,’值’)   根据字符粗的形式去某个对象中设置成员。</p></li>
+</ul>
+<p><a href="#id1132"><span class="problematic" id="id1133">``</span></a><a href="#id1134"><span class="problematic" id="id1135">`</span></a>python
+class Foo:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>obj = Foo()
+obj.k1 = 999
+setattr(obj,’k1’,123) # obj.k1 = 123</p>
+<p>print(obj.k1)
+<a href="#id1136"><span class="problematic" id="id1137">``</span></a><a href="#id1138"><span class="problematic" id="id1139">`</span></a></p>
+<ul class="simple">
+<li><p>delattr(对象,’变量’)   根据字符粗的形式去某个对象中删除成员。</p></li>
+</ul>
+<p><a href="#id1140"><span class="problematic" id="id1141">``</span></a><a href="#id1142"><span class="problematic" id="id1143">`</span></a>python
+class Foo:</p>
+<blockquote>
+<div><p>pass</p>
+</div></blockquote>
+<p>obj = Foo()
+obj.k1 = 999
+delattr(obj,’k1’)
+print(obj.k1)
+<a href="#id1144"><span class="problematic" id="id1145">``</span></a><a href="#id1146"><span class="problematic" id="id1147">`</span></a></p>
+<p>7.12 单例模式</p>
+<p>&gt; 无论实例化多少次，永远用的都是第一次实例化出的对象。优点是可以增加效率，防止链接太多导致的崩溃</p>
+<p><a href="#id1148"><span class="problematic" id="id1149">``</span></a><a href="#id1150"><span class="problematic" id="id1151">`</span></a>python
+class Singleton(object):</p>
+<blockquote>
+<div><p>instance = None
+def __new__(cls,*args,**kwargs):</p>
+<blockquote>
+<div><dl class="simple">
+<dt>if not cls.instance:</dt><dd><p>cls.instance = object.__new__(cls)</p>
+</dd>
+</dl>
+<p>return cls.instance</p>
+</div></blockquote>
+</div></blockquote>
+<p>#当运行第一次，创建new的对象，赋值给类变量instance,之后在使用这个类，对象相同
+obj1 = Singleton()
+obj2 = Singleton()
+<a href="#id1152"><span class="problematic" id="id1153">``</span></a><a href="#id1154"><span class="problematic" id="id1155">`</span></a></p>
+<p>文件的连接池</p>
+<p><a href="#id1156"><span class="problematic" id="id1157">``</span></a><a href="#id1158"><span class="problematic" id="id1159">`</span></a>python
+class FileHelper(object):</p>
+<blockquote>
+<div><p>instance = None
+def __init__(self, path):</p>
+<blockquote>
+<div><p>self.file_object = open(path,mode=’r’,encoding=’utf-8’)</p>
+</div></blockquote>
+<dl>
+<dt>def __new__(cls, <a href="#id1160"><span class="problematic" id="id1161">*</span></a>args, <a href="#id1162"><span class="problematic" id="id1163">**</span></a>kwargs):</dt><dd><dl class="simple">
+<dt>if not cls.instance:</dt><dd><p>cls.instance = object.__new__(cls)</p>
+</dd>
+</dl>
+<p>return cls.instance</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>obj1 = FileHelper(‘x’)
+obj2 = FileHelper(‘x’) # 无论打开多少次都是同一个链接
+<a href="#id1164"><span class="problematic" id="id1165">``</span></a><a href="#id1166"><span class="problematic" id="id1167">`</span></a></p>
+<p>反射当前文件的变量</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">getattr(sys.modules[__name__],'变量名')</span>
+<span class="pre">`</span></code></p>
+<p>## 第八章 网络编程</p>
+<p>TCP协议</p>
+<p><a href="#id1168"><span class="problematic" id="id1169">``</span></a><a href="#id1170"><span class="problematic" id="id1171">`</span></a>python
+# server.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.bind((‘127.0.0.1’,9000))
+sk.listen()</p>
+<p>conn,addr = sk.accept()  # 等待连接,阻塞状态
+conn.send(b’hello’)      # 发送信息，必须是字节类型
+msg = conn.recv(1024)    # 接收1024 字节
+print(msg)</p>
+<p>conn.close()             # 关闭连接
+sk.close()               # 关闭整个socket</p>
+<p># client.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.connect((‘127.0.0.1’,9000))</p>
+<p>msg = sk.recv(1024)
+print(msg)
+sk.send(b’nihao’)</p>
+<p>sk.close()
+<a href="#id1172"><span class="problematic" id="id1173">``</span></a><a href="#id1174"><span class="problematic" id="id1175">`</span></a></p>
+<p>通信循环</p>
+<p><a href="#id1176"><span class="problematic" id="id1177">``</span></a><a href="#id1178"><span class="problematic" id="id1179">`</span></a>python
+# client.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.connect((‘127.0.0.1’,9000))
+while True:</p>
+<blockquote>
+<div><p>inp = input(‘请输入内容：’)
+sk.send(inp.encode(‘utf-8’))
+msg = sk.recv(1024)
+print(msg)</p>
+</div></blockquote>
+<p>sk.close()</p>
+<p># server.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.bind((‘127.0.0.1’,9000))
+sk.listen()
+conn,addr = sk.accept()  # 等待连接
+while True:</p>
+<blockquote>
+<div><p>msg = conn.recv(1024)    # 接收1024 字节
+conn.send(msg.upper())
+print(msg)</p>
+</div></blockquote>
+<p>conn.close()             # 关闭连接
+sk.close()               # 关闭整个socket
+<a href="#id1180"><span class="problematic" id="id1181">``</span></a><a href="#id1182"><span class="problematic" id="id1183">`</span></a></p>
+<p>链接循环</p>
+<p><a href="#id1184"><span class="problematic" id="id1185">``</span></a><a href="#id1186"><span class="problematic" id="id1187">`</span></a>python
+# client.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.connect((‘127.0.0.1’ ,9000))
+while True:</p>
+<blockquote>
+<div><p>inp = input(‘请输入命令：’).strip()
+if not inp:continue                     # 解决发送为空
+sk.send(inp.encode(‘utf-8’))
+msg = sk.recv(1024)
+print(msg)</p>
+</div></blockquote>
+<p>sk.close()</p>
+<p># server.py
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.bind((‘127.0.0.1’,9000))
+sk.listen()
+while True:</p>
+<blockquote>
+<div><p>conn,addr = sk.accept()  # 等待连接
+while True:</p>
+<blockquote>
+<div><dl class="simple">
+<dt>try:</dt><dd><p>msg = conn.recv(1024)    # 接收1024 字节
+if not msg:break
+conn.send(msg.upper())
+print(msg)</p>
+</dd>
+<dt>except ConnectionResetError:</dt><dd><p>break</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>conn.close()             # 关闭连接</p>
+</div></blockquote>
+<p>sk.close()               # 关闭整个socket
+<a href="#id1188"><span class="problematic" id="id1189">``</span></a><a href="#id1190"><span class="problematic" id="id1191">`</span></a></p>
+<p>基于udp协议的套接字</p>
+<p><a href="#id1192"><span class="problematic" id="id1193">``</span></a><a href="#id1194"><span class="problematic" id="id1195">`</span></a>python
+#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.bind((‘127.0.0.1’,9000))
+sk.setblocking(False) # 设置为非阻塞
+sk.listen()</p>
+<p>conn,addr = sk.accept()  # 等待连接,阻塞状态
+conn.send(b’hello’)      # 发送信息，必须是字节类型
+msg = conn.recv(1024)    # 接收1024 字节
+print(msg)</p>
+<p>conn.close()             # 关闭连接
+sk.close()               # 关闭整个socket#!/usr/bin/env python
+# -<em>- coding:utf-8 -</em>-</p>
+<p>import socket</p>
+<p>sk = socket.socket()
+sk.bind((‘127.0.0.1’,9000))
+sk.setblocking(False) # 设置为非阻塞
+sk.listen()</p>
+<p>conn,addr = sk.accept()  # 等待连接,阻塞状态
+conn.send(b’hello’)      # 发送信息，必须是字节类型
+msg = conn.recv(1024)    # 接收1024 字节
+print(msg)</p>
+<p>conn.close()             # 关闭连接
+sk.close()               # 关闭整个socket
+<a href="#id1196"><span class="problematic" id="id1197">``</span></a><a href="#id1198"><span class="problematic" id="id1199">`</span></a></p>
+<p>非阻塞io模型</p>
+<p>验证客户端合法性</p>
+<p>socketserver模块</p>
+<p>## 第九章 并发编程</p>
+<p>## 第十章 数据库</p>
+<p>### 10.1 初识sql语句</p>
+<p><a href="#id1200"><span class="problematic" id="id1201">``</span></a><a href="#id1202"><span class="problematic" id="id1203">`</span></a>python
+#进入mysql客户端
+mysql
+mysql&gt; select user();  #查看当前用户
+mysql&gt; exit     # 也可以用q quit退出</p>
+<p># 默认用户登陆之后并没有实际操作的权限
+# 需要使用管理员root用户登陆
+mysql -uroot -p   # mysql5.6默认是没有密码的
+#遇到password直接按回车键
+mysql&gt; set password = password(‘root’); # 给当前数据库设置密码</p>
+<p># 创建账号
+mysql&gt; create user <a class="reference external" href="mailto:'eva'&#37;&#52;&#48;'192&#46;168&#46;10">‘eva’<span>&#64;</span>’192<span>&#46;</span>168<span>&#46;</span>10</a>.%’ IDENTIFIED BY ‘123’;# 指示网段
+mysql&gt; create user <a class="reference external" href="mailto:'eva'&#37;&#52;&#48;'192&#46;168&#46;10&#46;5">‘eva’<span>&#64;</span>’192<span>&#46;</span>168<span>&#46;</span>10<span>&#46;</span>5</a>’;   # 指示某机器可以连接
+mysql&gt; create user ‘eva’&#64;’%’;                   #指示所有机器都可以连接
+mysql&gt; show grants for <a class="reference external" href="mailto:'eva'&#37;&#52;&#48;'192&#46;168&#46;10&#46;5">‘eva’<span>&#64;</span>’192<span>&#46;</span>168<span>&#46;</span>10<span>&#46;</span>5</a>’;查看某个用户的权限
+# 远程登陆
+mysql -uroot -p123 -h 192.168.10.3</p>
+<p># 给账号授权
+mysql&gt; grant all on <em>.</em> to ‘eva’&#64;’%’;
+mysql&gt; flush privileges;    # 刷新使授权立即生效</p>
+<p># 创建账号并授权
+mysql&gt; grant all on <em>.</em> to ‘eva’&#64;’%’ identified by ‘123’;</p>
+<p># 查看配置项
+mysql&gt; show variables like ‘%engine%’;</p>
+<p># 查看表结构
+mysql&gt; desc t1;
+mysql&gt; describe t1; # 只能查看表的字段信息，基础信息
+mysql&gt; show create table t1; # 能够看到和这张表相关的所有信息
+<a href="#id1204"><span class="problematic" id="id1205">``</span></a><a href="#id1206"><span class="problematic" id="id1207">`</span></a></p>
+<p>1、DDL语句 数据库定义语言： 数据库、表、视图、索引、存储过程，例如CREATE DROP ALTER</p>
+<p>2、DML语句 数据库操纵语言： 插入数据INSERT、删除数据DELETE、更新数据UPDATE、查询数据SELECT</p>
+<p>3、DCL语句 数据库控制语言： 例如控制用户的访问权限GRANT、REVOKE</p>
+<p><a href="#id1208"><span class="problematic" id="id1209">``</span></a><a href="#id1210"><span class="problematic" id="id1211">`</span></a>python
+# 操作文件夹（库）</p>
+<blockquote>
+<div><p>增：create database db1 charset utf8;
+查：show databases;
+改：alter database db1 charset latin1;
+删除: drop database db1;</p>
+</div></blockquote>
+<dl>
+<dt># 操作文件（表）</dt><dd><p>先切换到文件夹下：use db1
+增：create table t1(id int,name char);
+查：show tables;
+改：alter table t1 modify name char(3);</p>
+<blockquote>
+<div><p>alter table t1 change name name1 char(2);</p>
+</div></blockquote>
+<p>删：drop table t1;</p>
+</dd>
+<dt># 操作文件中的内容（记录）</dt><dd><p>增：insert into t1 values(1,’egon1’),(2,’egon2’),(3,’egon3’);
+查：select * from t1;
+改：update t1 set name=’sb’ where id=2;
+删：delete from t1 where id=1;</p>
+</dd>
+<dt># 清空表：</dt><dd><p>delete from t1; #如果有自增id，新增的数据，仍然是以删除前的最后一样作为起始。
+truncate table t1;数据量大，删除速度比上一条快，且直接从零开始，</p>
+</dd>
+</dl>
+<p><a href="#id1212"><span class="problematic" id="id1213">*</span></a>auto_increment 表示：自增
+<a href="#id1214"><span class="problematic" id="id1215">*</span></a>primary key 表示：约束（不能重复且不能为空）；加速查找
+<a href="#id1216"><span class="problematic" id="id1217">``</span></a><a href="#id1218"><span class="problematic" id="id1219">`</span></a></p>
+<p>### 10.2 MySQL的表的操作</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">创建库</span>
+<span class="pre">mysql&gt;</span> <span class="pre">create</span> <span class="pre">database</span> <span class="pre">staff</span> <span class="pre">charset=utf-8;</span>
+<span class="pre">#</span> <span class="pre">创建表</span>
+<span class="pre">mysql&gt;</span> <span class="pre">create</span> <span class="pre">table</span> <span class="pre">staff_info</span> <span class="pre">(id</span> <span class="pre">int,name</span> <span class="pre">varchar(50),age</span> <span class="pre">int(3),sex</span> <span class="pre">enum('male','female'),phone</span> <span class="pre">bigint(11),job</span> <span class="pre">varchar(11));</span>
+<span class="pre">#</span> <span class="pre">查看表</span>
+<span class="pre">mysql&gt;</span> <span class="pre">show</span> <span class="pre">tables;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.2.1 表的约束</p>
+<p><a href="#id1220"><span class="problematic" id="id1221">``</span></a><a href="#id1222"><span class="problematic" id="id1223">`</span></a>mysql
+# 约束</p>
+<blockquote>
+<div><p>not null 某一个字段不能为空
+default 给某一个字段设置默认值
+unique 设置某一个字段不能重复
+auto_increment 设置某一个int类型的字段，自增
+primary key 设置某一个字段非空且不能重复
+foreign key 外键</p>
+</div></blockquote>
+<p><a href="#id1224"><span class="problematic" id="id1225">``</span></a><a href="#id1226"><span class="problematic" id="id1227">`</span></a></p>
+<p><a href="#id1228"><span class="problematic" id="id1229">``</span></a><a href="#id1230"><span class="problematic" id="id1231">`</span></a>mysql
+# not null
+mysql&gt; create table t12 (id int not null);
+#不能向id列插入空元素。
+mysql&gt; insert into t12 values (null);
+ERROR 1048 (23000): Column ‘id’ cannot be null</p>
+<p># default</p>
+<p># unique
+create table t3(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int unique,</p>
+</div></blockquote>
+<p>username char(12) unique,
+password char(18)</p>
+</div></blockquote>
+<p>);</p>
+<p># 联合唯一
+create table t4(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int,</p>
+</div></blockquote>
+<p>ip char(15),
+server char(10),
+port int,
+unique(ip,port)</p>
+</div></blockquote>
+<p>);
+mysql&gt; show create table t4;</p>
+<p># 自增，自增字段必须是数字，且必须是唯一的
+create table t3(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int unique auto_increment,</p>
+</div></blockquote>
+<p>username char(12) unique,
+password char(18)</p>
+</div></blockquote>
+<p>);</p>
+<p># primary key，一张表只能设置一个主键
+create table t6(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int not null unique, # 你指定的第一个非空且唯一的字段会被定义为主键</p>
+</div></blockquote>
+<p>name char(12) not null unique</p>
+</div></blockquote>
+<p>);</p>
+<p># 联合主键
+create table t4(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int,</p>
+</div></blockquote>
+<p>ip char(15),
+server char(10),
+port int,
+primary key(ip,port)</p>
+</div></blockquote>
+<p>);</p>
+<p># foreign key
+create table staff(</p>
+<blockquote>
+<div><blockquote>
+<div><p>id int primary key auto_increment,</p>
+</div></blockquote>
+<p>age int,
+gender enum(‘male’,’female’)
+salary float(8,2),
+hire_date date,
+post_id int</p>
+</div></blockquote>
+</div>
+<div class="section" id="id1232">
+<h1>);<a class="headerlink" href="#id1232" title="Permalink to this headline">¶</a></h1>
+<p>#### 10.2.2 修改表</p>
+<p><code class="docutils literal notranslate"><span class="pre">`</span>
+<span class="pre">alter</span> <span class="pre">table</span> <span class="pre">表名</span> <span class="pre">add</span> <span class="pre">添加字段</span>
+<span class="pre">alter</span> <span class="pre">table</span> <span class="pre">表名</span> <span class="pre">drop</span> <span class="pre">删除字段</span>
+<span class="pre">alter</span> <span class="pre">table</span> <span class="pre">表名</span> <span class="pre">modify</span> <span class="pre">修改已经存在的字段</span>
+<span class="pre">`</span></code></p>
+<p>### 10.3 单表查询</p>
+<p><a href="#id1233"><span class="problematic" id="id1234">``</span></a><a href="#id1235"><span class="problematic" id="id1236">`</span></a>python
+SELECT DISTINCT 字段1,字段2… FROM 表名</p>
+<blockquote>
+<div><p>WHERE 条件
+GROUP BY field
+HAVING 筛选
+ORDER BY field
+LIMIT 限制条数</p>
+</div></blockquote>
+<p><a href="#id1237"><span class="problematic" id="id1238">``</span></a><a href="#id1239"><span class="problematic" id="id1240">`</span></a></p>
+<p>#### 10.3.1 where约束</p>
+<p><a href="#id1241"><span class="problematic" id="id1242">``</span></a><a href="#id1243"><span class="problematic" id="id1244">`</span></a>python
+# 测试数据准备
+create table employee(
+id int not null unique auto_increment,
+emp_name varchar(20) not null,
+sex enum(‘male’,’female’) not null default ‘male’, #大部分是男的
+age int(3) unsigned not null default 28,
+hire_date date not null,
+post varchar(50),
+post_comment varchar(100),
+salary double(15,2),
+office int, #一个部门一个屋子
+depart_id int
+);</p>
+<p>#三个部门：教学，销售，运营
+insert into employee(emp_name,sex,age,hire_date,post,salary,office,depart_id) values
+(‘egon’,’male’,18,’20170301’,’老男孩驻沙河办事处外交大使’,7300.33,401,1), #以下是教学部
+(‘alex’,’male’,78,’20150302’,’teacher’,1000000.31,401,1),
+(‘wupeiqi’,’male’,81,’20130305’,’teacher’,8300,401,1),
+(‘yuanhao’,’male’,73,’20140701’,’teacher’,3500,401,1),
+(‘liwenzhou’,’male’,28,’20121101’,’teacher’,2100,401,1),
+(‘jingliyang’,’female’,18,’20110211’,’teacher’,9000,401,1),
+(‘jinxin’,’male’,18,’19000301’,’teacher’,30000,401,1),
+(‘成龙’,’male’,48,’20101111’,’teacher’,10000,401,1),</p>
+<p>(‘歪歪’,’female’,48,’20150311’,’sale’,3000.13,402,2),#以下是销售部门
+(‘丫丫’,’female’,38,’20101101’,’sale’,2000.35,402,2),
+(‘丁丁’,’female’,18,’20110312’,’sale’,1000.37,402,2),
+(‘星星’,’female’,18,’20160513’,’sale’,3000.29,402,2),
+(‘格格’,’female’,28,’20170127’,’sale’,4000.33,402,2),</p>
+<p>(‘张野’,’male’,28,’20160311’,’operation’,10000.13,403,3), #以下是运营部门
+(‘程咬金’,’male’,18,’19970312’,’operation’,20000,403,3),
+(‘程咬银’,’female’,18,’20130311’,’operation’,19000,403,3),
+(‘程咬铜’,’male’,18,’20150411’,’operation’,18000,403,3),
+(‘程咬铁’,’female’,18,’20140512’,’operation’,17000,403,3)
+<a href="#id1245"><span class="problematic" id="id1246">``</span></a><a href="#id1247"><span class="problematic" id="id1248">`</span></a></p>
+<p>#### 10.3.2 比较运算 &gt; &lt; = &gt;= &lt;= !=</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">查询薪资大于1000的人</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">where</span> <span class="pre">salary</span> <span class="pre">&gt;</span> <span class="pre">10000;</span>
+<span class="pre">#</span> <span class="pre">查询薪资小于10000的人</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">where</span> <span class="pre">salary</span> <span class="pre">&lt;</span> <span class="pre">10000;</span>
+<span class="pre">#</span> <span class="pre">薪资是30000或者薪资是20000的人</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">where</span> <span class="pre">salary=30000</span> <span class="pre">or</span> <span class="pre">salary=20000;</span>
+<span class="pre">#</span> <span class="pre">性别为女并且年龄为18岁的人</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">where</span> <span class="pre">sex='female'</span> <span class="pre">and</span> <span class="pre">age=18;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.3 范围筛选</p>
+<p><a href="#id1249"><span class="problematic" id="id1250">``</span></a><a href="#id1251"><span class="problematic" id="id1252">`</span></a>python
+1.多选一
+# 查找薪资为20000,30000,3000,19000的人
+mysql&gt; select * from employee where salary in(20000,30000,3000,1900);
+# 查找薪资不在20000,30000,3000,19000的人
+mysql&gt; select * from employee where salary not in(20000,30000,3000,1900);
+# 查找薪资为20000,30000,3000,19000的人的名字和职业
+mysql&gt; select emp_name,post from employee where salary in (20000,30000,3000,1900);</p>
+<p>2.在一个模糊的范围里
+# 在一个数值区间1w-2w之间的所有人的名字
+mysql&gt; select emp_name from employee where salary between 10000 and 20000;</p>
+<p>3.字符串的模糊查询
+# 找一个名字是以程字开头的(%为通配符，匹配任意长度的任意内容)
+mysql&gt; select * from employee where emp_name like ‘<a href="#id1281"><span class="problematic" id="id1282">程__</span></a>’;
+select * from employee where emp_name like ‘<a href="#id1281"><span class="problematic" id="id1283">程__</span></a>’;  # _代表一个字符，也是一个通配符，匹配一个字符长度的任意内容
+# 查找以n结尾的所有人的名字
+mysql&gt; select * from employee where emp_name like ‘%n’;
+# 查找名字里面含有n的
+mysql&gt; select * from employee where emp_name like ‘%n%’;</p>
+<p>4.正则匹配
+# 查找以j开头后面为5个字母的名字
+mysql&gt; select * from employee where emp_name regexp ‘^j[a-z]{5}’;
+<a href="#id1253"><span class="problematic" id="id1254">``</span></a><a href="#id1255"><span class="problematic" id="id1256">`</span></a></p>
+<p>#### 10.3.4 分组 group by</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">post;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.5 聚合</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">count</span> <span class="pre">统计</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">count(id)</span> <span class="pre">from</span> <span class="pre">employee;</span>
+<span class="pre">#</span> <span class="pre">ave</span> <span class="pre">平均值</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">avg(salary)</span> <span class="pre">from</span> <span class="pre">employee;</span>
+<span class="pre">#</span> <span class="pre">sum</span> <span class="pre">统计这个字段对应的数值的和</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">sum(salary)</span> <span class="pre">from</span> <span class="pre">employee;</span>
+<span class="pre">#</span> <span class="pre">max</span> <span class="pre">最大值</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">emp_name,max(salary)</span> <span class="pre">from</span> <span class="pre">employee;</span> <span class="pre">#</span> <span class="pre">名字对应不上金额，显示的是以分组为代价</span>
+<span class="pre">#</span> <span class="pre">min</span> <span class="pre">最小值</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.6 分组聚合</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">求各个部门的人数</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">post,count(*)</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">post;</span>
+<span class="pre">#</span> <span class="pre">求公司里男生和女生的人数</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">count(id)</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">sex;</span>
+<span class="pre">#</span> <span class="pre">各部门的平均薪资</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">post,avg(salary)</span> <span class="pre">from</span>&#160; <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">post;</span>
+<span class="pre">`</span></code></p>
+<p>注意：</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">在</span> <span class="pre">my.cnf</span> <span class="pre">里面设置:</span>
+<span class="pre">[mysqld]</span>
+<span class="pre">sql_mode=’STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION’</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.7 having</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">过滤组，总是与group</span> <span class="pre">by一起</span>
+<span class="pre">#</span> <span class="pre">部门人数大于3的部门</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">post</span>&#160; <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">post</span> <span class="pre">having</span> <span class="pre">count(*)</span> <span class="pre">&gt;</span> <span class="pre">3;</span>
+<span class="pre">#</span> <span class="pre">部门平均薪资大于10000的部门</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">post</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">group</span> <span class="pre">by</span> <span class="pre">post</span> <span class="pre">having</span> <span class="pre">avg(salary)&gt;10000;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.8 order by</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">薪资从大到小排序</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">order</span> <span class="pre">by</span> <span class="pre">salary</span> <span class="pre">desc;</span>
+<span class="pre">#</span> <span class="pre">入职时间从小到大排序</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">order</span> <span class="pre">by</span> <span class="pre">hire_date;</span>
+<span class="pre">#</span> <span class="pre">年龄相同的情况下，按薪资排序</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">order</span> <span class="pre">by</span> <span class="pre">age,salary</span> <span class="pre">desc;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.9 limit</p>
+<p><code class="docutils literal notranslate"><span class="pre">`python</span>
+<span class="pre">#</span> <span class="pre">取薪资最高前三名</span>
+<span class="pre">mysql&gt;</span> <span class="pre">select</span> <span class="pre">*</span> <span class="pre">from</span> <span class="pre">employee</span> <span class="pre">order</span> <span class="pre">by</span> <span class="pre">age,salary</span> <span class="pre">desc</span> <span class="pre">limit</span> <span class="pre">3;</span>
+<span class="pre">`</span></code></p>
+<p>#### 10.3.10 pymysql操作数据库</p>
+<p><a href="#id1257"><span class="problematic" id="id1258">``</span></a><a href="#id1259"><span class="problematic" id="id1260">`</span></a>python
+import pymysql</p>
+<p>conn = pymysql.connect(host=’192.168.56.30’,user=’root’,password=”123”,database=’blsnt’)</p>
+<p>cur = conn.cursor(pymysql.cursors.DictCursor) # 游标,字典格式显示,默认元祖
+cur.execute(‘select * from employee where id &gt; 10’)
+ret = cur.fetchall()
+print(ret)
+conn.commit()
+<a href="#id1261"><span class="problematic" id="id1262">``</span></a><a href="#id1263"><span class="problematic" id="id1264">`</span></a></p>
+<p>### 10.4 多表查询</p>
+<p>#### 10.4.1 连表查询</p>
+<p><a href="#id1265"><span class="problematic" id="id1266">``</span></a><a href="#id1267"><span class="problematic" id="id1268">`</span></a>python
+#建表
+create table department(
+id int,
+name varchar(20)
+);</p>
+<p>create table emp(
+id int primary key auto_increment,
+name varchar(20),
+sex enum(‘male’,’female’) not null default ‘male’,
+age int,
+dep_id int
+);</p>
+<p>#插入数据
+insert into department values
+(200,’技术’),
+(201,’人力资源’),
+(202,’销售’),
+(203,’运营’);</p>
+<p>insert into emp(name,sex,age,dep_id) values
+(‘egon’,’male’,18,200),
+(‘alex’,’female’,48,201),
+(‘wupeiqi’,’male’,38,201),
+(‘yuanhao’,’female’,28,202),
+(‘liwenzhou’,’male’,18,200),
+(‘jingliyang’,’female’,18,204)
+;
+# 查看表结构
+mysql&gt; desc department;
+mysql&gt; desc employee;</p>
+<p>1.交叉连接：不适用任何匹配条件。生成笛卡尔积
+mysql&gt; select * from employee,department;
++—-+————+——–+——+——–+——+————–+
+| id | name       | sex    | age  | dep_id | id   | name         |
++—-+————+——–+——+——–+——+————–+
+|  1 | egon       | male   |   18 |    200 |  200 | 技术         |
+|  1 | egon       | male   |   18 |    200 |  201 | 人力资源     |
+|  1 | egon       | male   |   18 |    200 |  202 | 销售         |
+|  1 | egon       | male   |   18 |    200 |  203 | 运营         |
+|  2 | alex       | female |   48 |    201 |  200 | 技术         |
+|  2 | alex       | female |   48 |    201 |  201 | 人力资源     |
+|  2 | alex       | female |   48 |    201 |  202 | 销售         |
+|  2 | alex       | female |   48 |    201 |  203 | 运营         |
+|  3 | wupeiqi    | male   |   38 |    201 |  200 | 技术         |
+|  3 | wupeiqi    | male   |   38 |    201 |  201 | 人力资源     |
+|  3 | wupeiqi    | male   |   38 |    201 |  202 | 销售         |
+|  3 | wupeiqi    | male   |   38 |    201 |  203 | 运营         |
+|  4 | yuanhao    | female |   28 |    202 |  200 | 技术         |
+|  4 | yuanhao    | female |   28 |    202 |  201 | 人力资源     |
+|  4 | yuanhao    | female |   28 |    202 |  202 | 销售         |
+|  4 | yuanhao    | female |   28 |    202 |  203 | 运营         |
+|  5 | liwenzhou  | male   |   18 |    200 |  200 | 技术         |
+|  5 | liwenzhou  | male   |   18 |    200 |  201 | 人力资源     |
+|  5 | liwenzhou  | male   |   18 |    200 |  202 | 销售         |
+|  5 | liwenzhou  | male   |   18 |    200 |  203 | 运营         |
+|  6 | jingliyang | female |   18 |    204 |  200 | 技术         |
+|  6 | jingliyang | female |   18 |    204 |  201 | 人力资源     |
+|  6 | jingliyang | female |   18 |    204 |  202 | 销售         |
+|  6 | jingliyang | female |   18 |    204 |  203 | 运营         |
++—-+————+——–+——+——–+——+————–+</p>
+<p>2.内连接：只连接匹配的行
+#找两张表共有的部分，相当于利用条件从笛卡尔积结果中筛选出了正确的结果
+#department没有204这个部门，因而emp表中关于204这条员工信息没有匹配出来
+mysql&gt; select * from emp inner join department on emp.dep_id = department.id;
++—-+———–+——–+——+——–+——+————–+
+| id | name      | sex    | age  | dep_id | id   | name         |
++—-+———–+——–+——+——–+——+————–+
+|  1 | egon      | male   |   18 |    200 |  200 | 技术         |
+|  2 | alex      | female |   48 |    201 |  201 | 人力资源     |
+|  3 | wupeiqi   | male   |   38 |    201 |  201 | 人力资源     |
+|  4 | yuanhao   | female |   28 |    202 |  202 | 销售         |
+|  5 | liwenzhou | male   |   18 |    200 |  200 | 技术         |
++—-+———–+——–+——+——–+——+————–+</p>
+<p>3.外链接之左连接：优先显示左表全部记录
+#以左表为准，即找出所有员工信息，当然包括没有部门的员工
+#本质就是：在内连接的基础上增加左边有右边没有的结果
+mysql&gt; select * from emp left join department on emp.dep_id = department.id;
++—-+————+——–+——+——–+——+————–+
+| id | name       | sex    | age  | dep_id | id   | name         |
++—-+————+——–+——+——–+——+————–+
+|  1 | egon       | male   |   18 |    200 |  200 | 技术         |
+|  5 | liwenzhou  | male   |   18 |    200 |  200 | 技术         |
+|  2 | alex       | female |   48 |    201 |  201 | 人力资源     |
+|  3 | wupeiqi    | male   |   38 |    201 |  201 | 人力资源     |
+|  4 | yuanhao    | female |   28 |    202 |  202 | 销售         |
+|  6 | jingliyang | female |   18 |    204 | NULL | NULL         |
++—-+————+——–+——+——–+——+————–+</p>
+<p>4.外链接之右连接：优先显示右表全部记录
+mysql&gt; select * from emp right join department on emp.dep_id = department.id;
++——+———–+——–+——+——–+——+————–+
+| id   | name      | sex    | age  | dep_id | id   | name         |
++——+———–+——–+——+——–+——+————–+
+|    1 | egon      | male   |   18 |    200 |  200 | 技术         |
+|    2 | alex      | female |   48 |    201 |  201 | 人力资源     |
+|    3 | wupeiqi   | male   |   38 |    201 |  201 | 人力资源     |
+|    4 | yuanhao   | female |   28 |    202 |  202 | 销售         |
+|    5 | liwenzhou | male   |   18 |    200 |  200 | 技术         |
+| NULL | NULL      | NULL   | NULL |   NULL |  203 | 运营         |
++——+———–+——–+——+——–+——+————–+</p>
+<p>5.全外连接：显示左右两个表全部记录
+#全外连接：在内连接的基础上增加左边有右边没有的和右边有左边没有的结果
+#注意：mysql不支持全外连接 full JOIN
+#强调：mysql可以使用此种方式间接实现全外连接
+mysql&gt; select * from emp left join department on emp.dep_id = department.id
+union
+select * from emp right join department on emp.dep_id = department.id
+;
++——+————+——–+——+——–+——+————–+
+| id   | name       | sex    | age  | dep_id | id   | name         |
++——+————+——–+——+——–+——+————–+
+|    1 | egon       | male   |   18 |    200 |  200 | 技术         |
+|    5 | liwenzhou  | male   |   18 |    200 |  200 | 技术         |
+|    2 | alex       | female |   48 |    201 |  201 | 人力资源     |
+|    3 | wupeiqi    | male   |   38 |    201 |  201 | 人力资源     |
+|    4 | yuanhao    | female |   28 |    202 |  202 | 销售         |
+|    6 | jingliyang | female |   18 |    204 | NULL | NULL         |
+| NULL | NULL       | NULL   | NULL |   NULL |  203 | 运营         |
++——+————+——–+——+——–+——+————–+</p>
+<p># 查找技术部人的名字
+mysql&gt; select emp.name from emp inner join department on emp.dep_id = department.id where department.name=’技术’;
+mysql&gt; select emp.name from emp inner join department as dep on emp.dep_id = dep.id where dep.name=’技术’;
++———–+
+| name      |
++———–+
+| egon      |
+| liwenzhou |
++———–+
+<a href="#id1269"><span class="problematic" id="id1270">``</span></a><a href="#id1271"><span class="problematic" id="id1272">`</span></a></p>
+<p>#### 10.4.2 子查询</p>
+<p><a href="#id1273"><span class="problematic" id="id1274">``</span></a><a href="#id1275"><span class="problematic" id="id1276">`</span></a>python</p>
+<p><a href="#id1277"><span class="problematic" id="id1278">``</span></a><a href="#id1279"><span class="problematic" id="id1280">`</span></a></p>
+<p>## 第十一章 前端开发</p>
+<p>## 第十二章 Django框架</p>
+<p>## 第十三章 爬虫</p>
+<p>## 第十四章 CMDB</p>
+<p>## 附录 常见错误和单词</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 小义同学
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

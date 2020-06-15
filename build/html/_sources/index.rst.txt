@@ -10,7 +10,10 @@ Welcome to Python自由人's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-   Python   
+   Python/index
+   Linux/index
+   ELK/index
+   DevOps/index   
 
 Indices and tables
 ==================
