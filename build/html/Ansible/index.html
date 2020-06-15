@@ -1,0 +1,232 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Ansible &mdash; BLSNT BLOG 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BLSNT BLOG
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../SaltStack/index.html">SaltStack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/index.html">Docker基础与使用</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BLSNT BLOG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Ansible</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/Ansible/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ansible">
+<h1>Ansible<a class="headerlink" href="#ansible" title="Permalink to this headline">¶</a></h1>
+<p>主要介绍ansible如何使用以及一些高级用法</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html">1. SSH批量分发脚本</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#ansible">2. ansible安装</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#id1">3. ansible命令使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#id2">4. ansible常用模块详解</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#lineinfile">4.1. lineinfile文本修改模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#command">4.2. command模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#shell">4.3. shell模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#script">4.4. script模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#copy">4.5. copy模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#fetch">4.6. fetch模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#file">4.7. file模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#hostname">4.8. hostname模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#cron">4.9. cron模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#yum">4.10. yum模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#service">4.11. service模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#user">4.12. user模块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#ansible-galaxy">4.13. ansible-galaxy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#id3">4.14. 对文件进行加密</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#ansible-console">4.15. ansible-console</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#yaml">5. YAML语法简介</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#ansible-playbook">6. ansible playbook基础</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#playbook-tags-handlers">6.1. playbook变量，tags，handlers使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#playbooktemplates">6.2. playbook模板templates</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Ansible.html#playbookewhen">6.3. playbooke条件判断when</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#playbookwith-items">7. playbook字典with_items</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#playbooktemplate-for-if">8. playbook中template for if</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Ansible.html#ansible-roles">9. ansible Roles</a></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 小义同学
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
