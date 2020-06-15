@@ -13,7 +13,7 @@ Welcome to Python自由人's documentation!
    Python/index
    Linux/index
    ELK/index
-   DevOps/index   
+   Ansible/index   
 
 Indices and tables
 ==================

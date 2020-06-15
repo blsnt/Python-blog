@@ -134,3 +134,9 @@ if not on_rtd:  # only import and set the theme if we're building docs locally
 
 _exts = "../exts"
 sys.path.append(os.path.abspath(_exts))
+
+from recommonmark.parser import CommonMarkParser
+source_parsers = {
+    '.md': CommonMarkParser,
+}
+source_suffix = ['.rst', '.md']
