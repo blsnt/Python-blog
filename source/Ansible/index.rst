@@ -1,9 +1,7 @@
 Ansible 
 ==========
 
-这一部分主要介绍数据科学的入门内容;\
-包含数据科学的基础工具，如：Jupyter、Linux，以及 Python 基本的数据科学包 Numpy，画图包 Matplotlib;
-
+主要介绍ansible如何使用以及一些高级用法
 
 .. toctree::
     :maxdepth: 2
