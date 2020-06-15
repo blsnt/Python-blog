@@ -9,8 +9,6 @@ Welcome to blsnt's documentation!
 .. toctree::
    :maxdepth: 2
 
-   Linux/index
-   SaltStack/index
    golang/index
 
 Indices and tables
