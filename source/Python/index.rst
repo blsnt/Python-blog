@@ -7,4 +7,4 @@ Python编程
     :maxdepth: 2
     :numbered: 2
 
-    1_python基础 
+    1_python_base 
