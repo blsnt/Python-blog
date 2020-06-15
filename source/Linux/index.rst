@@ -8,5 +8,6 @@ Linux基础
 .. toctree::
     :maxdepth: 2
     :numbered: 2
-
+    
+    install_centos7.6
     Linux
