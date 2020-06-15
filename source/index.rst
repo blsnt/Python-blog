@@ -14,7 +14,6 @@ Welcome to Python自由人's documentation!
    Linux/index
    ELK/index
    Ansible/index   
-   test.md
 
 Indices and tables
 ==================
