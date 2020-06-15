@@ -4343,21 +4343,6 @@ pymysql操作数据库
 
 .. code:: python
 
-第十一章 前端开发
------------------
-
-第十二章 Django框架
--------------------
-
-第十三章 爬虫
--------------
-
-第十四章 CMDB
--------------
-
-附录 常见错误和单词
--------------------
-
 .. |image0| image:: http://images.dregs.top/images/20200302221200.png
 .. |image1| image:: http://images.dregs.top/images/20200302221241.png
 .. |image2| image:: http://images.dregs.top/images/20200220182511.png
