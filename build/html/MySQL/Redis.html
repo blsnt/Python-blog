@@ -1,0 +1,1108 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>1. OK &mdash; BLSNT BLOG 1.0.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="数据库" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> BLSNT BLOG
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">Python入门</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Linux/index.html">Linux基础</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../golang/index.html">golang</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../ELK/index.html">ELK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Ansible/index.html">Ansible</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../SaltStack/index.html">SaltStack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Docker/index.html">Docker基础与使用</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">数据库</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. OK</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">BLSNT BLOG</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">数据库</a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>OK</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/MySQL/Redis.md.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <p>### 系统环境</p>
+<dl>
+<dt><a href="#id1"><span class="problematic" id="id2">``</span></a><a href="#id3"><span class="problematic" id="id4">`</span></a>shell</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# cat /etc/redhat-release</p>
+</dd>
+<dt>CentOS Linux release 7.4.1708 (Core)</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# uname -r</p>
+</dd>
+<dt>3.10.0-693.el7.x86_64</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# systemctl status firewalld</p>
+</dd>
+<dt>● firewalld.service - firewalld - dynamic firewall daemon</dt><dd><blockquote>
+<div><p>Loaded: loaded (/usr/lib/systemd/system/firewalld.service; disabled; vendor preset: enabled)
+Active: inactive (dead)</p>
+<blockquote>
+<div><p>Docs: man:firewalld(1)</p>
+</div></blockquote>
+</div></blockquote>
+<p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# getenforce</p>
+</dd>
+<dt>Disabled</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# hostname -i</p>
+</dd>
+</dl>
+<p>192.168.11.50
+<a href="#id5"><span class="problematic" id="id6">``</span></a><a href="#id7"><span class="problematic" id="id8">`</span></a></p>
+<p>### 目录规划</p>
+<p>Redis下载目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/server/tools</span>
+<span class="pre">`</span></code></p>
+<p>Redis安装目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/opt/redis_cluster/redis_{PORT}/{conf,logs,pid}</span>
+<span class="pre">`</span></code></p>
+<p>Redis数据目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/data/redis_cluster/redis_{PORT}/redis_{PORT}.rdb</span>
+<span class="pre">`</span></code></p>
+<p>Redis运维脚本</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/server/scripts/redis_shell.sh</span>
+<span class="pre">`</span></code></p>
+<p>### 安装Redis</p>
+<blockquote>
+<div><p>创建下载目录，安装目录和数据目录</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/server/tools</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/data/redis_cluster/redis_6379</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/opt/redis_cluster/redis_6379/{conf,logs,pid}</span>
+<span class="pre">`</span></code></p>
+<p>下载软件和创建软链接</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/server/tools</span>
+<span class="pre">wget</span> <span class="pre">http://download.redis.io/releases/redis-3.2.9.tar.gz</span>
+<span class="pre">tar</span> <span class="pre">zxf</span> <span class="pre">redis-3.2.9.tar.gz</span> <span class="pre">-C</span> <span class="pre">/opt/redis_cluster</span>
+<span class="pre">ln</span> <span class="pre">-s</span> <span class="pre">/opt/redis_cluster/redis-3.2.9/</span> <span class="pre">/opt/redis_cluster/redis</span>
+<span class="pre">`</span></code></p>
+<p>编译安装</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/opt/redis_cluster/redis</span>
+<span class="pre">make</span> <span class="pre">&amp;&amp;</span> <span class="pre">make</span> <span class="pre">install</span>
+<span class="pre">`</span></code></p>
+<p>### 设置Redis systemctl启动的两种方式</p>
+<p>方式一：自定义写</p>
+<p><a href="#id9"><span class="problematic" id="id10">``</span></a><a href="#id11"><span class="problematic" id="id12">`</span></a>shell
+vim /lib/systemd/system/redis.service
+[Unit]
+Description=redis-server
+After=network.target</p>
+<p>[Service]
+Type=forking
+ExecStart=/usr/local/bin/redis-server /opt/redis_cluster/redis_6379/conf/6379.conf #自定义
+PrivateTmp=true</p>
+<p>[Install]
+WantedBy=multi-user.target
+<a href="#id13"><span class="problematic" id="id14">``</span></a><a href="#id15"><span class="problematic" id="id16">`</span></a></p>
+<p>方式二：使用Redis自带的定义</p>
+<p><a href="#id17"><span class="problematic" id="id18">``</span></a><a href="#id19"><span class="problematic" id="id20">`</span></a>shell
+cd /opt/redis_cluster/redis/utils
+./install_server.sh  #执行脚本
+Welcome to the redis service installer
+This script will help you easily set up a running redis server</p>
+<p>Please select the redis port for this instance: [6379] 6379   #输入定义的redis端口
+Please select the redis config file name [/etc/redis/6379.conf]   /opt/redis_cluster/redis_6379/conf/6379.conf   #配置文件
+Please select the redis log file name [/var/log/redis_6379.log] /opt/redis_cluster/redis_6379/logs/redis_6379.log   #日志目录
+Please select the data directory for this instance [/var/lib/redis/6379] /data/redis_cluster/redis_6379  #数据目录
+Please select the redis executable path [/usr/local/bin/redis-server]  #默认
+Selected config:
+Port           : 6379
+Config file    : /opt/redis_cluster/redis_6379/conf/6379.conf
+Log file       : /opt/redis_cluster/redis_6379/logs/redis_6379.log
+Data dir       : /data/redis_cluster/redis_6379
+Executable     : /usr/local/bin/redis-server
+Cli Executable : /usr/local/bin/redis-cli
+Is this ok? Then press ENTER to go on or Ctrl-C to abort.
+Copied /tmp/6379.conf =&gt; /etc/init.d/redis_6379
+Installing service…
+Successfully added to chkconfig!
+Successfully added to runlevels 345!
+Starting Redis server…
+Installation successful!
+<a href="#id21"><span class="problematic" id="id22">``</span></a><a href="#id23"><span class="problematic" id="id24">`</span></a></p>
+<p>会将配置生成/etc/init.d/redis_6379 启动脚本，使用stop|start|restart 即可</p>
+<p>将redis.conf设置成后台启动，否则使用systemctl启动时会一直卡着`</p>
+<p>### Redis配置说明</p>
+<p><a href="#id25"><span class="problematic" id="id26">``</span></a><a href="#id27"><span class="problematic" id="id28">`</span></a>shell
+vim /opt/redis_cluster/redis_6379/conf/6379.conf
+# 以守护进程模式启动
+daemonize yes</p>
+<p># 绑定的主机地址
+bind 192.168.11.50</p>
+<p># 监听的端口
+port 6379</p>
+<p># pid文件和log文件的保存地址
+pidfile /opt/redis_cluster/redis_6379/pid/redis_6379.pid
+logfile /opt/redis_cluster/redis_6379/logs/redis_6379.log</p>
+<p># 设置数据库的数量，默认数据库为0
+databases 16</p>
+<p># 指定本地持久化文件的文件名，默认是dump.rdb
+dbfilename redis_6379.rdb</p>
+<p># 本地数据库的目录
+dir /data/redis_cluster/redis_6379
+<a href="#id29"><span class="problematic" id="id30">``</span></a><a href="#id31"><span class="problematic" id="id32">`</span></a></p>
+<p>### Redis基本操作命令-全局命令</p>
+<p>Redis有5种</p>
+<p>### Redis主从复制</p>
+<p>在分布式系统中为了解决单点问题，通常会把数据复制多个副本到其他机器，满足故障恢复和负载均衡等需求，Redis也是如此，提供了复制功能</p>
+<p>复制功能是高可用Redis的基础，后面的哨兵和集群都是在复制的基础上实现高可用的</p>
+<p><strong>主从复制流程</strong></p>
+<ul class="simple">
+<li><p>从服务器向主服务器发送 SYNC 命令。</p></li>
+<li><p>接到 SYNC 命令的主服务器会调用BGSAVE 命令，创建一个 RDB 文件，并使用缓冲区记录接下来执行的所有写命令。</p></li>
+<li><p>当主服务器执行完 BGSAVE 命令时，它会向从服务器发送 RDB 文件，而从服务器则会接收并载入这个文件。</p></li>
+<li><p>主服务器将缓冲区储存的所有写命令发送给从服务器执行。</p></li>
+</ul>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190820125325.png">http://images.dregs.top/images/20190820125325.png</a>)</p>
+<p><strong>注意：</strong></p>
+<p>&gt; 1、在开启主从复制的时候，使用的是RDB方式的，同步主从数据的
+&gt; 2、同步开始之后，通过主库命令传播的方式，主动的复制方式实现
+&gt; 3、2.8以后实现PSYNC的机制，实现断线重连</p>
+<p><strong>建立主从复制的三种方式：</strong></p>
+<p>每个从节点只能有一个主节点，主节点可以有多个从节点。</p>
+<ul class="simple">
+<li><p>在配置文件中加入slaveof {masterHost} {masterPort}随Redis启动生效</p></li>
+<li><p>在Redis-server启动命令后加入一slaveof  {masterHost} {masterPort} 生效</p></li>
+<li><p>直接使用命令：slaveof {masterHost} {masterPort} 生效</p></li>
+</ul>
+<p>查看复制状态信息命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">info</span> <span class="pre">replication</span>
+<span class="pre">`</span></code></p>
+<p><strong>断开复制</strong></p>
+<p>slaveof命令不但可以建立复制，还可以在从节点上执行`slave of no noe`来断开与主节点复制关系</p>
+<p>断开复制主要流程：</p>
+<ol class="arabic simple">
+<li><p>断开与主节点复制关系</p></li>
+<li><p>从节点晋升为主节点，从节点断开复制后不会抛弃原有数据，只是无法再获取主节点上的数据变化</p></li>
+</ol>
+<p><strong>切换主节点</strong></p>
+<p>通过slaveof 命令还可以实现切主操作，所谓切主是指把当前从节点对主节点的复制切换到另一个主节点上</p>
+<p>执行slaveof {newMasterIp} {newMasterPort}命令即可</p>
+<p>切主操作流程如下：</p>
+<ol class="arabic simple">
+<li><p>断开旧主节点的复制关系</p></li>
+<li><p>与新主节点建立复制关系</p></li>
+<li><p>删除从节点当前所有数据</p></li>
+<li><p>对新主节点进行复制操作</p></li>
+</ol>
+<p>&gt; 提示：线上操作一定要小心，因为切主后会清空之前所有的数据</p>
+<p><strong>Redis开启主从复制</strong></p>
+<p>从节点安装跟上面步骤一样，也可以直接将现有的redis拷贝过去也可以</p>
+<p>创建数据目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/server/tools</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/data/redis_cluster/redis_6379</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/opt/redis_cluster/redis_6379/{conf,logs,pid}</span>
+<span class="pre">`</span></code></p>
+<p>在11.50上拷贝文件到51</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/opt/redis_cluster/</span> <span class="pre">192.168.11.51:/opt</span>
+<span class="pre">scp</span> <span class="pre">/usr/local/bin/redis*</span> <span class="pre">192.168.11.51:/usr/local/bin</span>
+<span class="pre">`</span></code></p>
+<p>修改配置文件</p>
+<p><a href="#id33"><span class="problematic" id="id34">``</span></a><a href="#id35"><span class="problematic" id="id36">`</span></a>shell
+vim /opt/redis_cluster/redis_6379/conf/6379.conf
+# 以守护进程模式启动
+daemonize yes</p>
+<p># 绑定的主机地址
+bind 192.168.11.51</p>
+<p># 监听的端口
+port 6379</p>
+<p># pid文件和log文件的保存地址
+pidfile /opt/redis_cluster/redis_6379/pid/redis_6379.pid
+logfile /opt/redis_cluster/redis_6379/logs/redis_6379.log</p>
+<p># 设置数据库的数量，默认数据库为0
+databases 16</p>
+<p># 指定本地持久化文件的文件名，默认是dump.rdb
+dbfilename redis_6379.rdb</p>
+<p>#主从复制 添加这行即可 主不用动
+slaveof 192.168.11.50 6379</p>
+<p>#本地数据库的目录
+dir /data/redis_cluster/redis_6379
+<a href="#id37"><span class="problematic" id="id38">``</span></a><a href="#id39"><span class="problematic" id="id40">`</span></a></p>
+<p>测试：在主set一个值，在从get能查看到就ok了</p>
+<p>### Redis基本操作全局命令</p>
+<blockquote>
+<div><p>制作1000条数据</p>
+<p><a href="#id41"><span class="problematic" id="id42">``</span></a><a href="#id43"><span class="problematic" id="id44">`</span></a>shell</p>
+</div></blockquote>
+<dl class="simple">
+<dt>for i in {1..1000};do redis-cli -h 192.168.11.50 -p 6379 set key_${i} v_${i};done</dt><dd><p><a href="#id45"><span class="problematic" id="id46">``</span></a><a href="#id47"><span class="problematic" id="id48">`</span></a></p>
+</dd>
+</dl>
+<p>查看所有的数据key,不是值，不建议使用,
+</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">keys</span> <span class="pre">*</span>
+<span class="pre">`</span></code></p>
+<p>推荐使用</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">dbsize</span> <span class="pre">#直接返回多少条数据</span>
+<span class="pre">`</span></code></p>
+<p>检查键是否存在</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">Exists</span> <span class="pre">key</span> <span class="pre">#如果存在返回1，不存在返回0</span>
+<span class="pre">`</span></code></p>
+<p>删除键</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">Del</span> <span class="pre">key</span> <span class="pre">{key...}</span>
+<span class="pre">`</span></code></p>
+<p>键过期</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">EXPIRE</span> <span class="pre">key_997</span> <span class="pre">30</span>&#160; <span class="pre">#30是过期时间</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key_997</span>&#160; <span class="pre">#查看过期时间,查看一个不存在的键过期时间返回值为-2，-1这个键存在没设置过期时间</span>
+<span class="pre">(integer)</span> <span class="pre">25</span>
+<span class="pre">`</span></code></p>
+<p>### Redis数据类型之字符串操作</p>
+<p>设置和获取字符串</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">set</span> <span class="pre">key1</span> <span class="pre">value1</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key1</span>
+<span class="pre">&quot;value1&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">keys</span> <span class="pre">*</span>
+<span class="pre">`</span></code></p>
+<p>INCR命令将字符串解析成整型，将其加1，保存为新的字符串</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">set</span> <span class="pre">key2</span> <span class="pre">100</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key2</span>
+<span class="pre">&quot;100&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">incr</span> <span class="pre">key2</span>
+<span class="pre">(integer)</span> <span class="pre">101</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key2</span>
+<span class="pre">&quot;101&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">incrby</span> <span class="pre">key2</span> <span class="pre">10</span> <span class="pre">#直接增加10</span>
+<span class="pre">(integer)</span> <span class="pre">111</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key2</span>
+<span class="pre">&quot;111&quot;</span>
+<span class="pre">`</span></code></p>
+<p>MSET和MGET可以一次性存储或获取多个key对应的值</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">mset</span> <span class="pre">key3</span> <span class="pre">v3</span> <span class="pre">key4</span> <span class="pre">v4</span> <span class="pre">key5</span> <span class="pre">v5</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">mget</span> <span class="pre">key3</span> <span class="pre">key4</span> <span class="pre">key5</span>
+<span class="pre">1)</span> <span class="pre">&quot;v3&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;v4&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;v5&quot;</span>
+<span class="pre">`</span></code></p>
+<p>EXISTS命令返回 1或者0标记给定的key的值是否存在</p>
+<p>使用DEL命令可以删除key对应的值</p>
+<p>DEL命令返回1或0时被删除(值存在)或者没被删除(key对应的值不存在)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">EXISTS</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">del</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">EXISTS</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">0</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">del</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">0</span>
+<span class="pre">`</span></code></p>
+<p>type命令可以返回key对应的存储类型</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">set</span> <span class="pre">key5</span> <span class="pre">v5</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">type</span> <span class="pre">key5</span>
+<span class="pre">string</span>
+<span class="pre">`</span></code></p>
+<p>设置超时时间，当这个时间到达后被删除</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key5</span>
+<span class="pre">&quot;v5&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">-1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">expire</span> <span class="pre">key5</span> <span class="pre">10</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">5</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">4</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">3</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">2</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">2</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">-2</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">get</span> <span class="pre">key5</span>
+<span class="pre">(nil)</span>
+<span class="pre">`</span></code></p>
+<p>PERSIST 命令去除超时时间</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">set</span> <span class="pre">key5</span> <span class="pre">v5</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">expire</span> <span class="pre">key5</span> <span class="pre">100</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">96</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">PERSIST</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">ttl</span> <span class="pre">key5</span>
+<span class="pre">(integer)</span> <span class="pre">-1</span>
+<span class="pre">`</span></code></p>
+<p>### Redis数据类型之列表操作</p>
+<p>LPUSH命令可向list的左边添加一个新元素(头部)</p>
+<p>RPUSH命令可向list的右边添加一个新元素(尾部)</p>
+<p>LRANGE可以从list中取出一定范围的元素</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">rpush</span> <span class="pre">list1</span> <span class="pre">A</span>
+<span class="pre">(integer)</span> <span class="pre">1</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">rpush</span> <span class="pre">list1</span> <span class="pre">B</span>
+<span class="pre">(integer)</span> <span class="pre">2</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lpush</span> <span class="pre">list1</span> <span class="pre">first</span>
+<span class="pre">(integer)</span> <span class="pre">3</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lrange</span> <span class="pre">list1</span> <span class="pre">0</span> <span class="pre">-1</span>
+<span class="pre">1)</span> <span class="pre">&quot;first&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;A&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;B&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lrange</span> <span class="pre">list1</span> <span class="pre">1</span> <span class="pre">-1</span>
+<span class="pre">1)</span> <span class="pre">&quot;A&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;B&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lrange</span> <span class="pre">list1</span> <span class="pre">2</span> <span class="pre">-1</span>
+<span class="pre">1)</span> <span class="pre">&quot;B&quot;</span>
+<span class="pre">`</span></code></p>
+<p>RPOP删除右边第一个</p>
+<p>LPOP删除左边第一个</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">RPOP</span> <span class="pre">list1</span>
+<span class="pre">&quot;B&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lrange</span> <span class="pre">list1</span> <span class="pre">0</span> <span class="pre">2</span>
+<span class="pre">1)</span> <span class="pre">&quot;first&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;A&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">LPOP</span> <span class="pre">list1</span>
+<span class="pre">&quot;first&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">lrange</span> <span class="pre">list1</span> <span class="pre">0</span> <span class="pre">2</span>
+<span class="pre">1)</span> <span class="pre">&quot;A&quot;</span>
+<span class="pre">`</span></code></p>
+<p>### Redis数据类型之hash操作</p>
+<p>HMSET设置多个域</p>
+<p>HGET取回单个域</p>
+<p>HMGET取回一系列的值</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">hmset</span> <span class="pre">user:1000</span> <span class="pre">username</span> <span class="pre">blsnt</span> <span class="pre">age</span> <span class="pre">23</span> <span class="pre">job</span> <span class="pre">it</span>
+<span class="pre">OK</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">hget</span> <span class="pre">user:1000</span> <span class="pre">username</span>&#160; <span class="pre">#取单个</span>
+<span class="pre">&quot;blsnt&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">hmget</span> <span class="pre">user:1000</span> <span class="pre">username</span> <span class="pre">age</span> <span class="pre">job</span>&#160; <span class="pre">#取多个</span>
+<span class="pre">1)</span> <span class="pre">&quot;blsnt&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;23&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;it&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">HGETALL</span> <span class="pre">user:1000</span>
+<span class="pre">1)</span> <span class="pre">&quot;username&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;blsnt&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;age&quot;</span>
+<span class="pre">4)</span> <span class="pre">&quot;23&quot;</span>
+<span class="pre">5)</span> <span class="pre">&quot;job&quot;</span>
+<span class="pre">6)</span> <span class="pre">&quot;it&quot;</span>
+<span class="pre">`</span></code></p>
+<p>### Redis数据类型之集合操作</p>
+<p>集合是字符串的无序排列</p>
+<p>SADD将新的元素添加到set中</p>
+<p>SMEMBERS 查看集合中的内容</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">sadd</span> <span class="pre">set1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span> <span class="pre">5</span> <span class="pre">6</span>
+<span class="pre">(integer)</span> <span class="pre">6</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SMEMBERS</span> <span class="pre">set1</span>
+<span class="pre">1)</span> <span class="pre">&quot;1&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;2&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;3&quot;</span>
+<span class="pre">4)</span> <span class="pre">&quot;4&quot;</span>
+<span class="pre">5)</span> <span class="pre">&quot;5&quot;</span>
+<span class="pre">6)</span> <span class="pre">&quot;6&quot;</span>
+<span class="pre">`</span></code></p>
+<p>SDIFF计算集合的差异成员</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">sadd</span> <span class="pre">set1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span> <span class="pre">4</span>
+<span class="pre">(integer)</span> <span class="pre">4</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">sadd</span> <span class="pre">set2</span> <span class="pre">1</span> <span class="pre">4</span> <span class="pre">5</span>
+<span class="pre">(integer)</span> <span class="pre">3</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SDIFF</span> <span class="pre">set1</span> <span class="pre">set2</span>
+<span class="pre">1)</span> <span class="pre">&quot;2&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;3&quot;</span>
+<span class="pre">`</span></code></p>
+<p>SINTER计算集合的交集</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SINTER</span> <span class="pre">set1</span> <span class="pre">set2</span>
+<span class="pre">1)</span> <span class="pre">&quot;1&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;4&quot;</span>
+<span class="pre">`</span></code></p>
+<p>SUNION计算集合的并集</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SUNION</span> <span class="pre">set1</span> <span class="pre">set2</span>
+<span class="pre">1)</span> <span class="pre">&quot;1&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;2&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;3&quot;</span>
+<span class="pre">4)</span> <span class="pre">&quot;4&quot;</span>
+<span class="pre">5)</span> <span class="pre">&quot;5&quot;</span>
+<span class="pre">`</span></code></p>
+<p>SREM删除指定的值</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SMEMBERS</span> <span class="pre">set1</span>
+<span class="pre">1)</span> <span class="pre">&quot;1&quot;</span>
+<span class="pre">2)</span> <span class="pre">&quot;2&quot;</span>
+<span class="pre">3)</span> <span class="pre">&quot;3&quot;</span>
+<span class="pre">4)</span> <span class="pre">&quot;4&quot;</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">srem</span> <span class="pre">set1</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3</span>
+<span class="pre">(integer)</span> <span class="pre">3</span>
+<span class="pre">192.168.11.50:6379&gt;</span> <span class="pre">SMEMBERS</span> <span class="pre">set1</span>
+<span class="pre">1)</span> <span class="pre">&quot;4&quot;</span>
+<span class="pre">`</span></code></p>
+<p>&gt; 集合里面不会出现重复的数据</p>
+<p>### Sentine(哨兵)介绍</p>
+<p>Redis Sentinel是一个分布式系统，Redis Sentinel为Redis提供高可用性，可以在没有人为干预的情况下阻止某种类型的故障</p>
+<ul>
+<li><p>Redis的主从模式下，主节点一旦发生故障不能提供服务，需要人工干预，将从节点晋升为主节点，同时还需要修改客户端配置</p></li>
+<li><p>Redis从2.8发布了一个稳定版本的Redis Sentinel，当前版本的Sentinel称为Sentinel2，它是使用更强大和简单的预测算法来重写初始Sentinel实现</p></li>
+<li><p>Sentinel 架构解决了Redis主从人工干预的问题</p></li>
+<li><p>Redis Sentinel是Redis的高可用实现方案，在实际生产环境中，对提高整个系统可用性是非常有帮助的</p></li>
+<li><p>可以在一个架构中运行多个Sentinel进程，这些进程使用流言协议来接收关于主服务器是否下线的信息，并使用投票协议，来决定是否执行自动故障迁移，以及选择哪个从服务器作为新的主服务器</p></li>
+<li><p>Redis的Sentinel系统用于管理多个Redis服务器，该系统执行一下三个任务
+* 监控</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Sentinel会不断的定期检查你的主服务器和从服务器是否运作正常</p></li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><p>提醒
+* 当被监控的某个Redis服务器出现问题时，Sentinel可以通过API向管理员或者其他应用程序发送通知</p></li>
+<li><p>自动故障迁移
+* 当一个主服务器不能正常工作时，Sentinel会开始一次自动故障迁移操作，它会将失效主服务器的其中一个从服务器升级为新的主服务器，并让失效主服务器的其他从服务器改为复制新的主服务器，当新客户端试图连接失效的主服务器时，集群也会向客户端返回新的主服务器的地址，使得集群可以使用新服务器代替失效服务器</p></li>
+</ul>
+</li>
+</ul>
+<p>### Sentinel(哨兵)和主从的区别</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190814165510.png">http://images.dregs.top/images/20190814165510.png</a>)</p>
+<p>### Sentinel(哨兵)安装部署</p>
+<p>主机规划</p>
+<div class="line-block">
+<div class="line">角色               | IP            | 端口       |</div>
+<div class="line">—————— | ————- | ———- |</div>
+<div class="line">Master-Sentinel-01 | 192.168.11.50 | 6379,26379 |</div>
+<div class="line">Slave-Sentinel-02  | 192.168.11.51 | 6379,26379 |</div>
+<div class="line">Slave-Sentinel-03  | 192.168.11.52 | 6379,26379 |</div>
+</div>
+<p>所有节点都需要执行的命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/server/tools</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/data/redis_cluster/redis_6379</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/opt/redis_cluster/redis_6379/{conf,pid,logs}</span>
+<span class="pre">`</span></code></p>
+<p>先将master安装好，然后直接从master 将命令cp到两台slave上</p>
+<blockquote>
+<div><p><a href="#id49"><span class="problematic" id="id50">``</span></a><a href="#id51"><span class="problematic" id="id52">`</span></a>shell</p>
+</div></blockquote>
+<p>cd /server/tools
+wget <a class="reference external" href="http://download.redis.io/releases/redis-3.2.9.tar.gz">http://download.redis.io/releases/redis-3.2.9.tar.gz</a>
+tar zxf redis-3.2.9.tar.gz -C /opt/redis_cluster
+ln -s /opt/redis_cluster/redis-3.2.9/ /opt/redis_cluster/redis
+make &amp;&amp; make install
+#将redis拷贝到slave上面
+scp -r /opt/redis_cluster/ 192.168.11.51:/opt
+scp /usr/local/bin/redis* 192.168.11.51:/usr/local/bin
+scp /usr/lib/systemd/system/redis.service 192.168.11.51:/usr/lib/systemd/system/
+scp -r /opt/redis_cluster/ 192.168.11.52:/opt
+scp /usr/local/bin/redis* 192.168.11.52:/usr/local/bin
+scp /usr/lib/systemd/system/redis.service 192.168.11.52:/usr/lib/systemd/system/</p>
+<blockquote>
+<div><p><a href="#id53"><span class="problematic" id="id54">``</span></a><a href="#id55"><span class="problematic" id="id56">`</span></a></p>
+</div></blockquote>
+<p>master的配置文件</p>
+<p><a href="#id57"><span class="problematic" id="id58">``</span></a><a href="#id59"><span class="problematic" id="id60">`</span></a>shell
+vim /opt/redis_cluster/redis_6379/conf/6379.conf
+# 以守护进程模式启动
+daemonize yes</p>
+<p># 绑定的主机地址
+bind 192.168.11.50</p>
+<p># 监听的端口
+port 6379</p>
+<p># pid文件和log文件的保存地址
+pidfile /opt/redis_cluster/redis_6379/pid/redis_6379.pid
+logfile /opt/redis_cluster/redis_6379/logs/redis_6379.log</p>
+<p># 设置数据库的数量，默认数据库为0
+databases 16</p>
+<p># 指定本地持久化文件的文件名，默认是dump.rdb
+dbfilename redis_6379.rdb</p>
+<p>#本地数据库的目录
+dir /data/redis_cluster/redis_6379
+<a href="#id61"><span class="problematic" id="id62">``</span></a><a href="#id63"><span class="problematic" id="id64">`</span></a></p>
+<p>slave的两个配置文件</p>
+<p><a href="#id65"><span class="problematic" id="id66">``</span></a><a href="#id67"><span class="problematic" id="id68">`</span></a>shell
+vim /opt/redis_cluster/redis_6379/conf/6379.conf
+# 以守护进程模式启动
+daemonize yes</p>
+<p># 绑定的主机地址
+bind 192.168.11.51  #两个slave不一样的地方就是这，修改一下ip</p>
+<p># 监听的端口
+port 6379</p>
+<p># pid文件和log文件的保存地址
+pidfile /opt/redis_cluster/redis_6379/pid/redis_6379.pid
+logfile /opt/redis_cluster/redis_6379/logs/redis_6379.log</p>
+<p># 设置数据库的数量，默认数据库为0
+databases 16</p>
+<p># 指定本地持久化文件的文件名，默认是dump.rdb
+dbfilename redis_6379.rdb</p>
+<p>#主从复制 添加这行即可 主不用动
+slaveof 192.168.11.50 6379</p>
+<p>#本地数据库的目录
+dir /data/redis_cluster/redis_6379
+<a href="#id69"><span class="problematic" id="id70">``</span></a><a href="#id71"><span class="problematic" id="id72">`</span></a></p>
+<p>&gt; 记得要修改配置文件里面的IP地址</p>
+<p>以上主从复制就已经配置完毕</p>
+<p>接下来配置哨兵(所有节点都要创建)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/data/redis_cluster/redis_26379</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/opt/redis_cluster/redis_26379/{conf,pid,logs}</span>
+<span class="pre">`</span></code></p>
+<p>master配置sentinel</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">vim</span> <span class="pre">/opt/redis_cluster/redis_26379/conf/redis_26379.conf</span>
+<span class="pre">bind</span> <span class="pre">192.168.11.50</span>
+<span class="pre">port</span> <span class="pre">26379</span>
+<span class="pre">daemonize</span> <span class="pre">yes</span>
+<span class="pre">logfile</span> <span class="pre">/opt/redis_cluster/redis_26379/logs/redis_26379.log</span>
+<span class="pre">dir</span> <span class="pre">/data/redis_cluster/redis_26379</span>
+<span class="pre">sentinel</span> <span class="pre">monitor</span> <span class="pre">mymaster</span> <span class="pre">192.168.11.50</span> <span class="pre">6379</span> <span class="pre">2</span>
+<span class="pre">sentinel</span> <span class="pre">down-after-milliseconds</span> <span class="pre">mymaster</span> <span class="pre">30000</span>
+<span class="pre">sentinel</span> <span class="pre">parallel-syncs</span> <span class="pre">mymaster</span> <span class="pre">1</span>
+<span class="pre">sentinel</span> <span class="pre">failover-timeout</span> <span class="pre">mymaster</span> <span class="pre">180000</span>
+<span class="pre">`</span></code></p>
+<p>两台slave配置文件</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">vim</span> <span class="pre">/opt/redis_cluster/redis_26379/conf/redis_26379.conf</span>
+<span class="pre">bind</span> <span class="pre">192.168.11.51</span>&#160;&#160; <span class="pre">#修改一下各自的ip即可</span>
+<span class="pre">port</span> <span class="pre">26379</span>
+<span class="pre">daemonize</span> <span class="pre">yes</span>
+<span class="pre">logfile</span> <span class="pre">/opt/redis_cluster/redis_26379/logs/redis_26379.log</span>
+<span class="pre">dir</span> <span class="pre">/data/redis_cluster/redis_26379</span>
+<span class="pre">sentinel</span> <span class="pre">monitor</span> <span class="pre">mymaster</span> <span class="pre">192.168.11.50</span> <span class="pre">6379</span> <span class="pre">2</span>
+<span class="pre">sentinel</span> <span class="pre">down-after-milliseconds</span> <span class="pre">mymaster</span> <span class="pre">30000</span>
+<span class="pre">sentinel</span> <span class="pre">parallel-syncs</span> <span class="pre">mymaster</span> <span class="pre">1</span>
+<span class="pre">sentinel</span> <span class="pre">failover-timeout</span> <span class="pre">mymaster</span> <span class="pre">180000</span>
+<span class="pre">`</span></code></p>
+<p>配置详解</p>
+<p>sentinel monitor mymaster 192.168.11.50 6379 2</p>
+<p>mymaster主节点别名 主节点ip 端口，判断主节点失败，两个sentinel节点同意</p>
+<p>sentinel down-after-milliseconds mymaster 30000</p>
+<p>选项指定里 Sentinel认为服务器已经断线所需要的毫秒数</p>
+<p>sentinel parallel-syncs mymaster 1</p>
+<p>向新的主节点发起复制操作的从节点个数，1轮询发起复制</p>
+<p>sentinel failover-timeout mymaster 180000</p>
+<p>故障转移超时时间</p>
+<p>### <strong>哨兵故障转移</strong></p>
+<p>Redis sentinel存在多个从节点时，如果想要将指定的从节点晋升为主节点，可以将其他从节点的slavepriority配置为0，但是需要注意的是failover后，将slave-priority调回原值</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">#查询命令</span>
+<span class="pre">config</span> <span class="pre">get</span> <span class="pre">slave-priority</span>
+<span class="pre">#设置命令</span>
+<span class="pre">config</span> <span class="pre">set</span> <span class="pre">slave-priority</span> <span class="pre">0</span>
+<span class="pre">#生效</span>
+<span class="pre">sentinel</span> <span class="pre">failover</span>
+<span class="pre">`</span></code></p>
+<p>### Redis Cluster介绍与安装</p>
+<p>#### <strong>Redis Cluster目录规划</strong></p>
+<p>Redis安装目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/opt/redis_cluster/redis_{PORT}/{conf,logs,pid}</span>
+<span class="pre">`</span></code></p>
+<p>Redis数据目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">/data/redis_cluster/redis_{PORT}/redis_{PORT}.rdb</span>
+<span class="pre">`</span></code></p>
+<p>Redis Cluster拓扑</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822143347.png">http://images.dregs.top/images/20190822143347.png</a>)</p>
+<p>#### <strong>Redis Cluster搭建部署</strong></p>
+<p>创建软件目录和数据目录,三台节点都要操作</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/opt/redis_cluster/redis_{6380,6381}/{conf,logs,pid}</span>
+<span class="pre">mkdir</span> <span class="pre">-p</span> <span class="pre">/data/redis_cluster/redis_{6380,6381}</span>
+<span class="pre">`</span></code></p>
+<p> 集群配置文件</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">vim</span> <span class="pre">/opt/redis_cluster/redis_6380/conf/redis_6380.conf</span>
+<span class="pre">bind</span> <span class="pre">192.168.11.50</span>
+<span class="pre">port</span> <span class="pre">6380</span>
+<span class="pre">daemonize</span> <span class="pre">yes</span>
+<span class="pre">pidfile</span> <span class="pre">/opt/redis_cluster/redis_6380/pid/redis_6380.pid</span>
+<span class="pre">logfile</span> <span class="pre">/opt/redis_cluster/redis_6380/logs/redis_6380.log</span>
+<span class="pre">dbfilename</span> <span class="pre">redis_6380.rdb</span>
+<span class="pre">dir</span> <span class="pre">/data/redis_cluster/redis_6380/</span>
+<span class="pre">cluster-enabled</span> <span class="pre">yes</span>
+<span class="pre">cluster-config-file</span> <span class="pre">nodes_6380.conf</span>
+<span class="pre">cluster-node-timeout</span> <span class="pre">15000</span>
+<span class="pre">`</span></code></p>
+<p>#### <strong>Redis Cluster快捷部署</strong></p>
+<p>思路：</p>
+<ul class="simple">
+<li><p>部署一台服务器上的2个集群节点</p></li>
+<li><p>发送完成后修改其他主机的ip地址</p></li>
+<li><p>使用ansible或salt批量部署</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/opt/redis_cluster</span>
+<span class="pre">cp</span> <span class="pre">redis_6380/conf/redis_6380.conf</span> <span class="pre">redis_6381/conf/redis_6381.conf</span>
+<span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'s#6380#6381#g'</span> <span class="pre">redis_6381/conf/redis_6381.conf</span>
+<span class="pre">`</span></code></p>
+<p>拷贝到其他节点</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">scp</span> <span class="pre">-r</span>&#160; <span class="pre">/opt/redis_cluster/redis_638*</span> <span class="pre">192.168.11.51:/opt/redis_cluster/</span>
+<span class="pre">scp</span> <span class="pre">-r</span>&#160; <span class="pre">/opt/redis_cluster/redis_638*</span> <span class="pre">192.168.11.52:/opt/redis_cluster/</span>
+<span class="pre">`</span></code></p>
+<p>将每个节点的Redis启动即可</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6380/conf/redis_6380.conf</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6381/conf/redis_6381.conf</span>
+<span class="pre">`</span></code></p>
+<p>&gt; 当把每个节点都启动后查看进程会有cluster的字样</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822150405.png">http://images.dregs.top/images/20190822150405.png</a>)</p>
+<p>但是登录后执行`CLUSTER NODES` 命令会发现每个节点自己的ID，目前集群内的节点还没有互相发现，所以搭建的redis集群我们第一步要做的就是让集群内的节点相互发现</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822150756.png">http://images.dregs.top/images/20190822150756.png</a>)</p>
+<p><strong>Redis CLuster手动配置节点发现</strong></p>
+<p>在执行节点发现命令之前我们先查看一下集群的数据目录会发现有生成集群的配置文件</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822151104.png">http://images.dregs.top/images/20190822151104.png</a>)</p>
+<p>查看之后发现只有自己的节点，等节点全部发现后会把所发现的节点ID写入这个文件</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822151225.png">http://images.dregs.top/images/20190822151225.png</a>)</p>
+<p>&gt; 集群模式的Redis除了原有的配置文件之外又加了一份集群配置文件，当集群内节点信息发生变化，如添加节点，节点下线，故障转移等，节点会自动保存集群状态到配置文件，需要注意的是，Redis自动维护集群配置文件，不需要手动修改，防止节点重启时产生错乱</p>
+<p><strong>节点发现使用`CLUSTER MEET {IP} {PORT}`</strong></p>
+<p>提示：在集群内任意一台机器执行此命令就可以</p>
+<dl class="simple">
+<dt><a href="#id73"><span class="problematic" id="id74">``</span></a><a href="#id75"><span class="problematic" id="id76">`</span></a>shell</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# redis-cli -h 192.168.11.50 -p 6380</p>
+</dd>
+</dl>
+<p>192.168.11.50:6380&gt; CLUSTER MEET 192.168.11.50 6381
+OK
+192.168.11.50:6380&gt; CLUSTER MEET 192.168.11.51 6380
+OK
+192.168.11.50:6380&gt; CLUSTER MEET 192.168.11.51 6381
+OK
+192.168.11.50:6380&gt; CLUSTER MEET 192.168.11.52 6380
+OK
+192.168.11.50:6380&gt; CLUSTER MEET 192.168.11.52 6381
+OK
+192.168.11.50:6380&gt; CLUSTER NODES
+7829e2a4180de48f18a983b9e4bde508446d1775 192.168.11.52:6380 master - 0 1566458327787 4 connected
+b5dc7837ad363d459b34f29a2f4e8d74336710a4 192.168.11.51:6380 master - 0 1566458329812 5 connected
+a9a65e40131e8cd10f9570843e84fe971b9c79c3 192.168.11.51:6381 master - 0 1566458326268 3 connected
+fdf71cf84f70eaf2f63797e7699c2542d676a3df 192.168.11.52:6381 master - 0 1566458330825 0 connected
+19e09033f12389c5b5bb952542961a7bc1670e8a 192.168.11.50:6381 master - 0 1566458328800 1 connected
+8b3405e7cb3fdce3870582ff7dcd0c6bef93d306 192.168.11.50:6380 myself,master - 0 0 2 connected
+<a href="#id77"><span class="problematic" id="id78">``</span></a><a href="#id79"><span class="problematic" id="id80">`</span></a></p>
+<p>再次查看集群配置文件</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822152057.png">http://images.dregs.top/images/20190822152057.png</a>)</p>
+<p>#### <strong>Redis CLuster手动分配槽位</strong></p>
+<p>虽然节点之间已经互相发现了，但是此时集群还是不可用的状态，因为并没有给节点分配槽位，而且必须是所有的槽位都分配完毕后整个集群才是可以用的状态</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822152722.png">http://images.dregs.top/images/20190822152722.png</a>)</p>
+<p>我们有6个节点，但是真正写入都只有3个节点，其他3个节点只是作为主节点的从节点，也就是说，只需要分配三个节点的槽位即可</p>
+<p>分配槽位的方法：</p>
+<p>分配槽位需要在每个主节点上来配置，此时有2种方法执行</p>
+<ol class="arabic simple">
+<li><p>分别登录到每个主节点的客户端来执行命令</p></li>
+<li><p>在其他一台机器上用redis客户端远程登录到其他服务器的主节点上执行命令</p></li>
+</ol>
+<p>每个节点执行命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.50</span> <span class="pre">-p</span> <span class="pre">6380</span> <span class="pre">cluster</span> <span class="pre">addslots</span> <span class="pre">{0..5461}</span>
+<span class="pre">ok</span>
+<span class="pre">[root&#64;node2</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.51</span> <span class="pre">-p</span> <span class="pre">6380</span> <span class="pre">cluster</span> <span class="pre">addslots</span> <span class="pre">{5462..10922}</span>
+<span class="pre">ok</span>
+<span class="pre">[root&#64;node3</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.52</span> <span class="pre">-p</span> <span class="pre">6380</span> <span class="pre">cluster</span> <span class="pre">addslots</span> <span class="pre">{10923..16383}</span>
+<span class="pre">ok</span>
+<span class="pre">`</span></code></p>
+<p>分配完成所有的槽位以后我们再查看一下集群的节点状态和集群状态</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822155350.png">http://images.dregs.top/images/20190822155350.png</a>)</p>
+<p>#### <strong>Redis Cluster手动配置高可用</strong></p>
+<p>虽然这个时候集群是可用的了，但是整个集群只要有一台机器坏掉了，那么整个集群都是不可用的，所以这个时候需要用到其他三个节点分别作为三个主节点的从节点，以应对集群主几点故障时可以进行自动切换以保证集群高可用</p>
+<p>注意：</p>
+<ol class="arabic simple">
+<li><p>不要让复制节点复制本机器的主节点，因为如果那样的话机器挂了集群还是不可用状态，所以复制节点要复制其他服务器的主节点</p></li>
+<li><p>使用redis-trid工具自动分配的时候有概率会出现复制节点和主节点在同一台机器上的情况，需要注意</p></li>
+</ol>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822143347.png">http://images.dregs.top/images/20190822143347.png</a>)</p>
+<p>在一台机器上使用redis客户端远程操作集群其他节点</p>
+<p>注意：</p>
+<ol class="arabic simple">
+<li><p>需要执行命令的是每个从服务器的从节点</p></li>
+<li><p>注意主从的ID不要搞混了</p></li>
+</ol>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.50</span> <span class="pre">-p</span> <span class="pre">6381</span> <span class="pre">cluster</span> <span class="pre">nodes</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.50</span> <span class="pre">-p</span> <span class="pre">6381</span> <span class="pre">CLUSTER</span> <span class="pre">REPLICATE</span> <span class="pre">7829e2a4180de48f18a983b9e4bde508446d1775</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.51</span> <span class="pre">-p</span> <span class="pre">6381</span> <span class="pre">CLUSTER</span> <span class="pre">REPLICATE</span> <span class="pre">8b3405e7cb3fdce3870582ff7dcd0c6bef93d306</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.52</span> <span class="pre">-p</span> <span class="pre">6381</span> <span class="pre">CLUSTER</span> <span class="pre">REPLICATE</span> <span class="pre">b5dc7837ad363d459b34f29a2f4e8d74336710a4</span>
+<span class="pre">`</span></code></p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822165715.png">http://images.dregs.top/images/20190822165715.png</a>)</p>
+<p>#### <strong>Redis Cluster测试集群</strong></p>
+<p>测试写一条数据</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.50</span> <span class="pre">-p</span> <span class="pre">6380</span> <span class="pre">set</span> <span class="pre">key_1</span> <span class="pre">vlaue_1</span>
+<span class="pre">(error)</span> <span class="pre">MOVED</span> <span class="pre">11998</span> <span class="pre">192.168.11.52:6380</span>
+<span class="pre">`</span></code></p>
+<p>结果提示error，但是给出了集群另一个节点的地址 ，结果是没有写入的，这是因为使用集群后由于数据被分片了，所以并不是说在哪台机器上写入数据就会在哪台机器的节点上写入，集群的数据都写入和读取涉及到了另外一个概念，ASK路由</p>
+<p><strong>Redis Cluster ASK路由介绍</strong></p>
+<p>在集群模式下，Redis接受任何键相关命令时首先会计算键对应的槽，再根据槽找出所对应的节点，如果节点时自身，则处理键命令，否则回复MOVED重定向错误，通知客户端请求正确的节点，这个过程称为Mover重定向</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822194452.png">http://images.dregs.top/images/20190822194452.png</a>)</p>
+<p>知道了ASK路由后，我们使用-c选项批量插入一些数据</p>
+<p><a href="#id81"><span class="problematic" id="id82">``</span></a><a href="#id83"><span class="problematic" id="id84">`</span></a>shell
+#!/bin/bash
+for i in $(seq 1 1000)
+do</p>
+<blockquote>
+<div><p>redis-cli -c -h 192.168.11.50 -p 6380 set key_${i} value_${i}</p>
+</div></blockquote>
+<p>done
+<a href="#id85"><span class="problematic" id="id86">``</span></a><a href="#id87"><span class="problematic" id="id88">`</span></a></p>
+<p>写入后我们同样使用-c选项来读取刚才插入的键值，然后查看下redis会不会帮我们路由到正确的节点上</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822195718.png">http://images.dregs.top/images/20190822195718.png</a>)</p>
+<p>#### <strong>Redis Cluster模拟故障转移</strong></p>
+<p>我们已经手动的把一个redis高可用的集群部署完毕了，但是还没有模拟过故障，这里我们就模拟故障，挺掉其中一台主机的redis节点，然后查看一下集群的变化</p>
+<p>我们停掉192.168.11.52上面的redis集群节点。然后观察状态，理想情况应该是50上面的6381从节点升级为主节点</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822201525.png">http://images.dregs.top/images/20190822201525.png</a>)</p>
+<p>成功升级master</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822201742.png">http://images.dregs.top/images/20190822201742.png</a>)</p>
+<p>虽然我们已经测试了故障切换的功能，但是节点修复后还是需要重新上线的，所有这里测试节点重新上线后的操作</p>
+<p>重新启动52的6380，然后观察日志</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822202145.png">http://images.dregs.top/images/20190822202145.png</a>)</p>
+<p>观察50上面的6381日志</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822202304.png">http://images.dregs.top/images/20190822202304.png</a>)</p>
+<p>此时发生了角色转换，52的6380上线后发现自己的槽位被指派给了另一个节点，则以限制集群的配置为准，变为新节点6381的从节点</p>
+<p>如果想让修复后的节点重新上线为主节点，可以执行`CLUSTER FAILOVER`命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">[root&#64;node3</span> <span class="pre">~]#</span> <span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.52</span> <span class="pre">-p</span> <span class="pre">6380</span>
+<span class="pre">192.168.11.52:6380&gt;</span> <span class="pre">CLUSTER</span> <span class="pre">FAILOVER</span>
+<span class="pre">OK</span>
+<span class="pre">`</span></code></p>
+<p>观察50上的6381日志</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822202810.png">http://images.dregs.top/images/20190822202810.png</a>)</p>
+<p>### Redis Cluster使用Redis-trib.rb搭建cluster</p>
+<p>手动搭建集群便于理解集群创建的流程和细节，不过手动搭建集群需要很多步骤，当集群节点众多时，必然会加大搭建集群的复杂度和运维成本，因此官方提供了redis-trib.rb工具方便我们快速搭建集群</p>
+<p>redis-trib.rb是采用ruby实现的redis集群管理工具，内部通过Cluster相关命令帮我们简化集群创建，检查，槽迁移和均衡等常见运维操作</p>
+<p>使用前安装ruby依赖环境,我们在11.50上进行操作</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">yum</span> <span class="pre">-y</span> <span class="pre">install</span> <span class="pre">rubygems</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">gem</span> <span class="pre">sources</span> <span class="pre">--remove</span> <span class="pre">https://rubygems.org/</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">gem</span> <span class="pre">sources</span> <span class="pre">-a</span> <span class="pre">http://mirrors.aliyun.com/rubygems/</span>
+<span class="pre">[root&#64;node1</span> <span class="pre">~]#</span> <span class="pre">gem</span> <span class="pre">install</span> <span class="pre">redis</span> <span class="pre">-v</span> <span class="pre">3.3.5</span>
+<span class="pre">`</span></code></p>
+<p>三个节点删除集群数据目录，然后启动就是初始状态。</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/data/redis_cluster/redis_6380/*</span>
+<span class="pre">rm</span> <span class="pre">-rf</span> <span class="pre">/data/redis_cluster/redis_6381/*</span>
+<span class="pre">`</span></code></p>
+<p>三个节点启动起来</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6380/conf/redis_6380.conf</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6381/conf/redis_6381.conf</span>
+<span class="pre">`</span></code></p>
+<p>进入redis安装目录下的src目录</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/opt/redis_cluster/redis/src/</span>
+<span class="pre">`</span></code></p>
+<p>执行创建命令</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">./redis-trib.rb</span> <span class="pre">create</span> <span class="pre">--replicas</span> <span class="pre">1</span> <span class="pre">192.168.11.50:6380</span> <span class="pre">192.168.11.51:6380</span> <span class="pre">192.168.11.52:6380</span> <span class="pre">192.168.11.50:6381</span> <span class="pre">192.168.11.51:6381</span> <span class="pre">192.168.11.52:6381</span>
+<span class="pre">`</span></code></p>
+<p>输入yes即可</p>
+<p>检查集群完整性</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">./redis-trib.rb</span> <span class="pre">check</span> <span class="pre">192.168.11.50:6380</span>
+<span class="pre">`</span></code></p>
+<blockquote>
+<div><p>查看集群节点信息</p>
+</div></blockquote>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">redis-cli</span> <span class="pre">-h</span> <span class="pre">192.168.11.50</span> <span class="pre">-p</span> <span class="pre">6380</span> <span class="pre">cluster</span> <span class="pre">nodes</span>
+<span class="pre">`</span></code></p>
+<p>&gt; 默认指定的master可能会有错误，比如一台50的主节点和从节点都在一台机器上，这是不安全的，我们的从应该在不同的机器上面</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190822221136.png">http://images.dregs.top/images/20190822221136.png</a>)根据以上图我们手动调整从节点</p>
+<p>通过`CLUSTER REPLICATE`命令调整主从关系</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190823112813.png">http://images.dregs.top/images/20190823112813.png</a>)</p>
+<p>### <strong>Redis Cluster工具扩容</strong></p>
+<p>Redis集群的扩容操作可分为以下几个步骤</p>
+<ol class="arabic simple">
+<li><p>准备新节点</p></li>
+<li><p>加入集群</p></li>
+<li><p>迁移槽和数据</p></li>
+</ol>
+<p>新节点安装配置(我这是在node3直接安装)</p>
+<p><a href="#id89"><span class="problematic" id="id90">``</span></a><a href="#id91"><span class="problematic" id="id92">`</span></a>shell
+mkdir -p /opt/redis_cluster/redis_{6395,6396}/{conf,logs,pid}
+mkdir -p /data/redis_cluster/redis_{6395,6396}</p>
+<p>cp /opt/redis_cluster/redis_6380/conf/redis_6380.conf /opt/redis_cluster/redis_6395/conf/redis_6395.conf</p>
+<p>cp /opt/redis_cluster/redis_6380/conf/redis_6380.conf /opt/redis_cluster/redis_6396/conf/redis_6396.conf</p>
+<p>sed -i ‘s#6380#6395#g’ /opt/redis_cluster/redis_6395/conf/redis_6395.conf
+sed -i ‘s#6380#6396#g’ /opt/redis_cluster/redis_6396/conf/redis_6396.conf
+<a href="#id93"><span class="problematic" id="id94">``</span></a><a href="#id95"><span class="problematic" id="id96">`</span></a></p>
+<p>将节点启动起来</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6395/conf/redis_6395.conf</span>
+<span class="pre">redis-server</span> <span class="pre">/opt/redis_cluster/redis_6396/conf/redis_6396.conf</span>
+<span class="pre">`</span></code></p>
+<p>发现节点(任意节点执行都可以)</p>
+<dl class="simple">
+<dt><a href="#id97"><span class="problematic" id="id98">``</span></a><a href="#id99"><span class="problematic" id="id100">`</span></a>shell</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# redis-cli -c -h 192.168.11.50 -p 6380 cluster meet 192.168.11.52 6395</p>
+</dd>
+<dt>OK</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> ~]# redis-cli -c -h 192.168.11.50 -p 6380 cluster meet 192.168.11.52 6396</p>
+</dd>
+</dl>
+<div class="section" id="ok">
+<h1><span class="section-number">1. </span>OK<a class="headerlink" href="#ok" title="Permalink to this headline">¶</a></h1>
+<p>使用脚本工具扩容(在node1执行，因为安装了ruby环境)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/opt/redis_cluster/redis/src</span>
+<span class="pre">./redis-trib.rb</span> <span class="pre">reshard</span> <span class="pre">192.168.11.50:6380</span> <span class="pre">#这个只要是其中一个节点就可以</span>
+<span class="pre">`</span></code></p>
+<p>打印出集群每个节点信息后，reshard命令需要确认迁移的槽数量，这里我们输入了4096个</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190823123452.png">http://images.dregs.top/images/20190823123452.png</a>)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">How</span> <span class="pre">many</span> <span class="pre">slots</span> <span class="pre">do</span> <span class="pre">you</span> <span class="pre">want</span> <span class="pre">to</span> <span class="pre">move</span> <span class="pre">(from</span> <span class="pre">1</span> <span class="pre">to</span> <span class="pre">16384)?</span> <span class="pre">4096</span>
+<span class="pre">`</span></code></p>
+<p>输入6395的节点ID作为目标节点，也就是要扩容的节点，目标节点只能指定一个</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">What</span> <span class="pre">is</span> <span class="pre">the</span> <span class="pre">receiving</span> <span class="pre">node</span> <span class="pre">ID?</span> <span class="pre">563c955536214e6e688d5b4807558aeeb6d70475</span>
+<span class="pre">`</span></code></p>
+<p>之后输入源节点的ID，这里分别输入每个主节点的6380的ID，最后用done表示结束(可以直接用all)</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">Source</span> <span class="pre">node</span> <span class="pre">#1:61426b3fd7168a45ddac5b9554fd40aa4d1ea68f</span>
+<span class="pre">Source</span> <span class="pre">node</span> <span class="pre">#2:4396898272bc71bcdf4285872760c1f84ee70239</span>
+<span class="pre">Source</span> <span class="pre">node</span> <span class="pre">#3:656cb3cd94513e649726d9742631acd854041a54</span>
+<span class="pre">Source</span> <span class="pre">node</span> <span class="pre">#4:done</span>
+<span class="pre">`</span></code></p>
+<p>迁移完成后命令会自动退出，这时候我们查看一下集群的状态</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190823124747.png">http://images.dregs.top/images/20190823124747.png</a>)</p>
+<p>最后集群主从关系已经对应上了</p>
+<p>通过`CLUSTER REPLICATE`命令调整主从关系</p>
+<p>![](<a class="reference external" href="http://images.dregs.top/images/20190823133300.png">http://images.dregs.top/images/20190823133300.png</a>)</p>
+<p>### Redis Cluster工具收缩</p>
+<ol class="arabic simple">
+<li><p>首先需要确定下线节点是否有负责的槽，如果是，需要把槽迁移到其他节点，保证节点下线后整个集群槽点映射到完整性</p></li>
+<li><p>当下线节点不再负责槽或者本身是从节点时，就可以通知集群内其他节点忘记下线节点，当所有节点忘记该节点后可以正常关闭</p></li>
+</ol>
+<p>我们将刚才新添加的节点下线，也就是6395和6396</p>
+<p>收缩和扩容迁移的方向相反，6395变为源节点，其他节点变为目标节点，源节点把自己负责的4096个槽均匀的迁移到其他节点上</p>
+<p>由于redis-trib reshard命令只能有一个目标节点，因此需要执行3次reshard命令</p>
+<dl class="simple">
+<dt><a href="#id101"><span class="problematic" id="id102">``</span></a><a href="#id103"><span class="problematic" id="id104">`</span></a>shell</dt><dd><p>[<a class="reference external" href="mailto:root&#37;&#52;&#48;node1">root<span>&#64;</span>node1</a> /opt/redis_cluster/redis/src]# ./redis-trib.rb reshard 192.168.11.50:6380
+How many slots do you want to move (from 1 to 16384)? 1365
+What is the receiving node ID? 6380ID
+Source node #1:6395ID
+Source node #2:done
+Do you want to proceed with the proposed reshard plan (yes/no)? yes</p>
+</dd>
+</dl>
+<p><a href="#id105"><span class="problematic" id="id106">``</span></a><a href="#id107"><span class="problematic" id="id108">`</span></a></p>
+<p> 由于我们的集群做了高可用，所以当主节点下线的时候从节点也会顶上，所以我们最好先下线从节点，然后在下线主节点</p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">./redis-trib.rb</span> <span class="pre">del-node</span> <span class="pre">192.168.11.52:6396</span> <span class="pre">ID</span>
+<span class="pre">./redis-trib.rb</span> <span class="pre">del-node</span> <span class="pre">192.168.11.52:6395</span> <span class="pre">ID</span>
+<span class="pre">`</span></code></p>
+<p>### Redis 集群单节点数据导入集群</p>
+<p>刚切换到redis集群的时候肯定会面临数据导入问题，这里推荐使用redis-migrate-tool工具来导入</p>
+<p>[官网网址](<a class="reference external" href="http://www.oschina.net/p/redis-migrate-tool">http://www.oschina.net/p/redis-migrate-tool</a>)</p>
+<p>[GitHub](<a class="reference external" href="https://github.com/vipshop/redis-migrate-tool">https://github.com/vipshop/redis-migrate-tool</a>)</p>
+<p><strong>安装工具</strong></p>
+<p><code class="docutils literal notranslate"><span class="pre">`shell</span>
+<span class="pre">cd</span> <span class="pre">/opt/redis_cluster</span>
+<span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/vipshop/redis-migrate-tool.git</span>
+<span class="pre">cd</span> <span class="pre">redis-migrate-tool</span>
+<span class="pre">autoreconf</span> <span class="pre">-fvi</span>
+<span class="pre">./configure</span>
+<span class="pre">make</span>
+<span class="pre">make</span> <span class="pre">install</span>
+<span class="pre">`</span></code></p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="数据库" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2020, 小义同学
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

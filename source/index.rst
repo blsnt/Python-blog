@@ -11,3 +11,4 @@ Welcome to blsnt's documentation!
    Ansible/index
    SaltStack/index
    Docker/index
+   MySQL/index
