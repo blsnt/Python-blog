@@ -10,5 +10,4 @@ Welcome to boke's documentation!
    :maxdepth: 2
 
    Python/index
-   Python/test.md
-
+   Linux/index
