@@ -10,11 +10,8 @@ Welcome to boke's documentation!
    :maxdepth: 2
    :caption: Contents:
 
-
+   Python/index
 
 Indices and tables
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
