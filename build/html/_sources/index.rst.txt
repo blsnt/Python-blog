@@ -5,4 +5,3 @@ Welcome to blsnt's documentation!
    :maxdepth: 2
 
    Python/index
-   Linux/index
