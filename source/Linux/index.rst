@@ -10,4 +10,3 @@ Linux基础
     :numbered: 2
     
     install_centos7.6
-    Linux
