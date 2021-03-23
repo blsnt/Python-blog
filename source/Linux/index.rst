@@ -9,4 +9,3 @@ Linux基础
     :maxdepth: 2
     :numbered: 2
     
-    install_centos7.6
