@@ -6,9 +6,3 @@ Welcome to blsnt's documentation!
 
    Python/index
    Linux/index
-   golang/index
-   ELK/index
-   Ansible/index
-   SaltStack/index
-   Docker/index
-   MySQL/index
