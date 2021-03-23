@@ -8,10 +8,7 @@ Welcome to boke's documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
    Python/index
-
-Indices and tables
-==================
+   Python/test.md
 
