@@ -11,4 +11,3 @@
     
 
     test.rst
-    2.md

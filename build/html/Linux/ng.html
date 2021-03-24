@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>1. python编程 &mdash; boke 1.0 文档</title>
+  <title>1. nginx反向代理harbor &mdash; boke 1.0 文档</title>
   
 
   
@@ -36,7 +36,6 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="入门篇" href="../Linux/index.html" />
     <link rel="prev" title="入门篇" href="index.html" /> 
 </head>
 
@@ -82,11 +81,11 @@
             
             
               <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Python/index.html">入门篇</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">入门篇</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">1. python编程</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">1. nginx反向代理harbor</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../Linux/index.html">入门篇</a></li>
 </ul>
 
             
@@ -134,13 +133,13 @@
         
           <li><a href="index.html">入门篇</a> &raquo;</li>
         
-      <li><span class="section-number">1. </span>python编程</li>
+      <li><span class="section-number">1. </span>nginx反向代理harbor</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/Python/test.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/Linux/ng.rst.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -156,17 +155,58 @@
   <div class="contents topic" id="id1">
 <p class="topic-title">目录</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#python" id="id2">python编程</a></p></li>
+<li><p><a class="reference internal" href="#nginxharbor" id="id2">nginx反向代理harbor</a></p></li>
 </ul>
 </div>
-<div class="section" id="python">
-<h1><a class="toc-backref" href="#id2"><span class="section-number">1. </span>python编程</a><a class="headerlink" href="#python" title="永久链接至标题">¶</a></h1>
-<p>此处是代码高亮</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~</span><span class="c1">#</span>
-<span class="n">root</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~</span><span class="c1">#</span>
-<span class="n">root</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~</span><span class="c1"># ls</span>
-<span class="n">docker_install</span><span class="o">.</span><span class="n">sh</span>
-<span class="n">root</span><span class="nd">@ubuntu</span><span class="p">:</span><span class="o">~</span><span class="c1">#</span>
+<div class="section" id="nginxharbor">
+<h1><a class="toc-backref" href="#id2"><span class="section-number">1. </span>nginx反向代理harbor</a><a class="headerlink" href="#nginxharbor" title="永久链接至标题">¶</a></h1>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>worker_processes 1;
+events {
+  worker_connections 1024;
+}
+http {
+  include mime.types;
+  default_type application/octet-stream;
+  sendfile on;
+  keepalive_timeout 65;
+  server {
+    listen 80;
+    server_name harbor.wd.dolphin-labs.com;
+    return 301 https://$host$request_uri;
+  }
+
+  server {
+    listen 443 ssl;
+    server_name harbor.wd.dolphin-labs.com;
+    charset utf-8;
+    ssl_certificate ssl/harbor.wd.dolphin-labs.com.crt;
+    ssl_certificate_key ssl/harbor.wd.dolphin-labs.com.key;
+    ssl_session_timeout 5m;
+    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
+    ssl_prefer_server_ciphers on;
+    client_max_body_size 0;
+    proxy_connect_timeout      600;
+    proxy_send_timeout         600;
+    proxy_read_timeout         600;
+    proxy_buffer_size          4k;
+    proxy_buffers              4 32k;
+    proxy_busy_buffers_size    64k;
+    proxy_temp_file_write_size 64k;
+    proxy_http_version 1.1;
+    proxy_set_header Host $host;
+    proxy_set_header X-Real-IP         $remote_addr; # pass on real client&#39;s IP
+    proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+
+    location / {
+        proxy_redirect off;
+        proxy_ssl_verify off;
+        proxy_ssl_session_reuse on;
+        proxy_pass http://36.24.243.91;
+    }
+  }
+}
 </pre></div>
 </div>
 </div>
@@ -178,8 +218,6 @@
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-      
-        <a href="../Linux/index.html" class="btn btn-neutral float-right" title="入门篇" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="index.html" class="btn btn-neutral float-left" title="入门篇" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
